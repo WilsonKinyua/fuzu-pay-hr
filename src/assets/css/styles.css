@@ -12,11 +12,14 @@ body {
   --main-color: #004763;
 }
 
-.fa, .fas {
+.fa,
+.fas {
   color: var(--main-color);
 }
 
-a,a:hover,a:focus {
+a,
+a:hover,
+a:focus {
   text-decoration: none;
   color: var(--main-color);
 }
@@ -105,30 +108,8 @@ button {
 
 /* sidebar */
 
-
-/*
-.navigation {
-  display: flex;
-  justify-content: space-around;
-  background-color: #fff;
-  flex-wrap: wrap;
-  box-shadow: 0 0 4px;
-  height: 10vh;
-}
-.navigation li,
-span {
-  padding-top: 10px;
-}
-#list {
-  padding-top: 18px;
-}
-.id {
-  border-left: 1px solid grey;
-  padding-left: 20px;
-}
 .sidebar {
-  margin-top: -1em;
-  width: 210px;
+  width: 180px;
   position: fixed;
   left: 0;
   height: 100%;
@@ -136,26 +117,51 @@ span {
 }
 .sidebar-menu ul {
   list-style-type: none;
-  margin-top: 5em;
+  margin-top: 2em;
   padding: 0;
-  width: 200px;
+  width: 170px;
 }
 
 .sidebar-menu li {
-  margin: 0.3rem;
-  padding-left: 2em;
+  margin: 0.2rem;
+  padding-left: 1.3em;
   text-align: left;
+  font-size: 15px;
 }
 .sidebar-menu li a {
   display: block;
-  color: #004763;
+  color: var(--main-color);
   text-decoration: none;
   padding: 4px 16px;
 }
-.sidebar-menu a:hover {
-  background-color: #db3f70;
+.sidebar-menu li a:hover,
+.active {
+  background-color: #db3f7079;
+  color: #004763;
+}
+
+.copyright {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.8em;
   color: #004763;
 }
 footer {
   margin-top: 160%;
-} */
+}
+
+/* content */
+.content {
+  margin: 0px 0px 0px 50px;
+  padding: 0.5em;
+}
+
+/* ======================== Dashboard ================================== */
+
+/* ======================== Hiring ===================================== */
+
+/* ======================== Leave manager ============================== */
+
+/* ======================== Reports ==================================== */
+
+/* ======================== Staff ====================================== */
