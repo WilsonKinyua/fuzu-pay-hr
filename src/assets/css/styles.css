@@ -29,7 +29,8 @@ a:focus {
   color: var(--main-color);
 }
 
-button, .a-button {
+button,
+.a-button {
   border-radius: 2px;
   width: 197px;
   height: 37px;
@@ -83,6 +84,10 @@ button, .a-button {
 thead th {
   color: var(--main-color);
   font-weight: 600;
+}
+
+tbody tr td {
+  font-size: 13px;
 }
 
 .form-check-input:checked {
@@ -234,7 +239,8 @@ footer {
   margin-top: 20px;
 }
 
-.button-group div button, .a-button {
+.button-group div button,
+.a-button {
   margin-right: 10px;
 }
 

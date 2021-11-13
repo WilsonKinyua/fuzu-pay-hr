@@ -5,14 +5,14 @@
       <div class="col-md-12">
         <div class="d-flex justify-content-start button-group">
           <div>
-            <button class="btn btn-outline-primary btn-current-active" (click)="onClick($event)" id="leaveRequest">Leave
-              Request</button>
+            <a class="btn btn-outline-primary btn-current-active a-button" id="overview" routerLink="/leave-manager">
+              Leave Request </a>
           </div>
           <div>
-            <button class="btn btn-outline-primary " (click)="onClick($event)" id="onLeave">On Leave</button>
+            <a routerLink="/on-leave" class="btn btn-outline-primary a-button" id="department">On Leave</a>
           </div>
           <div>
-            <button class="btn btn-outline-primary " (click)="onClick($event)" id="activeStaff">Active Staff</button>
+            <a routerLink="/active-staff" class="btn btn-outline-primary a-button" id="addstaff">active staff</a>
           </div>
         </div>
       </div>
@@ -30,7 +30,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="row">
       <!-- tables  -->
