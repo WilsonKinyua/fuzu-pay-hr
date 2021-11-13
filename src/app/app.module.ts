@@ -23,6 +23,7 @@ import { SafePipe } from './shared/pipes/safe.pipe';
 import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { SidebarComponent } from './core/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FooterComponent } from './core/footer/footer.component';
     SafePipe,
     CapitalizePipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
