@@ -39,7 +39,55 @@ button {
 .btn-primary:hover {
   background-color: #004763;
   color: #fff;
+  border-color: #004763 !important;
 }
+
+.btn-outline-primary,.btn-outline-primary:hover,.btn-outline-primary:focus {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: #fff;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.btn-current-active,.btn-current-active:hover,.btn-current-active:focus {
+  background-color: var(--main-color);
+  color: #fff;
+  border-color: var(--main-color);
+}
+.display-none {
+  display: none;
+}
+
+.btn-sm {
+  width: 120px;
+  height: 33px;
+  font-weight: 500;
+}
+
+.btn-sm:hover {
+  background-color: #004763;
+  color: #fff;
+  border-color: #004763 !important;
+}
+
+.table-bordered-none {
+  border: none;
+}
+
+thead th {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+/* change color of checked radio button */
+.form-check-input:checked {
+  color: var(--main-color);
+  border-color: #004763;
+  background-color: var(--main-color);
+}
+
 
 /* top navigation */
 
@@ -168,6 +216,13 @@ footer {
 /* ======================== Hiring ===================================== */
 
 /* ======================== Leave manager ============================== */
+.button-group {
+  margin-top: 20px;
+}
+
+.button-group div button {
+  margin-right: 10px;
+}
 
 /* ======================== Reports ==================================== */
 
