@@ -17,6 +17,11 @@ body {
   color: var(--main-color);
 }
 
+.main-color {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
 a,
 a:hover,
 a:focus {
@@ -26,6 +31,8 @@ a:focus {
 
 button {
   border-radius: 2px;
+  width: 197px;
+  height: 37px;
 }
 
 .btn-primary,
@@ -165,3 +172,95 @@ footer {
 /* ======================== Reports ==================================== */
 
 /* ======================== Staff ====================================== */
+.btnhome {
+  border: none;
+  color: #004763;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-family: Regular, Semibold and Bold;
+  border: 2px solid;
+  box-shadow: 1px 1px 1px 1px #004763;
+  text-align: center;
+  margin: 0 2rem;
+  border-radius: 2px;
+  padding-top: -1rem;
+  font-size: 1.3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.btn-active {
+  background-color: #004763;
+  color: white;
+}
+
+.head {
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(197, 192, 192);
+}
+
+.par p {
+  font-family: Regular, Semibold and Bold;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.tablestaff {
+  font-family: Regular, Semibold and Bold;
+  font-size: 1.2rem;
+  color: #004763;
+}
+
+table,
+tr,
+td,
+th {
+  border: none;
+}
+
+thead {
+  color: white;
+}
+
+.btnn {
+  border: none;
+  color: #004763;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 2rem;
+  background-color: white;
+  text-transform: capitalize;
+}
+
+.class {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 2px 2px #dadfe0;
+}
+
+.class p {
+  font-family: Regular, Semibold and Bold;
+  font-size: 1.5rem;
+  color: #004763;
+}
+
+.inline ul {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.inline li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.id {
+  margin-top: 1.5rem;
+}
