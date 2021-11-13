@@ -20,5 +20,6 @@ export class StaffComponent implements OnInit {
       buttons[i].classList.remove('btn-current-active');
     }
     event.target.classList.add('btn-current-active');
+    // const currentClickedButtonId = event.target.id;
   }
 }

@@ -29,7 +29,7 @@ a:focus {
   color: var(--main-color);
 }
 
-button {
+button, .a-button {
   border-radius: 2px;
   width: 197px;
   height: 37px;
@@ -234,7 +234,7 @@ footer {
   margin-top: 20px;
 }
 
-.button-group div button {
+.button-group div button, .a-button {
   margin-right: 10px;
 }
 
