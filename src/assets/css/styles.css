@@ -29,10 +29,11 @@ a:focus {
   color: var(--main-color);
 }
 
-button {
+button, .a-button {
   border-radius: 2px;
   width: 197px;
   height: 37px;
+  text-transform: capitalize;
 }
 
 .btn-primary,
@@ -42,7 +43,9 @@ button {
   border-color: #004763 !important;
 }
 
-.btn-outline-primary,.btn-outline-primary:hover,.btn-outline-primary:focus {
+.btn-outline-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
   border: 1px solid var(--main-color);
   color: var(--main-color);
   background-color: #fff;
@@ -50,8 +53,9 @@ button {
   box-shadow: none !important;
 }
 
-
-.btn-current-active,.btn-current-active:hover,.btn-current-active:focus {
+.btn-current-active,
+.btn-current-active:hover,
+.btn-current-active:focus {
   background-color: var(--main-color);
   color: #fff;
   border-color: var(--main-color);
@@ -81,14 +85,24 @@ thead th {
   font-weight: 600;
 }
 
-/* change color of checked radio button */
 .form-check-input:checked {
   color: var(--main-color);
   border-color: #004763;
   background-color: var(--main-color);
 }
 
+.text-bold {
+  font-weight: 600;
+}
 
+.paragraph-1 {
+  font-size: 0.8em;
+  color: rgb(0, 0, 0);
+}
+
+.mr-5 {
+  margin-right: 40px;
+}
 /* top navigation */
 
 .navbar-expand-lg {
@@ -220,115 +234,34 @@ footer {
   margin-top: 20px;
 }
 
-.button-group div button {
+.button-group div button, .a-button {
   margin-right: 10px;
 }
 
 /* ======================== Reports ==================================== */
 
 /* ======================== Staff ====================================== */
-.btnhome {
-  border: none;
-  color: #004763;
-  cursor: pointer;
-  text-transform: capitalize;
-  font-family: Regular, Semibold and Bold;
-  border: 2px solid;
-  box-shadow: 1px 1px 1px 1px #f1f6f8;
+.top-header-table {
+  box-shadow: -1px 5px 2px -1px rgba(138, 134, 134, 0.5);
+  -webkit-box-shadow: -1px 2px 5px -1px rgba(138, 134, 134, 0.5);
+  -moz-box-shadow: -1px 5px 2px -1px rgba(138, 134, 134, 0.5);
+  padding: 5px;
+}
+
+.top-header-table .justify-content-between {
+  margin-top: 10px;
   text-align: center;
-  margin: 0 2rem;
-  border-radius: 2px;
-  padding-top: -1rem;
-  font-size: 1.1rem;
-  
-}
-.btn-active {
-  color: #004763;
+  font-size: 15px;
 }
 
-.head {
-  background-color: white;
-  box-shadow: 2px 2px 2px 2px rgb(197, 192, 192);
+.top-header-table .form-select {
+  margin-left: 5px;
+  width: 100px;
+  height: 30px;
+  font-size: 10px;
 }
 
-.par p {
-  font-family: Regular, Semibold and Bold;
-  font-size: 1.1rem;
-  color: black;
-}
-
-.table {
-  font-family: Regular, Semibold and Bold;
-  font-size: 1rem;
-  
-}
-
-table,
-tr,
-td,
-th {
-  border: none;
-}
-
-thead {
-  color: white;
-}
-
-.class {
-  display: flex;
-  justify-content: space-between;
-  /* box-shadow: 1px 1px 2px 2px #dadfe0;
-  width: 100%; */
-  
-  
-}
-
-.class p {
-  font-family: Regular, Semibold and Bold;
-  font-size: 1rem;
-  color: #004763;
-}
-
-.inline ul {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-.inline li {
-  display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-.btnn{
-  font-size: 1.1rem;
-  color: #004763;
-}
-
-#dropdownMenuButton{
-  box-shadow: 1px 1px 2px 2px #dadfe0;
-  font-size: 1rem;
-  color: #004763;
-
-
-}
-.table th{
-  font-family: Regular, Semibold and Bold;
-  font-size: 1rem;
-  color: #004763;
-}
-
-.search{
-  display: flex;
-  padding-right: 4rem;
-}
-
-.search p{
-  padding-top: .2rem;
-  
+.top-header-table h6 {
+  font-weight: 700;
+  font-size: 15px;
 }
