@@ -231,10 +231,7 @@ footer {
 }
 
 /* ======================== Dashboard ================================== */
-.content{
-  margin-left: 14rem;
-  padding: 20px;
-}
+
 .card{
   box-shadow:0 1px 1px #ccc;
   padding: 25px;
