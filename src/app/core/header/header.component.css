@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Open Sans;
+    color: #004763;
+}
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    flex-wrap: wrap;
+    box-shadow: 0 0 4px;
+    height: 10vh;
+}
+.navigation li,span{
+    padding-top: 10px;
+}
+#list{
+    padding-top: 18px;
+}
+.id{
+     border-left: 1px solid grey;
+     padding-left: 20px;
+}
