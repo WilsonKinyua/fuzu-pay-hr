@@ -261,6 +261,15 @@ footer {
 
 
 /* ======================== Hiring ===================================== */
+.activebuttons{
+  color: #fff;
+  background-color: #004763;
+}
+.h:hover{
+  color: #fff;
+  background-color: #004763f6;
+}
+
 
 /* ======================== Leave manager ============================== */
 .button-group {
