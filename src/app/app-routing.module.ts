@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { HiringComponent } from './modules/hiring/hiring.component';
+import { NewListingComponent } from './modules/hiring/jobs/new-listing/new-listing.component';
 import { LeaveManagerComponent } from './modules/leave-manager/leave-manager.component';
 import { ReportsComponent } from './modules/reports/reports.component';
 import { StaffComponent } from './modules/staff/staff.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'staff', component: StaffComponent },
   { path: 'leave-manager', component: LeaveManagerComponent },
   { path: 'hiring', component: HiringComponent },
+  { path: 'newlisting', component: NewListingComponent},
   { path: 'reports', component: ReportsComponent },
   { path: '**', redirectTo: 'dashboard' },
 ];
