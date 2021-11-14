@@ -27,7 +27,8 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ActiveListingComponent } from './modules/hiring/jobs/active-listing/active-listing.component';
 import { PastListingComponent } from './modules/hiring/jobs/past-listing/past-listing.component';
 import { NewApplicantComponent } from './modules/hiring/applications/new-applicant/new-applicant.component';
-
+import { OnLeaveComponent } from './modules/leave-manager/on-leave/on-leave.component';
+import { ActiveStaffComponent } from './modules/leave-manager/active-staff/active-staff.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,9 @@ import { NewApplicantComponent } from './modules/hiring/applications/new-applica
     SidebarComponent,
     ActiveListingComponent,
     PastListingComponent,
-    NewApplicantComponent
+    NewApplicantComponent,
+    OnLeaveComponent,
+    ActiveStaffComponent
   ],
   imports: [
     BrowserModule,
