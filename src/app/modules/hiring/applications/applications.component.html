@@ -1,1 +1,12 @@
-<p>applications works!</p>
+<app-hiring></app-hiring>
+<div class="container-fluid mt-5 shadow p-3 mb-5 bg-body rounded">
+  <div class="row ">
+    <div class="col-md-2 m-1">
+      <button type="button" routerLink="/hiring/application/newapplication" class="btn btn-outline-secondary h" routerLinkActive="activebuttons">New Applicant</button>
+    </div>
+    <div class="col-md-2 m-1">
+      <button type="button" routerLink="/hiring/application/pastapplications"  class="btn btn-outline-secondary h" routerLinkActive="activebuttons">Past Applicants</button>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>  
