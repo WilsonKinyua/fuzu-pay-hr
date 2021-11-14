@@ -1,0 +1,66 @@
+.btncom{
+    border: none;
+    color: #004763;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-family: Regular, Semibold and Bold; 
+    border: 2px solid;
+    box-shadow: 1px 1px 1px 1px #004763;
+    text-align: center;
+    margin:0 2rem;
+    border-radius: 2px;
+    padding-top: -1rem;
+    font-size: 1.3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+}
+.btncom:active{
+    background-color: #004763;
+    color: white;
+}
+
+
+.back{
+    font-weight: bold;
+    font-family: Regular, Semibold and Bold;
+    font-size: 18px;
+
+}
+.table,.table th,.table tr,.table td{
+    border: none;
+    font-size: 20px;
+    margin-top: 30px;
+    
+    
+    
+}
+
+.net{
+    font-weight: bold;
+    font-family: Regular, Semibold and Bold;
+    font-size: 18px;
+    color: #004763;
+    
+}
+
+.int{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+  position: absolute;
+  font-size: 18px;
+  color: #004763;
+  margin: 5rem;
+ top: 18rem;
+  
+
+
+}
+.table tr{
+    margin: 5rem;
+    
+}
