@@ -24,6 +24,9 @@ import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
+import { ActiveListingComponent } from './modules/hiring/jobs/active-listing/active-listing.component';
+import { PastListingComponent } from './modules/hiring/jobs/past-listing/past-listing.component';
+import { NewApplicantComponent } from './modules/hiring/applications/new-applicant/new-applicant.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
     CapitalizePipe,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    ActiveListingComponent,
+    PastListingComponent,
+    NewApplicantComponent
   ],
   imports: [
     BrowserModule,
