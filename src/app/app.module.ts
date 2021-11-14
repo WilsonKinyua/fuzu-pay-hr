@@ -24,6 +24,8 @@ import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
+import { OnLeaveComponent } from './modules/leave-manager/on-leave/on-leave.component';
+import { ActiveStaffComponent } from './modules/leave-manager/active-staff/active-staff.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
     CapitalizePipe,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    OnLeaveComponent,
+    ActiveStaffComponent
   ],
   imports: [
     BrowserModule,
