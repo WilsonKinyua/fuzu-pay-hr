@@ -12,6 +12,7 @@
                     <img src="./assets/img/prof.png" class="avatar-md avatar rounded-circle" style="width: 150px;height: 150px;"alt="">
                 </div>
                 <div class="col-sm-8 pt-5">
+                    <h6 class="m-3">Michael Muthamia</h6>
                     <h6 class="m-2"><i class="far fa-envelope"></i> Linkedin.com/in/muthamiamichael</h6>
                     <h6 class="m-2"><i class="fab fa-linkedin"></i> Linkedin.com/in/muthamiamichael</h6>
                 </div>
@@ -76,14 +77,17 @@
                 </div>
             </div>
             <div class="row">
+        <!-- Button trigger modal -->
                 <div class="col-sm-4">
-                    <button type="button" class="btn btn-outline-secondary h" routerLinkActive="activebuttons">Schedule Interview</button>
+                    <button type="button" class="btn btn-outline-secondary h activebuttons" data-bs-toggle="modal" data-bs-target="#interview">Schedule Interview</button>
                 </div>
+        <!-- Button trigger modal -->
+
                 <div class="col-sm-4">
                     <button type="button" class="btn btn-outline-secondary h" routerLinkActive="activebuttons">Decline</button>
                 </div>
                 <div class="col-sm-4">
-                    <button type="button" class="btn btn-outline-secondary h" routerLinkActive="activebuttons">Go back</button>
+                    <button type="button" class="btn btn-outline-secondary h activebuttons"(click)="goBack()">Go back</button>
                 </div>
 
             </div>
@@ -115,6 +119,27 @@
 
         </div>
     </div>
+
+    <!-- modal to send emails to the Applicants -->
     
+  <!-- Modal -->
+  <div class="modal fade" id="interview" tabindex="-1" aria-labelledby="interviewmodal" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-secondary h">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-single-applicant',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleApplicantComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit(): void {
   }
-
+  
+  goBack() {
+    // window.history.back();
+    this.location.back();
+  }
 }
