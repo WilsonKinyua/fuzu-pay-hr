@@ -296,3 +296,106 @@ footer {
 }
 
 
+/* departments styling */
+
+.btnhomed{
+  border: none;
+  color: #004763;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-family: Regular, Semibold and Bold; 
+  border: 2px solid;
+  box-shadow: 1px 1px 1px 1px #004763;
+  text-align: center;
+  margin:0 2rem;
+  border-radius: 2px;
+  padding-top: -1rem;
+  font-size: 1.3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+}
+.btnhomed:active{
+  background-color: #004763;
+  color: white;
+}
+
+
+table, tr, td,th {
+  border: none;
+}
+
+
+
+.btnnn {
+  border: none; 
+  color: #004763; 
+  padding: 12px 16px; 
+  font-size: 20px; 
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin:0 2rem;
+  background-color: white;
+  height: 3rem;
+  text-transform: capitalize;
+
+}
+
+
+.classed{
+    display: flex;
+    box-shadow: 1px 1px 2px 2px #dadfe0;
+    margin-top: 4rem;
+    height: 4.1rem;
+    
+    
+    
+}
+
+.classed p{
+  font-family: Regular, Semibold and Bold; 
+  font-size: 1.5rem;
+  color: black;
+}
+
+.down{
+position: absolute;
+right: 120px;
+
+
+
+}
+
+.down button{
+  color: white;
+  background-color: #004763;
+  border-radius: 8px;
+}
+
+.john{
+  color: #004763;
+  font-family: Regular, Semibold and Bold; 
+  font-size: 1.5rem;
+}
+
+
+.tableth{
+  color: #004763;
+  font-family: Regular, Semibold and Bold; 
+  font-size: 1.5rem;
+
+}
+
+.table td{
+  font-family: Regular, Semibold and Bold; 
+  font-size: 1rem;
+
+}
+tr{
+  font-size: .9rem;
+}
+
+
