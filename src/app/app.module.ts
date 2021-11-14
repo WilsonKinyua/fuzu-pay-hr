@@ -29,6 +29,8 @@ import { PastListingComponent } from './modules/hiring/jobs/past-listing/past-li
 import { NewApplicantComponent } from './modules/hiring/applications/new-applicant/new-applicant.component';
 import { OnLeaveComponent } from './modules/leave-manager/on-leave/on-leave.component';
 import { ActiveStaffComponent } from './modules/leave-manager/active-staff/active-staff.component';
+import { PastApplicantComponent } from './modules/hiring/applications/past-applicant/past-applicant.component';
+import { SingleApplicantComponent } from './modules/hiring/applications/single-applicant/single-applicant.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,9 @@ import { ActiveStaffComponent } from './modules/leave-manager/active-staff/activ
     PastListingComponent,
     NewApplicantComponent,
     OnLeaveComponent,
-    ActiveStaffComponent
+    ActiveStaffComponent,
+    PastApplicantComponent,
+    SingleApplicantComponent
   ],
   imports: [
     BrowserModule,

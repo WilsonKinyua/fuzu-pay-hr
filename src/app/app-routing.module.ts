@@ -14,6 +14,9 @@ import { AddStaffComponent } from './modules/staff/add-staff/add-staff.component
 import { DepartmentsComponent } from './modules/staff/departments/departments.component';
 import { StaffComponent } from './modules/staff/staff.component';
 import { ApplicationsComponent } from './modules/hiring/applications/applications.component';
+import { PastApplicantComponent } from './modules/hiring/applications/past-applicant/past-applicant.component';
+import { NewApplicantComponent } from './modules/hiring/applications/new-applicant/new-applicant.component';
+import { SingleApplicantComponent } from './modules/hiring/applications/single-applicant/single-applicant.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -25,7 +28,10 @@ const routes: Routes = [
   { path: 'hiring/jobs/newlisting', component: NewListingComponent},
   { path: 'hiring/jobs/activelisting', component: ActiveListingComponent},
   { path: 'hiring/jobs/pastlisting', component: PastListingComponent},
-  { path: 'hiring/application/newapplication', component: ApplicationsComponent},
+  { path: 'hiring/application', component: ApplicationsComponent },
+  { path: 'hiring/application/newapplication', component: NewApplicantComponent },
+  { path: 'hiring/application/pastapplications', component: PastApplicantComponent },
+  { path: 'hiring/application/singleapplications', component: SingleApplicantComponent },
   { path: 'reports', component: ReportsComponent },
   { path: 'departments', component: DepartmentsComponent },
   { path: 'add-staff', component: AddStaffComponent },
