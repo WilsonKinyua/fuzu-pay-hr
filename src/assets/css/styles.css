@@ -233,21 +233,21 @@ footer {
 /* ======================== Dashboard ================================== */
 
 .card{
-  box-shadow:0 1px 1px #ccc;
+  box-shadow:0 1px 1px 1px #ccc;
   padding: 25px;
 }
 .small-txt{
   text-align: center;
 }
 .tableDay{
-  margin-bottom:25px ;
+  margin-bottom:30px ;
+  padding: 15px;
   height: 20vh;
-  /* font-weight: bold; */
 
 }
 .cell{
   margin-left: -50%;
-  position: absolute;
+  
 }
 .card-btn{
   background-color: #004763;
