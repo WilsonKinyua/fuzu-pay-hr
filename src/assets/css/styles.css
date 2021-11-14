@@ -292,3 +292,61 @@ thead {
 .id {
   margin-top: 1.5rem;
 }
+
+
+/* Add staff styling */
+.card-btn{
+  background-color: #FFFFFF;
+  border: 1px solid #004763 ;
+  border-radius: 2px;
+  padding: 0px 24px;
+  margin: 20px;
+  color:#004763; 
+}
+.card-btn:hover{
+  background-color: #004763;
+  color: #FFFFFF;
+}
+.radio-btn{
+  margin: 15px;
+}
+.details{
+  margin: 10px;
+}
+input[type='number']{
+  width: 120px;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+input[type='text']{
+  width: 120px;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+input[type='email']{
+  width: 120px;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+input[type='date']{
+  width: 120px;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+.p-payment{
+  color:#004763 ;
+  font-weight: bold;
+  margin: 15px;
+}
+.submit-btn{
+  background-color:#004763;
+  border: 1px solid  ;
+  border-radius: 2px;
+  padding: 0px 12px;
+  margin: 30px 0 0 35%;
+  color:#FFFFFF;
+}
