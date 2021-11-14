@@ -27,10 +27,10 @@ const routes: Routes = [
   { path: 'hiring/jobs/pastlisting', component: PastListingComponent},
   { path: 'hiring/application/newapplication', component: ApplicationsComponent},
   { path: 'reports', component: ReportsComponent },
-  { path: 'departments', component: DepartmentsComponent },
-  { path: 'add-staff', component: AddStaffComponent },
-  { path: 'on-leave', component: OnLeaveComponent },
-  {path: 'active-staff', component: ActiveStaffComponent},
+  { path: 'staff/departments', component: DepartmentsComponent },
+  { path: 'staff/add-staff', component: AddStaffComponent },
+  { path: 'leave-manager/on-leave', component: OnLeaveComponent },
+  {path: 'leave-manager/active-staff', component: ActiveStaffComponent},
   { path: '**', redirectTo: 'dashboard' },
 ];
 
