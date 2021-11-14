@@ -247,7 +247,7 @@ footer {
 }
 .cell{
   margin-left: -50%;
-  
+
 }
 .card-btn{
   background-color: #004763;
@@ -303,7 +303,7 @@ footer {
   color: #004763;
   cursor: pointer;
   text-transform: capitalize;
-  font-family: Regular, Semibold and Bold; 
+  font-family: Regular, Semibold and Bold;
   border: 2px solid;
   box-shadow: 1px 1px 1px 1px #004763;
   text-align: center;
@@ -328,10 +328,10 @@ table, tr, td,th {
 
 
 .btnnn {
-  border: none; 
-  color: #004763; 
-  padding: 12px 16px; 
-  font-size: 20px; 
+  border: none;
+  color: #004763;
+  padding: 12px 16px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 2px;
   border: 1px solid;
@@ -350,13 +350,13 @@ table, tr, td,th {
     box-shadow: 1px 1px 2px 2px #dadfe0;
     margin-top: 4rem;
     height: 4.1rem;
-    
-    
-    
+
+
+
 }
 
 .classed p{
-  font-family: Regular, Semibold and Bold; 
+  font-family: Regular, Semibold and Bold;
   font-size: 1.5rem;
   color: black;
 }
@@ -377,80 +377,23 @@ right: 120px;
 
 .john{
   color: #004763;
-  font-family: Regular, Semibold and Bold; 
+  font-family: Regular, Semibold and Bold;
   font-size: 1.5rem;
 }
 
 
 .tableth{
   color: #004763;
-  font-family: Regular, Semibold and Bold; 
+  font-family: Regular, Semibold and Bold;
   font-size: 1.5rem;
 
 }
 
 .table td{
-  font-family: Regular, Semibold and Bold; 
+  font-family: Regular, Semibold and Bold;
   font-size: 1rem;
 
 }
 tr{
   font-size: .9rem;
-}
-
-/* Stying for add staff  */
-.card-btn{
-  background-color: #FFFFFF;
-  border: 1px solid #004763 ;
-  border-radius: 2px;
-  padding: 0px 24px;
-  margin: 20px;
-  color:#004763; 
-}
-.card-btn:hover{
-  background-color: #004763;
-  color: #FFFFFF;
-}
-.radio-btn{
-  margin: 15px;
-}
-.details{
-  margin: 10px;
-}
-input[type='number']{
-  width: 120px;
-  height: 25px;
-  border-radius: 2px;
-  border: 1px solid #000;
-}
-input[type='text']{
-  width: 120px;
-  height: 25px;
-  border-radius: 2px;
-  border: 1px solid #000;
-}
-input[type='email']{
-  width: 120px;
-  height: 25px;
-  border-radius: 2px;
-  border: 1px solid #000;
-}
-input[type='date']{
-  width: 120px;
-  height: 25px;
-  border-radius: 2px;
-  border: 1px solid #000;
-}
-.p-payment{
-  color:#004763 ;
-  font-weight: bold;
-  margin: 15px;
-}
-.submit-btn{
-  background-color:#004763;
-  border: 1px solid  ;
-  border-radius: 2px;
-  padding: 0px 12px;
-  margin: 30px 0 0 35%;
-  color:#FFFFFF;
 }
