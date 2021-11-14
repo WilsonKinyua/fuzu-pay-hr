@@ -14,6 +14,7 @@ import { AddStaffComponent } from './modules/staff/add-staff/add-staff.component
 import { DepartmentsComponent } from './modules/staff/departments/departments.component';
 import { StaffComponent } from './modules/staff/staff.component';
 import { ApplicationsComponent } from './modules/hiring/applications/applications.component';
+import { StaffDetailsComponent } from './modules/staff/staff-details/staff-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'reports', component: ReportsComponent },
   { path: 'staff/departments', component: DepartmentsComponent },
   { path: 'staff/add-staff', component: AddStaffComponent },
+  { path: 'staff/view', component: StaffDetailsComponent},
   { path: 'leave-manager/on-leave', component: OnLeaveComponent },
   {path: 'leave-manager/active-staff', component: ActiveStaffComponent},
   { path: '**', redirectTo: 'dashboard' },
