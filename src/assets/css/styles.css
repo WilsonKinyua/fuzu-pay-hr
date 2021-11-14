@@ -108,6 +108,10 @@ tbody tr td {
 .mr-5 {
   margin-right: 40px;
 }
+
+.display-none {
+  display: none;
+}
 /* top navigation */
 
 .navbar-expand-lg {
@@ -125,8 +129,8 @@ tbody tr td {
 
 .search-input {
   border: 1.5px solid var(--main-color);
-  margin-right: 130px;
-  margin-left: 130px;
+  margin-right: 110px;
+  margin-left: 110px;
   padding: 1px;
   margin-top: 8px;
   color: #004763;
