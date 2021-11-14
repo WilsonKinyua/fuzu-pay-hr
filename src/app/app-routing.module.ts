@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { HiringComponent } from './modules/hiring/hiring.component';
-import { ActiveStaffComponent } from './modules/leave-manager/active-staff/active-staff.component';
 import { LeaveManagerComponent } from './modules/leave-manager/leave-manager.component';
 import { OnLeaveComponent } from './modules/leave-manager/on-leave/on-leave.component';
 import { ReportsComponent } from './modules/reports/reports.component';
@@ -16,6 +15,7 @@ const routes: Routes = [
   { path: 'staff', component: StaffComponent },
   { path: 'leave-manager', component: LeaveManagerComponent },
   { path: 'hiring', component: HiringComponent },
+  { path: 'newlisting', component: NewListingComponent},
   { path: 'reports', component: ReportsComponent },
   { path: 'departments', component: DepartmentsComponent },
   { path: 'add-staff', component: AddStaffComponent },
