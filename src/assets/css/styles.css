@@ -125,7 +125,8 @@ tbody tr td {
 
 .search-input {
   border: 1.5px solid var(--main-color);
-  margin-right: 120px;
+  margin-right: 130px;
+  margin-left: 130px;
   padding: 1px;
   margin-top: 8px;
   color: #004763;
