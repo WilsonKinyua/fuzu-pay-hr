@@ -399,3 +399,42 @@ tr{
 }
 
 
+/* styling for staff details component */
+
+.card-body{
+  position: absolute;
+  left: 20rem;
+}
+.card{
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+}
+.abb{
+  margin-top: 2.2rem;
+  font-family: Regular, Semibold and Bold;
+  color: #004763;
+  box-shadow: 2px 2px 2px 2px #b9bdbe;
+  height: 4rem;
+ padding: 1rem;
+  
+}
+
+.back{
+  font-weight: bold;
+  font-family: Regular, Semibold and Bold;
+  font-size: 18px;
+
+}
+.table,.table th,.table tr,.table td{
+  border: none;
+  
+  
+}
+
+
+
+.int{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
