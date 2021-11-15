@@ -1,0 +1,29 @@
+.container{
+    font-family: Regular, Semibold and Bold;
+    font-size: 18px;
+    color: #004763;  
+
+}
+.can{
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #004763;
+    margin-top: 1.5rem;
+}
+
+.send{
+    color: #004763;
+    border: 4px #004763;
+    font-size: 24px;
+    box-shadow: 1px 2px 1px 1px #004763;
+    
+}
+
+.mb-3{
+    position:absolute;
+    left: 1200px;
+    top:30px;
+    font-size: 1.8rem;
+
+}
