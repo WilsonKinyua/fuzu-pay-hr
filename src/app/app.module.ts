@@ -31,6 +31,8 @@ import { OnLeaveComponent } from './modules/leave-manager/on-leave/on-leave.comp
 import { ActiveStaffComponent } from './modules/leave-manager/active-staff/active-staff.component';
 import { PastApplicantComponent } from './modules/hiring/applications/past-applicant/past-applicant.component';
 import { SingleApplicantComponent } from './modules/hiring/applications/single-applicant/single-applicant.component';
+import { ActiveInterviewComponent } from './modules/hiring/interviews/active-interview/active-interview.component';
+import { PastInterviewComponent } from './modules/hiring/interviews/past-interview/past-interview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +63,9 @@ import { SingleApplicantComponent } from './modules/hiring/applications/single-a
     OnLeaveComponent,
     ActiveStaffComponent,
     PastApplicantComponent,
-    SingleApplicantComponent
+    SingleApplicantComponent,
+    ActiveInterviewComponent,
+    PastInterviewComponent
   ],
   imports: [
     BrowserModule,
