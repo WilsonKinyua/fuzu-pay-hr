@@ -1,6 +1,5 @@
 <section class="content">
   <div class="container">
-    <!-- body code here -->
     <div class="row">
       <div class="col-md-12">
         <div class="d-flex justify-content-start button-group">
@@ -9,19 +8,134 @@
               overview </a>
           </div>
           <div>
-            <a routerLink="/departments" class="btn btn-outline-primary a-button" id="department">department</a>
+            <a routerLink="/staff/departments" class="btn btn-outline-primary a-button" id="department">department</a>
           </div>
           <div>
-            <a routerLink="/add-staff" class="btn btn-outline-primary btn-current-active a-button" id="addstaff">add staff</a>
+            <a routerLink="/staff/add-staff" class="btn btn-outline-primary  btn-current-active a-button"
+              id="addstaff">add staff</a>
           </div>
         </div>
       </div>
     </div>
-   <div>
-   <div id="department">
-    <h2>add staff</h2>
-   </div>
-   </div>
-  </div>
+    <div class="radio-btn">
+      <input type="radio" class="details" name="details" value="Input details" checked
+        (click)="showTextBox($event)">Input details
+      <input type="radio" class="details" name="details" value="upload document" (click)="showTextBox($event)">Upload
+      document
+    </div>
 
+    <div id="input-details">
+      <div class="container">
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+          <div class="col mb-2">
+            <label class="mb-1" for="employee-code">Employee Code</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="surname">Surname</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="other-name">Other Name</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="phone-number">Phone Number</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="email">Email</label>
+            <input type="email" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="id">ID/Passport Number</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="nationality">Nationality</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="dob">Date of Birth</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="position">Department</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="position">Position</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="employment-type">Employment Type</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="employment-date">Employment Date</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="gross-salary">Gross Salary</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="marital-status">Marital Status</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="emergency-contact">Emergency Contact</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="emergencyphone">Emergency Contact Phone</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+
+        </div>
+      </div>
+
+      <p class="p-payment">Payment Details</p>
+
+      <div class="container">
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+          <div class="col mb-2">
+            <label class="mb-1" for="bank-name">Bank Name</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="branch">Branch</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+          <div class="col mb-2">
+            <label class="mb-1" for="account-number">Account Number</label>
+            <input type="text" name="data" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="upload-documents" style="display: none;">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="par mt-3 mb-3">
+            <p class="m-1 text-bold paragraph-1"><span class="mr-5">* Kindly download the excel spreadsheet, fill the details & upload</span> <button type="submit" class="submit-btn">Download</button></p>
+          </div>
+        </div>
+      </div>
+      <form class="row g-0">
+        <div class="col-auto">
+          <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-outline-primary mb-3">Upload</button>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-8 text-center mt-5">
+        <button type="submit" class="submit-btn">Save Details</button>
+      </div>
+    </div>
+  </div>
 </section>
