@@ -17,6 +17,7 @@ import { ApplicationsComponent } from './modules/hiring/applications/application
 import { PastApplicantComponent } from './modules/hiring/applications/past-applicant/past-applicant.component';
 import { SingleApplicantComponent } from './modules/hiring/applications/single-applicant/single-applicant.component';
 import { StaffDetailsComponent } from './modules/staff/staff-details/staff-details.component';
+import { HiredComponent } from './modules/hiring/hired/hired.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'staff', component: StaffComponent },
   { path: 'leave-manager', component: LeaveManagerComponent },
   { path: 'hiring', component: HiringComponent },
+  { path: 'hiring/hired', component: HiredComponent },
   { path: 'hiring/jobs', component: JobsComponent },
   { path: 'hiring/jobs/newlisting', component: NewListingComponent},
   { path: 'hiring/jobs/activelisting', component: ActiveListingComponent},
