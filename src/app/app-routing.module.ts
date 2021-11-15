@@ -18,6 +18,9 @@ import { PastApplicantComponent } from './modules/hiring/applications/past-appli
 import { SingleApplicantComponent } from './modules/hiring/applications/single-applicant/single-applicant.component';
 import { StaffDetailsComponent } from './modules/staff/staff-details/staff-details.component';
 import { HiredComponent } from './modules/hiring/hired/hired.component';
+import { InterviewsComponent } from './modules/hiring/interviews/interviews.component';
+import { ActiveInterviewComponent } from './modules/hiring/interviews/active-interview/active-interview.component';
+import { PastInterviewComponent } from './modules/hiring/interviews/past-interview/past-interview.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -27,12 +30,15 @@ const routes: Routes = [
   { path: 'hiring', component: HiringComponent },
   { path: 'hiring/hired', component: HiredComponent },
   { path: 'hiring/jobs', component: JobsComponent },
+  { path: 'hiring/interview', component: InterviewsComponent },
   { path: 'hiring/jobs/newlisting', component: NewListingComponent},
   { path: 'hiring/jobs/activelisting', component: ActiveListingComponent},
   { path: 'hiring/jobs/pastlisting', component: PastListingComponent},
   { path: 'hiring/application/newapplication', component: ApplicationsComponent },
   { path: 'hiring/application/pastapplications', component: PastApplicantComponent },
   { path: 'hiring/application/singleapplications', component: SingleApplicantComponent },
+  { path: 'hiring/interview/active', component: ActiveInterviewComponent },
+  { path: 'hiring/interview/past', component: PastInterviewComponent },
   { path: 'reports', component: ReportsComponent },
   { path: 'staff/departments', component: DepartmentsComponent },
   { path: 'staff/add-staff', component: AddStaffComponent },
