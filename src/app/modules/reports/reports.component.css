@@ -1,0 +1,31 @@
+
+.container{
+  margin-left: 2%;
+  margin-right: 25%;
+}
+button{
+  border-radius: 4%;
+}
+h6,p{
+  color: #004763;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+}
+hr{
+  
+  border-right: 5px solid blue;
+  height: 50px;
+
+}
+label{
+  color: black;
+  font-weight: bold;
+  font-size: small;
+}
+.form-select{
+  color: #004763;
+  font-weight: bold;
+  font-size: small;
+
+}
