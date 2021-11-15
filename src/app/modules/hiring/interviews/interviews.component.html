@@ -1,15 +1,27 @@
 <div class="container">
     <!-- Section A -->
-    <div>
+    <!-- <div>
         <button class="hr-btn">Jobs</button>
         <button class="hr-btn">Applications</button>
         <button class="hr-btn">Interviews</button>
         <button class="hr-btn">Hired</button>
-    </div>
-    
+    </div> -->
+<app-hiring></app-hiring>
 
     <!-- Section B -->
-    <div class="row">
+    <div class="container-fluid mt-5 shadow p-3 mb-5 bg-body rounded">
+        <div class="row">
+          <div class="col-md-2 m-1">
+            <button type="button" routerLink="/hiring/interview/active" class="btn btn-outline-secondary h" routerLinkActive="activebuttons">Active Interview</button>
+          </div>
+          <div class="col-md-2 m-1">
+            <button type="button" routerLink="/hiring/interview/past"  class="btn btn-outline-secondary h" routerLinkActive="activebuttons">Past Interview</button>
+          </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>  
+
+    <!-- <div class="row">
         <div class="col-sm-6">
             <p class="hr-p">Interview Status: In Review</p>
             <div class="row">
@@ -78,6 +90,6 @@
                 
             </div>
         </div>
-    </div>
+    </div> -->
 
 </div>
