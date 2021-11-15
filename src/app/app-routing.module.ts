@@ -16,6 +16,7 @@ import { StaffComponent } from './modules/staff/staff.component';
 import { ApplicationsComponent } from './modules/hiring/applications/applications.component';
 import { PastApplicantComponent } from './modules/hiring/applications/past-applicant/past-applicant.component';
 import { SingleApplicantComponent } from './modules/hiring/applications/single-applicant/single-applicant.component';
+import { StaffDetailsComponent } from './modules/staff/staff-details/staff-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -31,10 +32,11 @@ const routes: Routes = [
   { path: 'hiring/application/pastapplications', component: PastApplicantComponent },
   { path: 'hiring/application/singleapplications', component: SingleApplicantComponent },
   { path: 'reports', component: ReportsComponent },
-  { path: 'departments', component: DepartmentsComponent },
-  { path: 'add-staff', component: AddStaffComponent },
-  { path: 'on-leave', component: OnLeaveComponent },
-  {path: 'active-staff', component: ActiveStaffComponent},
+  { path: 'staff/departments', component: DepartmentsComponent },
+  { path: 'staff/add-staff', component: AddStaffComponent },
+  { path: 'staff/view', component: StaffDetailsComponent},
+  { path: 'leave-manager/on-leave', component: OnLeaveComponent },
+  {path: 'leave-manager/active-staff', component: ActiveStaffComponent},
   { path: '**', redirectTo: 'dashboard' },
 ];
 
