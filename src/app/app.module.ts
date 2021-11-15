@@ -24,9 +24,11 @@ import { CapitalizePipe } from './shared/pipes/capitalize.pipe';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
+import { ActiveListingComponent } from './modules/hiring/jobs/active-listing/active-listing.component';
+import { PastListingComponent } from './modules/hiring/jobs/past-listing/past-listing.component';
+import { NewApplicantComponent } from './modules/hiring/applications/new-applicant/new-applicant.component';
 import { OnLeaveComponent } from './modules/leave-manager/on-leave/on-leave.component';
 import { ActiveStaffComponent } from './modules/leave-manager/active-staff/active-staff.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +53,9 @@ import { ActiveStaffComponent } from './modules/leave-manager/active-staff/activ
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    ActiveListingComponent,
+    PastListingComponent,
+    NewApplicantComponent,
     OnLeaveComponent,
     ActiveStaffComponent
   ],
