@@ -1,0 +1,16 @@
+.container{
+    margin: 0 0 0 30px;
+}
+th, .tr-date{
+    color: #004763;
+}
+.interview-table td{ 
+    padding: 8px;
+    width: 250px;
+}
+.tr-hired{
+    color: #43a047; ;
+}
+.tr-declined{
+    color:#F30B0B;
+}
