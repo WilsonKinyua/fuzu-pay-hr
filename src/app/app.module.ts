@@ -33,6 +33,7 @@ import { PastApplicantComponent } from './modules/hiring/applications/past-appli
 import { SingleApplicantComponent } from './modules/hiring/applications/single-applicant/single-applicant.component';
 import { ActiveInterviewComponent } from './modules/hiring/interviews/active-interview/active-interview.component';
 import { PastInterviewComponent } from './modules/hiring/interviews/past-interview/past-interview.component';
+import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-letter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +66,8 @@ import { PastInterviewComponent } from './modules/hiring/interviews/past-intervi
     PastApplicantComponent,
     SingleApplicantComponent,
     ActiveInterviewComponent,
-    PastInterviewComponent
+    PastInterviewComponent,
+    OfferLetterComponent,
   ],
   imports: [
     BrowserModule,
