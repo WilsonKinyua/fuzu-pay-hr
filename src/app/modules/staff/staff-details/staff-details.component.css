@@ -2,7 +2,7 @@
 
 .card-body {
   position: absolute;
-  left: 20rem;
+  left: 15rem;
 }
 .card {
   margin-top: 2.5rem;
@@ -10,7 +10,6 @@
 }
 .abb {
   margin-top: 2.2rem;
-  font-family: Regular, Semibold and Bold;
   color: #004763;
   box-shadow: 2px 2px 2px 2px #b9bdbe;
   height: 4rem;
@@ -19,61 +18,81 @@
 
 .back {
   font-weight: bold;
-  font-family: Regular, Semibold and Bold;
   font-size: 18px;
 }
-.table,
-.table th,
-.table tr,
-.table td {
-  border: none;
-}
+
 .int {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.btnhomed{
+.btnhomed {
   border: none;
   color: #004763;
   cursor: pointer;
   text-transform: capitalize;
-  font-family: Regular, Semibold and Bold; 
   border: 2px solid;
   box-shadow: 1px 1px 1px 1px #004763;
   text-align: center;
-  margin:0 2rem;
+  margin: 0 2rem;
   border-radius: 2px;
   padding-top: -1rem;
   font-size: 1.3rem;
   padding-left: 4rem;
   padding-right: 4rem;
-
 }
-.btn-bn{
+.btn-bn {
   border: none;
   background-color: #004763;
   color: white;
   cursor: pointer;
   text-transform: capitalize;
-  font-family: Regular, Semibold and Bold; 
-  
- 
+
   text-align: center;
-  margin:0 2rem;
+  margin: 0 2rem;
   border-radius: 2px;
   padding-top: -1rem;
   font-size: 1.3rem;
- 
-
 }
-.pit{
+.pit {
   display: flex;
   margin-left: 4rem;
- 
 }
 
-.hep{
+.hep {
   margin-top: 1rem;
+}
+
+/* ==================== */
+.btn-edit {
+  margin-right: 20px;
+}
+
+.form-select {
+  margin-left: 40px;
+  border: 1px solid #004763;
+  color: #004763;
+  font-weight: 600;
+}
+
+.icon i {
+  font-size: 10em;
+}
+
+.card-body p,
+.card-body h6,
+.card-body h4 {
+  color: #0a0a0a;
+}
+
+.fa-map-marker {
+  font-size: 0.8em;
+  color: #0a0a0a;
+  margin-right: 10px;
+}
+
+
+tbody {
+  margin-top: 200px !important;
 }
