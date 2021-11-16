@@ -114,6 +114,10 @@ tbody tr td {
 }
 /* top navigation */
 
+.navbar {
+  overflow: hidden;
+}
+
 .navbar-expand-lg {
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -237,44 +241,39 @@ footer {
 
 /* ======================== Dashboard ================================== */
 
-.card{
-  box-shadow:0 1px 1px 1px #ccc;
+.card {
+  box-shadow: 0 1px 1px 1px #ccc;
   padding: 25px;
 }
-.small-txt{
+.small-txt {
   text-align: center;
 }
-.tableDay{
-  margin-bottom:30px ;
+.tableDay {
+  margin-bottom: 30px;
   padding: 15px;
   height: 20vh;
-
 }
-.cell{
+.cell {
   margin-left: -50%;
-
 }
-.card-btn{
+.card-btn {
   background-color: #004763;
-  color: #FFFFFF;
-  outline:none;
+  color: #ffffff;
+  outline: none;
   border: none;
   border-radius: 2px;
   padding: 1px 23px;
-
 }
 
-
 /* ======================== Hiring ===================================== */
-.activebuttons{
+.activebuttons {
   color: #fff;
   background-color: #004763;
 }
-.h:hover{
+.h:hover {
   color: #fff;
   background-color: #004763f6;
 }
-
 
 /* ======================== Leave manager ============================== */
 .button-group {
@@ -309,10 +308,9 @@ footer {
   font-size: 10px;
 }
 
-
 /* departments styling */
 
-.btnhomed{
+.btnhomed {
   border: none;
   color: #004763;
   cursor: pointer;
@@ -321,25 +319,24 @@ footer {
   border: 2px solid;
   box-shadow: 1px 1px 1px 1px #004763;
   text-align: center;
-  margin:0 2rem;
+  margin: 0 2rem;
   border-radius: 2px;
   padding-top: -1rem;
   font-size: 1.3rem;
   padding-left: 4rem;
   padding-right: 4rem;
-
 }
-.btnhomed:active{
+.btnhomed:active {
   background-color: #004763;
   color: white;
 }
 
-
-table, tr, td,th {
+table,
+tr,
+td,
+th {
   border: none;
 }
-
-
 
 .btnnn {
   border: none;
@@ -351,63 +348,52 @@ table, tr, td,th {
   border: 1px solid;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin:0 2rem;
+  margin: 0 2rem;
   background-color: white;
   height: 3rem;
   text-transform: capitalize;
-
 }
 
-
-.classed{
-    display: flex;
-    box-shadow: 1px 1px 2px 2px #dadfe0;
-    margin-top: 4rem;
-    height: 4.1rem;
-
-
-
+.classed {
+  display: flex;
+  box-shadow: 1px 1px 2px 2px #dadfe0;
+  margin-top: 4rem;
+  height: 4.1rem;
 }
 
-.classed p{
+.classed p {
   font-family: Regular, Semibold and Bold;
   font-size: 1.5rem;
   color: black;
 }
 
-.down{
-position: absolute;
-right: 120px;
-
-
-
+.down {
+  position: absolute;
+  right: 120px;
 }
 
-.down button{
+.down button {
   color: white;
   background-color: #004763;
   border-radius: 8px;
 }
 
-.john{
+.john {
   color: #004763;
   font-family: Regular, Semibold and Bold;
   font-size: 1.5rem;
 }
 
-
-.tableth{
+.tableth {
   color: #004763;
   font-family: Regular, Semibold and Bold;
   font-size: 1.5rem;
-
 }
 
-.table td{
+.table td {
   font-family: Regular, Semibold and Bold;
   font-size: 1rem;
-
 }
-tr{
-  font-size: .9rem;
+tr {
+  font-size: 0.9rem;
 }

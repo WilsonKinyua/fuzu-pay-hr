@@ -21,6 +21,7 @@ import { HiredComponent } from './modules/hiring/hired/hired.component';
 import { InterviewsComponent } from './modules/hiring/interviews/interviews.component';
 import { ActiveInterviewComponent } from './modules/hiring/interviews/active-interview/active-interview.component';
 import { PastInterviewComponent } from './modules/hiring/interviews/past-interview/past-interview.component';
+import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-letter.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'leave-manager', component: LeaveManagerComponent },
   { path: 'hiring', component: HiringComponent },
   { path: 'hiring/hired', component: HiredComponent },
+  { path: 'hiring/offer-letter', component: OfferLetterComponent },
   { path: 'hiring/jobs', component: JobsComponent },
   { path: 'hiring/interview', component: InterviewsComponent },
   { path: 'hiring/jobs/newlisting', component: NewListingComponent},
