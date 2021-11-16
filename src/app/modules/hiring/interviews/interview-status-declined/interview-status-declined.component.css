@@ -1,3 +1,6 @@
+.container {
+  margin-left: 4%;
+}
 .hr-btn {
   background-color: #ffffff;
   border: 1px solid #004763;
@@ -65,8 +68,8 @@
 .cv-download {
   margin-left: 30%;
 }
-button {
-  height: 40px;
-  width: 150px;
-  font-size: 14px;
+
+.text-bold {
+  font-weight: bold;
+  margin-right: 10px;
 }
