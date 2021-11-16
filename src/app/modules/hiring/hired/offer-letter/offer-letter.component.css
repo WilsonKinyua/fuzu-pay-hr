@@ -1,0 +1,35 @@
+.container{
+    font-family: Regular, Semibold and Bold;
+    font-size: 18px;
+    color: #004763;  
+   
+
+}
+.can{
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #345d6d;
+    margin-top: 1.1rem;
+}
+
+.send{
+    color: #004763;
+    border: 4px #004763;
+    font-size: 24px;
+    box-shadow: 1px 2px 1px 1px;
+    
+}
+
+.tea{
+    position:absolute;
+    left: 800px;
+    top:200px;
+    font-size: 1.8rem;
+
+}
+
+.let{
+    margin-top: 1.3rem;
+
+}
