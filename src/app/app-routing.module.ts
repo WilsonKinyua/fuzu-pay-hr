@@ -22,7 +22,8 @@ import { InterviewsComponent } from './modules/hiring/interviews/interviews.comp
 import { ActiveInterviewComponent } from './modules/hiring/interviews/active-interview/active-interview.component';
 import { PastInterviewComponent } from './modules/hiring/interviews/past-interview/past-interview.component';
 import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-letter.component';
-
+import { InterviewStatusDeclinedComponent } from './modules/hiring/interviews/interview-status-declined/interview-status-declined.component';
+import { InterviewStatusInreviewComponent } from './modules/hiring/interviews/interview-status-inreview/interview-status-inreview.component';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
@@ -41,6 +42,8 @@ const routes: Routes = [
   { path: 'hiring/application/singleapplications', component: SingleApplicantComponent },
   { path: 'hiring/interview/active', component: ActiveInterviewComponent },
   { path: 'hiring/interview/past', component: PastInterviewComponent },
+  { path: 'hiring/interview/declined', component: InterviewStatusDeclinedComponent },
+  { path: 'hiring/interview/inreview', component: InterviewStatusInreviewComponent },
   { path: 'reports', component: ReportsComponent },
   { path: 'staff/departments', component: DepartmentsComponent },
   { path: 'staff/add-staff', component: AddStaffComponent },
