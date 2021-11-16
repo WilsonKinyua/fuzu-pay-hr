@@ -34,6 +34,8 @@ import { SingleApplicantComponent } from './modules/hiring/applications/single-a
 import { ActiveInterviewComponent } from './modules/hiring/interviews/active-interview/active-interview.component';
 import { PastInterviewComponent } from './modules/hiring/interviews/past-interview/past-interview.component';
 import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-letter.component';
+import { InterviewStatusDeclinedComponent } from './modules/hiring/interviews/interview-status-declined/interview-status-declined.component';
+import { InterviewStatusInreviewComponent } from './modules/hiring/interviews/interview-status-inreview/interview-status-inreview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,8 @@ import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-
     ActiveInterviewComponent,
     PastInterviewComponent,
     OfferLetterComponent,
+    InterviewStatusDeclinedComponent,
+    InterviewStatusInreviewComponent,
   ],
   imports: [
     BrowserModule,
