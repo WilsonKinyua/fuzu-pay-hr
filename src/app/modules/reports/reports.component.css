@@ -1,0 +1,86 @@
+.container {
+  margin-left: 2%;
+}
+button {
+  border-radius: 4%;
+}
+.two {
+  border-right: 1px solid lightgrey;
+  height: 30px;
+  position: absolute;
+  left: 65%;
+  top: 49%;
+}
+.eight {
+  border-right: 1px solid lightgrey;
+  height: 30px;
+  position: absolute;
+  left: 38%;
+  top: 76%;
+}
+.six {
+  border-right: 1px solid lightgrey;
+  height: 30px;
+  position: absolute;
+  left: 24%;
+  top: 49%;
+}
+.seven {
+  border-right: 1px solid lightgrey;
+  height: 33px;
+  position: absolute;
+  left: 24%;
+  top: 76%;
+}
+.onus p {
+  font-weight: 600;
+}
+.nine {
+  border-right: 1px solid lightgrey;
+  height: 33px;
+  position: absolute;
+  left: 51%;
+  top: 76%;
+}
+.five {
+  border-right: 1px solid lightgrey;
+  height: 30px;
+  position: absolute;
+  left: 38%;
+  top: 42%;
+}
+.four {
+  border-right: 1px solid lightgrey;
+  height: 55px;
+  position: absolute;
+  left: 52%;
+  top: 50%;
+}
+.three {
+  border-right: 1px solid lightgrey;
+  height: 50px;
+  position: absolute;
+  left: 80%;
+  top: 49%;
+}
+.top-header-table {
+  margin-right: 1%;
+}
+h6,
+p {
+  color: #004763;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+}
+
+label {
+  color: black;
+  font-weight: bold;
+  font-size: small;
+}
+.form-select {
+  color: #004763;
+  font-weight: bold;
+  font-size: small;
+}
