@@ -2,6 +2,7 @@
     font-family: Regular, Semibold and Bold;
     font-size: 18px;
     color: #004763;  
+    margin-left: 4rem;
 
 }
 .can{
@@ -20,10 +21,10 @@
     
 }
 
-.mb-3{
+.tea{
     position:absolute;
-    left: 1200px;
-    top:30px;
+    left: 800px;
+    top:200px;
     font-size: 1.8rem;
 
 }
