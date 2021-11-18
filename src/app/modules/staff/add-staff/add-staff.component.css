@@ -24,8 +24,7 @@
 input[type="number"] {
   width: 120px;
   height: 25px;
-  border-radius: 2px;
-  border: 1px solid #000;
+  border-radius: 4px;
 }
 input[type="text"] {
   width: 120px;
@@ -40,8 +39,7 @@ input[type="email"] {
 input[type="date"] {
   width: 120px;
   height: 25px;
-  border-radius: 2px;
-  border: 1px solid #000;
+  border-radius: 4px;
 }
 .p-payment {
   color: #004763;
@@ -67,4 +65,9 @@ label {
 .download {
   height: 50px;
   width: 100px;
+}
+
+
+.staff_number {
+  font-size: 10px;
 }
