@@ -23,6 +23,11 @@
       <input type="radio" class="details" name="details" value="upload document" (click)="showTextBox($event)">Upload
       document
     </div>
+    <div class="row" *ngIf="isLoading">
+      <div class="col-md-12 text-center">
+        <app-loader></app-loader>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12">
         <div class="alert alert-success" role="alert" *ngIf="successMessage">
@@ -37,7 +42,7 @@
         </div>
       </div>
     </div>
-    <form (ngSubmit)="addStaffOnSubmit(f)" #f="ngForm">
+    <form (ngSubmit)="addStaffOnSubmit(f)" #f="ngForm" *ngIf="!isLoading">
       <div id="input-details">
         <div class="container">
           <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
@@ -81,7 +86,7 @@
             <div class="col mb-2">
               <label class="mb-1" for="position">Department</label>
               <!-- <input type="text" name="department" class="form-control" ngModel #department> -->
-              <select name="department" id="department" class="form-select" ngModel #department >
+              <select name="department" id="department" class="form-select" ngModel #department>
                 <option *ngFor="let dep of departments" value="{{ dep.pk }}">{{ dep.name }}</option>
               </select>
             </div>
@@ -92,7 +97,7 @@
             <div class="col mb-2">
               <label class="mb-1" for="employment-type">Employment Type</label>
               <!-- <input type="text" name="employment_type" class="form-control" ngModel #employment_type> -->
-              <select name="employment_type" id="employment_type" class="form-select" ngModel #employment_type >
+              <select name="employment_type" id="employment_type" class="form-select" ngModel #employment_type>
                 <option *ngFor="let emp of employmentType" value="{{ emp.pk }}">{{ emp.name }}</option>
               </select>
             </div>
