@@ -15,4 +15,9 @@ export class EmployeeService {
   addStaff(employee: Staff) {
     return this.http.post(this.sourceUrl + '/human-resource/api/employees/', employee);
   }
+
+  // get all employees
+  getAllEmployees() {
+    return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
+  }
 }

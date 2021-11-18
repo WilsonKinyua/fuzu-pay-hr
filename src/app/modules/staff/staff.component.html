@@ -93,71 +93,24 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr *ngFor="let staff of staffs">
               <td class="main-color">
                 <a routerLink="/staff/view">
-                  John Doe
+                  {{ staff.other_names }} {{ staff.surname }}
                 </a>
               </td>
-              <td>Information Technology</td>
-              <td>Software Developer</td>
-              <td>Active</td>
-              <td>Fulltime</td>
-            </tr>
-            <tr>
-              <td class="main-color">
-                <a routerLink="/staff/view">
-                  John Doe
-                </a>
+              <td>
+                {{ staff.department }}
               </td>
-              <td>Information Technology</td>
-              <td>Software Developer</td>
-              <td>Active</td>
-              <td>Fulltime</td>
-            </tr>
-            <tr>
-              <td class="main-color">
-                <a routerLink="/staff/view">
-                  John Doe
-                </a>
+              <td>
+                {{ staff.position }}
               </td>
-              <td>Information Technology</td>
-              <td>Software Developer</td>
-              <td>Active</td>
-              <td>Fulltime</td>
-            </tr>
-            <tr>
-              <td class="main-color">
-                <a routerLink="/staff/view">
-                  John Doe
-                </a>
+              <td>
+                {{ staff.status }}
               </td>
-              <td>Information Technology</td>
-              <td>Software Developer</td>
-              <td>Active</td>
-              <td>Fulltime</td>
-            </tr>
-            <tr>
-              <td class="main-color">
-                <a routerLink="/staff/view">
-                  John Doe
-                </a>
+              <td>
+                {{ staff.employment_type }}
               </td>
-              <td>Information Technology</td>
-              <td>Software Developer</td>
-              <td>Active</td>
-              <td>Fulltime</td>
-            </tr>
-            <tr>
-              <td class="main-color">
-                <a routerLink="/staff/view">
-                  John Doe
-                </a>
-              </td>
-              <td>Information Technology</td>
-              <td>Software Developer</td>
-              <td>Active</td>
-              <td>Fulltime</td>
             </tr>
           </tbody>
         </table>
