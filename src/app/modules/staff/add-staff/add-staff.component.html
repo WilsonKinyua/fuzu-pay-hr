@@ -23,7 +23,20 @@
       <input type="radio" class="details" name="details" value="upload document" (click)="showTextBox($event)">Upload
       document
     </div>
-
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-success" role="alert" *ngIf="successMessage">
+          {{successMessage}}
+        </div>
+        <div *ngIf="errorMessage">
+          <span *ngFor="let item of errorMessage | keyvalue">
+            <div class="alert alert-danger text-capitalize" role="alert">
+              {{item.key}} - {{item.value}}
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
     <form (ngSubmit)="addStaffOnSubmit(f)" #f="ngForm">
       <div id="input-details">
         <div class="container">
@@ -31,11 +44,11 @@
             <div class="col mb-2 employee_code">
               <label class="mb-1" for="employee-code">Employee Code</label>
               <input type="text" id="employee_code" name="employee_id" class="form-control" ngModel #employee_id
-                required >
-                <!-- display random number -->
-                <span class="staff_number">
-                 Or Copy: {{employeeCode}}
-                </span>
+                required>
+              <!-- display random number -->
+              <span class="staff_number">
+                Or Copy: {{employeeCode}}
+              </span>
             </div>
             <div class="col mb-2">
               <label class="mb-1" for="surname">Surname</label>
@@ -95,7 +108,8 @@
             </div>
             <div class="col mb-2">
               <label class="mb-1" for="emergencyphone">Emergency Contact Phone</label>
-              <input type="number" name="emergency_contact_number" class="form-control" ngModel #emergency_contact_number>
+              <input type="number" name="emergency_contact_number" class="form-control" ngModel
+                #emergency_contact_number>
             </div>
 
           </div>
@@ -141,7 +155,7 @@
       </div>
       <div class="row">
         <div class="col-md-8 text-center mt-5">
-          <button type="submit" class="submit-btn" >Save Details</button>
+          <button type="submit" class="submit-btn">Save Details</button>
         </div>
       </div>
     </form>

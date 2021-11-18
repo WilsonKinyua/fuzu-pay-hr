@@ -12,6 +12,10 @@ export class AddStaffComponent implements OnInit {
 
   employeeCode:string;
 
+  // empty error message array
+  errorMessage: any = [];
+  successMessage = null;
+
   ngOnInit(): void {
     this.generateEmployeeCode();
   }
@@ -40,8 +44,10 @@ export class AddStaffComponent implements OnInit {
     console.log(form.value);
     this.staffService.addStaff(form.value).subscribe((res) => {
       console.log(res);
+      this.successMessage = res
     },error=>{
-      console.log(error);
+      this.errorMessage = error.error;
+      console.log(this.errorMessage);
     });
   }
 }
