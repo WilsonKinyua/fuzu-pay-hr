@@ -80,7 +80,10 @@
             </div>
             <div class="col mb-2">
               <label class="mb-1" for="position">Department</label>
-              <input type="text" name="department" class="form-control" ngModel #department>
+              <!-- <input type="text" name="department" class="form-control" ngModel #department> -->
+              <select name="department" id="department" class="form-select" ngModel #department >
+                <option *ngFor="let dep of departments" value="{{ dep.pk }}">{{ dep.name }}</option>
+              </select>
             </div>
             <div class="col mb-2">
               <label class="mb-1" for="position">Position</label>
@@ -88,7 +91,10 @@
             </div>
             <div class="col mb-2">
               <label class="mb-1" for="employment-type">Employment Type</label>
-              <input type="text" name="employment_type" class="form-control" ngModel #employment_type>
+              <!-- <input type="text" name="employment_type" class="form-control" ngModel #employment_type> -->
+              <select name="employment_type" id="employment_type" class="form-select" ngModel #employment_type >
+                <option *ngFor="let emp of employmentType" value="{{ emp.pk }}">{{ emp.name }}</option>
+              </select>
             </div>
             <div class="col mb-2">
               <label class="mb-1" for="employment-date">Employment Date</label>
