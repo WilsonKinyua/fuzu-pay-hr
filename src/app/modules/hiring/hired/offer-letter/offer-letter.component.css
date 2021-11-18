@@ -1,8 +1,7 @@
 .container{
     font-family: Regular, Semibold and Bold;
     font-size: 18px;
-    color: #004763;  
-   
+    color: #004763;
 
 }
 .can{
@@ -23,7 +22,7 @@
 
 .tea{
     position:absolute;
-    left: 800px;
+    left: 1200px;
     top:200px;
     font-size: 1.8rem;
 
