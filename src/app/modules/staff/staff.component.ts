@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/core/services/employee.service';
 
 @Component({
   selector: 'app-staff',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./staff.component.css'],
 })
 export class StaffComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+  staffs;
+  constructor(private employeeService: EmployeeService) {}
+
+  ngOnInit(): void {
+    this.getAllStaff();
+  }
 
   // change the button current state
   onClick(event: any) {
@@ -21,5 +26,14 @@ export class StaffComponent implements OnInit {
     }
     event.target.classList.add('btn-current-active');
     // const currentClickedButtonId = event.target.id;
+  }
+
+
+  // fetch all staff
+  getAllStaff() {
+    this.employeeService.getAllEmployees().subscribe((res) => {
+      console.log(res);
+      this.staffs = res;
+    });
   }
 }

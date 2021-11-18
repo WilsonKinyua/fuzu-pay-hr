@@ -12,6 +12,6 @@ export class DepartmentService {
 
   // get all departments
   getDepartments(){
-    return this.http.get(`${this.sourceUrl}/human-resource/api/departments`);
+    return this.http.get(`${this.sourceUrl}/human-resource/api/departments/`);
   }
 }

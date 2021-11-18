@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { DepartmentService } from 'src/app/core/services/department.service';
+import { EmploymentTypeService } from 'src/app/core/services/employment-type.service';
 import { EmployeeService } from '../../../core/services/employee.service';
 
 @Component({
@@ -8,9 +10,15 @@ import { EmployeeService } from '../../../core/services/employee.service';
   styleUrls: ['./add-staff.component.css'],
 })
 export class AddStaffComponent implements OnInit {
-  constructor(private staffService: EmployeeService) {}
+  constructor(
+    private staffService: EmployeeService,
+    private departmentService: DepartmentService,
+    private employmentTypeService: EmploymentTypeService
+  ) {}
 
-  employeeCode:string;
+  employeeCode: string;
+  departments;
+  employmentType;
 
   // empty error message array
   errorMessage: any = [];
@@ -18,6 +26,8 @@ export class AddStaffComponent implements OnInit {
 
   ngOnInit(): void {
     this.generateEmployeeCode();
+    this.getDepartments();
+    this.getEmploymentTypes();
   }
 
   showTextBox(event) {
@@ -42,12 +52,37 @@ export class AddStaffComponent implements OnInit {
   // add staff
   addStaffOnSubmit(form: NgForm) {
     console.log(form.value);
-    this.staffService.addStaff(form.value).subscribe((res) => {
+    this.staffService.addStaff(form.value).subscribe(
+      (res) => {
+        console.log(res);
+        this.successMessage = res;
+      },
+      (error) => {
+        this.errorMessage = error.error;
+        console.log(this.errorMessage);
+      }
+    );
+  }
+
+  // get departments
+  getDepartments() {
+    this.departmentService.getDepartments().subscribe((res) => {
+      console.log(
+        '================================ Departments =========================='
+      );
+      this.departments = res;
       console.log(res);
-      this.successMessage = res
-    },error=>{
-      this.errorMessage = error.error;
-      console.log(this.errorMessage);
+    });
+  }
+
+  // get employment types
+  getEmploymentTypes() {
+    this.employmentTypeService.getEmploymentTypes().subscribe((res) => {
+      console.log(
+        '================================ Employment Types =========================='
+      );
+      this.employmentType = res;
+      console.log(res);
     });
   }
 }
