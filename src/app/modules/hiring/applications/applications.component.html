@@ -1,15 +1,19 @@
 <app-hiring></app-hiring>
-<div *ngIf="!hasRoute('singleapplications')" class="container-fluid mt-5 shadow p-3 mb-5 bg-body rounded">
-  <div class="row ">
-    <div class="col-md-2 m-1">
-      <button type="button" routerLink="/hiring/application/newapplication" class="btn btn-outline-secondary h" routerLinkActive="activebuttons">New Applicant</button>
-    </div>
-    <div class="col-md-2 m-1">
-      <button type="button" routerLink="/hiring/application/pastapplications"  class="btn btn-outline-secondary h" routerLinkActive="activebuttons">Past Applicants</button>
+<section class="content">
+  <div *ngIf="!hasRoute('singleapplications')" class="container-fluid mt-5 shadow p-3 mb-5 bg-body rounded">
+    <div class="row ">
+      <div class="col-md-2 m-1">
+        <button type="button" routerLink="/hiring/application/newapplication" class="btn btn-outline-secondary h"
+          routerLinkActive="activebuttons">New Applicant</button>
+      </div>
+      <div class="col-md-2 m-1">
+        <button type="button" routerLink="/hiring/application/pastapplications" class="btn btn-outline-secondary h"
+          routerLinkActive="activebuttons">Past Applicants</button>
+      </div>
     </div>
   </div>
-</div>
-<div *ngIf="hasRoute('newapplication')">
-  <app-new-applicant></app-new-applicant>
-</div>
-<router-outlet></router-outlet>  
+  <div *ngIf="hasRoute('newapplication')">
+    <app-new-applicant></app-new-applicant>
+  </div>
+  <router-outlet></router-outlet>
+</section>
