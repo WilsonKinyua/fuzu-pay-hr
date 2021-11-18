@@ -19,6 +19,7 @@ export class AddStaffComponent implements OnInit {
   employeeCode: string;
   departments;
   employmentType;
+  isLoading = false;
 
   // empty error message array
   errorMessage: any = [];
@@ -52,13 +53,16 @@ export class AddStaffComponent implements OnInit {
   // add staff
   addStaffOnSubmit(form: NgForm) {
     console.log(form.value);
+    this.isLoading = true;
     this.staffService.addStaff(form.value).subscribe(
       (res) => {
         console.log(res);
+        this.isLoading = false;
         this.successMessage = res;
       },
       (error) => {
         this.errorMessage = error.error;
+        this.isLoading = false;
         console.log(this.errorMessage);
       }
     );

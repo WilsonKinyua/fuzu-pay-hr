@@ -93,9 +93,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let staff of staffs">
+            <tr class="preloader" *ngIf="isLoading">
+              <td colspan="5" class="text-center mt-5">
+                <app-loader></app-loader>
+              </td>
+            </tr>
+            <tr *ngFor="let staff of staffs" class="text-capitalize" >
               <td class="main-color">
-                <a routerLink="/staff/view">
+                <a routerLink="/staff/{{ staff.employee_id }}">
                   {{ staff.other_names }} {{ staff.surname }}
                 </a>
               </td>
