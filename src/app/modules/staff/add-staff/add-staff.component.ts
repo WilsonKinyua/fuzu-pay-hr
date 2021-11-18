@@ -40,6 +40,8 @@ export class AddStaffComponent implements OnInit {
     console.log(form.value);
     this.staffService.addStaff(form.value).subscribe((res) => {
       console.log(res);
+    },error=>{
+      console.log(error);
     });
   }
 }
