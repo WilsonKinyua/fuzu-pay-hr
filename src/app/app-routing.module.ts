@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: 'reports', component: ReportsComponent },
   { path: 'staff/departments', component: DepartmentsComponent },
   { path: 'staff/add-staff', component: AddStaffComponent },
-  { path: 'staff/view', component: StaffDetailsComponent},
+  { path: 'staff/:employee_id', component: StaffDetailsComponent},
   { path: 'leave-manager/on-leave', component: OnLeaveComponent },
   {path: 'leave-manager/active-staff', component: ActiveStaffComponent},
   { path: '**', redirectTo: 'dashboard' },
