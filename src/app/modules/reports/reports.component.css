@@ -6,7 +6,7 @@ button {
 }
 .two {
   border-right: 1px solid lightgrey;
-  height: 30px;
+  height: 37px;
   position: absolute;
   left: 65%;
   top: 49%;
@@ -20,10 +20,11 @@ button {
 }
 .six {
   border-right: 1px solid lightgrey;
-  height: 30px;
+  height: 32px;
   position: absolute;
   left: 24%;
-  top: 49%;
+  top:50%;
+
 }
 .seven {
   border-right: 1px solid lightgrey;
@@ -37,10 +38,10 @@ button {
 }
 .nine {
   border-right: 1px solid lightgrey;
-  height: 33px;
+  height: 36px;
   position: absolute;
   left: 51%;
-  top: 76%;
+  top:75%;
 }
 .five {
   border-right: 1px solid lightgrey;
@@ -54,14 +55,15 @@ button {
   height: 55px;
   position: absolute;
   left: 52%;
-  top: 50%;
+  top:47%;
+
 }
 .three {
   border-right: 1px solid lightgrey;
   height: 50px;
   position: absolute;
   left: 80%;
-  top: 49%;
+  top:47%;
 }
 .top-header-table {
   margin-right: 1%;
