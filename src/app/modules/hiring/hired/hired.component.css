@@ -41,13 +41,15 @@
   align-items: center;
 }
 
-.left {
-  position: absolute;
-  font-size: 18px;
-  color: #004763;
-  margin: 5rem;
-  top: 19rem;
-}
+
 .table tr {
   margin: 5rem;
+}
+
+.left {
+  /* position: absolute; */
+  font-size: 18px;
+  color: #004763;
+  margin-left: 5rem !important;
+  top: 19rem;
 }

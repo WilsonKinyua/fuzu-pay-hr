@@ -1,4 +1,11 @@
-// $(document).ready(function () {
+$(document).ready(function () {
+   // generate random staff number
+  //  const year = new Date().getFullYear();
+  //  const randomNumber = Math.floor(Math.random() * 1000);
+  //  const code = Math.random().toString(36).substring(2, 4).toUpperCase();
+  //  const employeeCode = `${code}/${randomNumber}/${year}`;
+  //  document.getElementById('employee_code').value = employeeCode;
+  //  console.log(employeeCode);
 //   // When the user scrolls the page, execute myFunction
 //   window.onscroll = function () {
 //     myFunction();
@@ -18,4 +25,5 @@
 //       navbar.classList.remove("sticky");
 //     }
 //   }
-// });
+});
+
