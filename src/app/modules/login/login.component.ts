@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
         this.isLoading = false;
         this.token = response;
         this.tokenService.setToken(this.token.token);
+        this.authService.isLoggedIn();
+        console.log(this.authService.isLoggedIn());
         this.router.navigateByUrl('/')
         .then(() => {
           location.reload();
