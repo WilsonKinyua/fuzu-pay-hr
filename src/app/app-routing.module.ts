@@ -29,7 +29,7 @@ import { MainComponent } from './modules/main/main.component';
 import { AlreadyLoggedService } from './core/services/already-logged.service';
 import { EnsureAuthenticatedService } from './core/services/ensure-authenticated.service';
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', component: DashboardComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -79,7 +79,7 @@ const routes: Routes = [
     // canActivate: [AlreadyLoggedService],
   },
   { path: 'app', component: MainComponent },
-  { path: '**', redirectTo: 'dashboard' },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
