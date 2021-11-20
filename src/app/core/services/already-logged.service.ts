@@ -8,7 +8,7 @@ export class AlreadyLoggedService {
   constructor(private router: Router) {}
 
   canActivate(): boolean {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('currentUserToken')) {
       this.router.navigateByUrl('/dashboard');
       return false;
     } else {
