@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginService } from '../../core/services/login.service';
 import { Subject, throwError } from 'rxjs';
+import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/core/services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,9 @@ import { Subject, throwError } from 'rxjs';
 export class LoginComponent implements OnInit {
   constructor(
     private loginService: LoginService,
-    private tokenService: TokenService
+    private tokenService: TokenService,
+    private router: Router,
+    private authService: AuthenticationService
   ) {}
 
   isLoading = false;
@@ -29,6 +33,10 @@ export class LoginComponent implements OnInit {
         this.isLoading = false;
         this.token = response;
         this.tokenService.setToken(this.token.token);
+        this.router.navigateByUrl('/')
+        .then(() => {
+          location.reload();
+        });
         // this.loginService.setToken(response.token);
         // this.loginService.setUser(response.user);
         // this.loginService.setIsLoggedIn(true);

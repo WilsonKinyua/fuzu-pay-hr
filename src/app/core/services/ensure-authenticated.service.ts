@@ -8,7 +8,7 @@ export class EnsureAuthenticatedService {
   constructor(private router: Router) {}
 
   canActivate(): boolean {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('currentUserToken')) {
       return true;
     } else {
       this.router.navigateByUrl('/login');

@@ -33,7 +33,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    // canActivate: [EnsureAuthenticatedService],
+    canActivate: [EnsureAuthenticatedService],
   },
   { path: 'staff', component: StaffComponent },
   { path: 'leave-manager', component: LeaveManagerComponent },
