@@ -1,3 +1,4 @@
+import { TokenService } from './../../core/services/token.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LoginService } from '../../core/services/login.service';
@@ -9,10 +10,14 @@ import { Subject, throwError } from 'rxjs';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private loginService: LoginService) {}
+  constructor(
+    private loginService: LoginService,
+    private tokenService: TokenService
+  ) {}
 
   isLoading = false;
   errorMessage: any = [];
+  token;
 
   ngOnInit(): void {}
 
@@ -22,6 +27,8 @@ export class LoginComponent implements OnInit {
       (response) => {
         console.log(response);
         this.isLoading = false;
+        this.token = response;
+        this.tokenService.setToken(this.token.token);
         // this.loginService.setToken(response.token);
         // this.loginService.setUser(response.user);
         // this.loginService.setIsLoggedIn(true);

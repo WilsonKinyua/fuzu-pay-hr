@@ -26,9 +26,15 @@ import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-
 import { InterviewStatusDeclinedComponent } from './modules/hiring/interviews/interview-status-declined/interview-status-declined.component';
 import { InterviewStatusInreviewComponent } from './modules/hiring/interviews/interview-status-inreview/interview-status-inreview.component';
 import { MainComponent } from './modules/main/main.component';
+import { AlreadyLoggedService } from './core/services/already-logged.service';
+import { EnsureAuthenticatedService } from './core/services/ensure-authenticated.service';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    // canActivate: [EnsureAuthenticatedService],
+  },
   { path: 'staff', component: StaffComponent },
   { path: 'leave-manager', component: LeaveManagerComponent },
   { path: 'hiring', component: HiringComponent },
@@ -67,7 +73,11 @@ const routes: Routes = [
   { path: 'staff/:employee_id', component: StaffDetailsComponent },
   { path: 'leave-manager/on-leave', component: OnLeaveComponent },
   { path: 'leave-manager/active-staff', component: ActiveStaffComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    // canActivate: [AlreadyLoggedService],
+  },
   { path: 'app', component: MainComponent },
   { path: '**', redirectTo: 'dashboard' },
 ];
