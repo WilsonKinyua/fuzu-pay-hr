@@ -29,11 +29,11 @@ import { MainComponent } from './modules/main/main.component';
 import { AlreadyLoggedService } from './core/services/already-logged.service';
 import { EnsureAuthenticatedService } from './core/services/ensure-authenticated.service';
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [EnsureAuthenticatedService],
+    // canActivate: [EnsureAuthenticatedService],
   },
   { path: 'staff', component: StaffComponent },
   { path: 'leave-manager', component: LeaveManagerComponent },
@@ -79,7 +79,7 @@ const routes: Routes = [
     // canActivate: [AlreadyLoggedService],
   },
   { path: 'app', component: MainComponent },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'dashboard' },
 ];
 
 @NgModule({
