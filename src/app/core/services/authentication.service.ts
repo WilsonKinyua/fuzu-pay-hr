@@ -17,7 +17,4 @@ export class AuthenticationService {
     }
   }
 
-  setIsAuthenticated(isLoggedIn: boolean) {
-    this.isLoggedin = isLoggedIn;
-  }
 }
