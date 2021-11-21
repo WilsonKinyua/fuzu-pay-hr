@@ -7,17 +7,27 @@ import { Staff } from '../../shared/models/staff';
   providedIn: 'root',
 })
 export class EmployeeService {
-  sourceUrl = 'http://127.0.0.1:8000';
+  sourceUrl = 'https://machachari.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
   // add new employee
   addStaff(employee: Staff) {
-    return this.http.post(this.sourceUrl + '/human-resource/api/employees/', employee);
+    return this.http.post(
+      this.sourceUrl + '/human-resource/api/employees/',
+      employee
+    );
   }
 
   // get all employees
   getAllEmployees() {
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
+  }
+
+  // get employee by id
+  getEmployeeById(employee_id: string) {
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/employees/' + employee_id + '/'
+    );
   }
 }

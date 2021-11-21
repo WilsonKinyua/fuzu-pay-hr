@@ -7,8 +7,8 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
   styleUrls: ['./staff.component.css'],
 })
 export class StaffComponent implements OnInit {
-
   staffs;
+  isLoading = false;
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit(): void {
@@ -28,12 +28,19 @@ export class StaffComponent implements OnInit {
     // const currentClickedButtonId = event.target.id;
   }
 
-
   // fetch all staff
   getAllStaff() {
-    this.employeeService.getAllEmployees().subscribe((res) => {
-      console.log(res);
-      this.staffs = res;
-    });
+    this.isLoading = true;
+    this.employeeService.getAllEmployees().subscribe(
+      (res) => {
+        console.log(res);
+        this.staffs = res;
+        this.isLoading = false;
+      },
+      (error) => {
+        console.log(error);
+        this.isLoading = false;
+      }
+    );
   }
 }
