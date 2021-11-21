@@ -4,66 +4,27 @@
 button {
   border-radius: 4%;
 }
-.two {
-  border-right: 1px solid lightgrey;
-  height: 37px;
-  position: absolute;
-  left: 65%;
-  top: 49%;
-}
-.eight {
-  border-right: 1px solid lightgrey;
-  height: 30px;
-  position: absolute;
-  left: 38%;
-  top: 76%;
-}
-.six {
-  border-right: 1px solid lightgrey;
-  height: 32px;
-  position: absolute;
-  left: 24%;
-  top:50%;
+.six{
+  width: 100%;
+  margin: auto;
+  margin-top: 60%;
+  margin-bottom: 50px;
+  transform: rotate(90deg);
+  border-color: #1A85FD;
 
 }
-.seven {
-  border-right: 1px solid lightgrey;
-  height: 33px;
-  position: absolute;
-  left: 24%;
-  top: 76%;
+
+.seven{
+  width: 100%;
+  margin: auto;
+  margin-top: 60%;
+  margin-bottom: 50px;
+  transform: rotate(90deg);
+  border-color: #1A85FD;
 }
+
 .onus p {
   font-weight: 600;
-}
-.nine {
-  border-right: 1px solid lightgrey;
-  height: 36px;
-  position: absolute;
-  left: 51%;
-  top:75%;
-}
-.five {
-  border-right: 1px solid lightgrey;
-  height: 30px;
-  position: absolute;
-  left: 38%;
-  top: 42%;
-}
-.four {
-  border-right: 1px solid lightgrey;
-  height: 55px;
-  position: absolute;
-  left: 52%;
-  top:47%;
-
-}
-.three {
-  border-right: 1px solid lightgrey;
-  height: 50px;
-  position: absolute;
-  left: 80%;
-  top:47%;
 }
 .top-header-table {
   margin-right: 1%;
