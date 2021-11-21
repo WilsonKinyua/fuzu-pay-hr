@@ -1,6 +1,10 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #004763;
