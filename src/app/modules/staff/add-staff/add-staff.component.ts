@@ -46,7 +46,7 @@ export class AddStaffComponent implements OnInit {
     const year = new Date().getFullYear();
     const randomNumber = Math.floor(Math.random() * 1000);
     const code = Math.random().toString(36).substring(2, 4).toUpperCase();
-    this.employeeCode = `${code}/${randomNumber}/${year}`;
+    this.employeeCode = `${code}${randomNumber}${year}`;
     console.log(this.employeeCode);
   }
 

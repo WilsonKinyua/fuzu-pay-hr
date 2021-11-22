@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DepartmentService {
+  sourceUrl = environment.sourceUrl;
 
-  sourceUrl = 'https://machachari.herokuapp.com';
-
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // get all departments
-  getDepartments(){
+  getDepartments() {
     return this.http.get(`${this.sourceUrl}/human-resource/api/departments/`);
   }
 }

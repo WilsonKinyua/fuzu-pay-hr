@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { Staff } from '../../shared/models/staff';
 
@@ -7,7 +8,7 @@ import { Staff } from '../../shared/models/staff';
   providedIn: 'root',
 })
 export class EmployeeService {
-  sourceUrl = 'https://machachari.herokuapp.com';
+  sourceUrl = environment.sourceUrl;
 
   constructor(private http: HttpClient) {}
 
