@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/core/services/employee.service';
 
 @Component({
   selector: 'app-past-applicant',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PastApplicantComponent implements OnInit {
 
-  constructor() { }
+  jobListing;
+  isLoading = false;
+
+  constructor(private employeeService: EmployeeService) {}
+
+   // get all Applicants
+   getApplicants() {
+    this.isLoading = true;
+    this.employeeService.getNewApplicant().subscribe(
+      (res) => {
+        console.log(res);
+        this.jobListing = res;
+        this.isLoading = false;
+      },
+      (error) => {
+        console.log(error);
+        this.isLoading = false;
+      }
+    );
+  }
 
   ngOnInit(): void {
+    this.getApplicants();
   }
 
 }

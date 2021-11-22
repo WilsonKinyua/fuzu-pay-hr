@@ -13,7 +13,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr routerLink="/hiring/application/singleapplications">
+      <tr routerLink="/hiring/application/singleapplications" ngFor='let newApplicant of newApplicant'>
+        <th scope="row">{{newApplicant.other_names}}</th>
+        <td>{{newApplicant.position}}</td>
+        <td>{{newApplicant.education_obtained}}</td>
+        <td>{{newApplicant.experience}}</td>
+        <td>{{newApplicant.location}}</td>
+        <td></td>
+      </tr>
+
+      <!-- <tr routerLink="/hiring/application/singleapplications">
         <th scope="row">Stephen Odiek</th>
         <td>Software Developer</td>
         <td>Bsc Computer science</td>
@@ -38,16 +47,7 @@
         <td>5yrs</td>
         <td>Nairobi</td>
         <td >Yes</td>
-      </tr>
-
-      <tr routerLink="/hiring/application/singleapplications">
-        <th scope="row">Stephen Odiek</th>
-        <td>Software Developer</td>
-        <td>Bsc Computer science</td>
-        <td>5yrs</td>
-        <td>Nairobi</td>
-        <td >Yes</td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
 
