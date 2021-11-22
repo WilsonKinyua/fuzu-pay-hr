@@ -1,3 +1,4 @@
+import { LoginComponent } from './modules/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
@@ -24,9 +25,16 @@ import { PastInterviewComponent } from './modules/hiring/interviews/past-intervi
 import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-letter.component';
 import { InterviewStatusDeclinedComponent } from './modules/hiring/interviews/interview-status-declined/interview-status-declined.component';
 import { InterviewStatusInreviewComponent } from './modules/hiring/interviews/interview-status-inreview/interview-status-inreview.component';
+import { MainComponent } from './modules/main/main.component';
+import { AlreadyLoggedService } from './core/services/already-logged.service';
+import { EnsureAuthenticatedService } from './core/services/ensure-authenticated.service';
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    // canActivate: [EnsureAuthenticatedService],
+  },
   { path: 'staff', component: StaffComponent },
   { path: 'leave-manager', component: LeaveManagerComponent },
   { path: 'hiring', component: HiringComponent },
@@ -34,22 +42,43 @@ const routes: Routes = [
   { path: 'hiring/offer-letter', component: OfferLetterComponent },
   { path: 'hiring/jobs', component: JobsComponent },
   { path: 'hiring/interview', component: InterviewsComponent },
-  { path: 'hiring/jobs/newlisting', component: NewListingComponent},
-  { path: 'hiring/jobs/activelisting', component: ActiveListingComponent},
-  { path: 'hiring/jobs/pastlisting', component: PastListingComponent},
-  { path: 'hiring/application/newapplication', component: ApplicationsComponent },
-  { path: 'hiring/application/pastapplications', component: PastApplicantComponent },
-  { path: 'hiring/application/singleapplications', component: SingleApplicantComponent },
+  { path: 'hiring/jobs/newlisting', component: NewListingComponent },
+  { path: 'hiring/jobs/activelisting', component: ActiveListingComponent },
+  { path: 'hiring/jobs/pastlisting', component: PastListingComponent },
+  {
+    path: 'hiring/application/newapplication',
+    component: ApplicationsComponent,
+  },
+  {
+    path: 'hiring/application/pastapplications',
+    component: PastApplicantComponent,
+  },
+  {
+    path: 'hiring/application/singleapplications',
+    component: SingleApplicantComponent,
+  },
   { path: 'hiring/interview/active', component: ActiveInterviewComponent },
   { path: 'hiring/interview/past', component: PastInterviewComponent },
-  { path: 'hiring/interview/declined', component: InterviewStatusDeclinedComponent },
-  { path: 'hiring/interview/inreview', component: InterviewStatusInreviewComponent },
+  {
+    path: 'hiring/interview/declined',
+    component: InterviewStatusDeclinedComponent,
+  },
+  {
+    path: 'hiring/interview/inreview',
+    component: InterviewStatusInreviewComponent,
+  },
   { path: 'reports', component: ReportsComponent },
   { path: 'staff/departments', component: DepartmentsComponent },
   { path: 'staff/add-staff', component: AddStaffComponent },
-  { path: 'staff/view', component: StaffDetailsComponent},
+  { path: 'staff/:employee_id', component: StaffDetailsComponent },
   { path: 'leave-manager/on-leave', component: OnLeaveComponent },
-  {path: 'leave-manager/active-staff', component: ActiveStaffComponent},
+  { path: 'leave-manager/active-staff', component: ActiveStaffComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    // canActivate: [AlreadyLoggedService],
+  },
+  { path: 'app', component: MainComponent },
   { path: '**', redirectTo: 'dashboard' },
 ];
 

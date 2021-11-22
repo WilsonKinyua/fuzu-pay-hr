@@ -38,6 +38,9 @@ import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-
 import { InterviewStatusDeclinedComponent } from './modules/hiring/interviews/interview-status-declined/interview-status-declined.component';
 import { InterviewStatusInreviewComponent } from './modules/hiring/interviews/interview-status-inreview/interview-status-inreview.component';
 import { FormsModule } from '@angular/forms';
+import { MainComponent } from './modules/main/main.component';
+import { LoginComponent } from './modules/login/login.component';
+import { RegisterComponent } from './modules/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +77,9 @@ import { FormsModule } from '@angular/forms';
     OfferLetterComponent,
     InterviewStatusDeclinedComponent,
     InterviewStatusInreviewComponent,
+    MainComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
