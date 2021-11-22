@@ -1,6 +1,7 @@
 import { User } from './../../shared/models/user';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { Injectable } from '@angular/core';
 export class LoginService {
   constructor(private http: HttpClient) {}
 
-  sourceUrl = 'http://127.0.0.1:8000';
+  sourceUrl = environment.sourceUrl;
 
   login(user: User) {
     return this.http.post(this.sourceUrl + '/account/login/', user);
