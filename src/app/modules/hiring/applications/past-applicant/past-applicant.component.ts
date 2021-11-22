@@ -8,18 +8,18 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
 })
 export class PastApplicantComponent implements OnInit {
 
-  jobListing;
+  pastApplicant;
   isLoading = false;
 
   constructor(private employeeService: EmployeeService) {}
 
    // get all Applicants
-   getApplicants() {
+   getPastApplicants() {
     this.isLoading = true;
-    this.employeeService.getNewApplicant().subscribe(
+    this.employeeService.getPastApplicant().subscribe(
       (res) => {
         console.log(res);
-        this.jobListing = res;
+        this.pastApplicant = res;
         this.isLoading = false;
       },
       (error) => {
@@ -30,7 +30,7 @@ export class PastApplicantComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getApplicants();
+    this.getPastApplicants();
   }
 
 }

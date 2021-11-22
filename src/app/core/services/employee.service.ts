@@ -31,6 +31,12 @@ export class EmployeeService {
   getAllEmployees() {
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
   }
+  getNewApplicant(){
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/')
+  }
+  getPastApplicant(){
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/')
+  }
 
   // get employee by id
   getEmployeeById(employee_id: string) {
