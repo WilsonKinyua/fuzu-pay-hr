@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { Staff } from '../../shared/models/staff';
 import { JobListing } from 'src/app/shared/models/job-listing';
@@ -10,13 +11,16 @@ import { Application } from 'src/app/shared/models/application';
   providedIn: 'root',
 })
 export class EmployeeService {
-  sourceUrl = 'https://machachari.herokuapp.com';
-  
+  sourceUrl = environment.sourceUrl;
+
   constructor(private http: HttpClient) {}
 
   // add new employee
   addStaff(employee: Staff) {
-    return this.http.post(this.sourceUrl + '/human-resource/api/employees/', employee);
+    return this.http.post(
+      this.sourceUrl + '/human-resource/api/employees/',
+      employee
+    );
   }
   // Add applicant
   addApplicant(applicant: JobListing) {
@@ -28,9 +32,10 @@ export class EmployeeService {
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
   }
 
-  // get new applicant
-  getNewApplicant() {
-    return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
-  
+  // get employee by id
+  getEmployeeById(employee_id: string) {
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/employees/' + employee_id + '/'
+    );
   }
 }
