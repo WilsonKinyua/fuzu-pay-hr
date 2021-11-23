@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { BankDetailsService } from 'src/app/core/services/bank-details.service';
 import { DepartmentService } from 'src/app/core/services/department.service';
 import { EmploymentTypeService } from 'src/app/core/services/employment-type.service';
+import { BankDetails } from 'src/app/shared/models/bank-details';
 import { EmployeeService } from '../../../core/services/employee.service';
 
 @Component({
@@ -13,7 +15,8 @@ export class AddStaffComponent implements OnInit {
   constructor(
     private staffService: EmployeeService,
     private departmentService: DepartmentService,
-    private employmentTypeService: EmploymentTypeService
+    private employmentTypeService: EmploymentTypeService,
+    private bankDetails: BankDetailsService
   ) {}
 
   employeeCode: string;
@@ -53,11 +56,18 @@ export class AddStaffComponent implements OnInit {
   // add staff
   addStaffOnSubmit(form: NgForm) {
     console.log(form.value);
+    const bank_name = form.value.bank_name;
+    const account_number = form.value.account_number;
+    const branch_name = form.value.branch_name;
+    console.log(bank_name);
+    console.log(account_number);
+    console.log(branch_name);
     this.isLoading = true;
     this.staffService.addStaff(form.value).subscribe(
       (res) => {
         console.log(res);
         this.isLoading = false;
+        this.addBankDetails(bank_name, account_number, branch_name);
         this.successMessage = res;
       },
       (error) => {
@@ -88,5 +98,19 @@ export class AddStaffComponent implements OnInit {
       this.employmentType = res;
       console.log(res);
     });
+  }
+
+  // add bank details
+  addBankDetails(bank_name, account_number, branch_name) {
+    this.bankDetails
+      .saveBankDetails(bank_name, branch_name, account_number)
+      .subscribe(
+        (res) => {
+          console.log('save bank details', res);
+        },
+        (error) => {
+          console.log('Error Log => ', error);
+        }
+      );
   }
 }
