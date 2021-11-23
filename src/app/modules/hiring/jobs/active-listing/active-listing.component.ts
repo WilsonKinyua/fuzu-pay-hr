@@ -22,7 +22,7 @@ export class ActiveListingComponent implements OnInit {
 
   getAllActiveListings() {
     this.isLoading = true;
-    this.hiringservice.getAllJobListings().subscribe(
+    this.hiringservice.getAllActiveJob().subscribe(
       (res) => {
         console.log(res);
         this.jobs = res;

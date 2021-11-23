@@ -15,7 +15,10 @@ export class HiringService {
     return this.http.post(this.baseurl + '/human-resource/api/jobs/', listings);
   }
 
-  getAllJobListings() {
-    return this.http.get(this.baseurl + '/human-resource/api/jobs/');
+  getAllActiveJob() {
+    return this.http.get(this.baseurl + '/human-resource/api/jobs/active/');
+  }
+  getAllPastJob() {
+    return this.http.get(this.baseurl + '/human-resource/api/jobs/past/');
   }
 }

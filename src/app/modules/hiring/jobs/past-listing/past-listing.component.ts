@@ -22,7 +22,7 @@ export class PastListingComponent implements OnInit {
 
   getAllpastListings() {
     this.isLoading = true;
-    this.hiringservice.getAllJobListings().subscribe(
+    this.hiringservice.getAllPastJob().subscribe(
       (res) => {
         
         this.jobs = res;
@@ -35,5 +35,5 @@ export class PastListingComponent implements OnInit {
       }
     );
   }  
-
+  
 }
