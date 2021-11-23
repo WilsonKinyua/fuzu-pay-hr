@@ -12,9 +12,9 @@ export class Leave {
         public approved_by: string,
         public created_at: Date,
         public employee_type: string,
-        
+
     ) { }
-        
-        
-    
+
+
+
 }
