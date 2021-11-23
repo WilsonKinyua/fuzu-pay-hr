@@ -34,65 +34,20 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Information Technology</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
+            <tr *ngFor="let empOnLeaves of empOnLeave">
+              <td>{{empOnLeaves.employee}}</td>
+              <td>{{empOnLeaves.position}}</td>
+              <td>{{empOnLeaves.department}}</td>
+              <td>{{empOnLeaves.leave_date_from}}</td>
+              <td>{{empOnLeaves.leave_date_to}}</td>
               <td>8 Days</td>
             </tr>
-            <tr>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Information Technology</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>8 Days</td>
-            </tr>
-            <tr>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Information Technology</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>8 Days</td>
-            </tr>
-            <tr>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Information Technology</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>8 Days</td>
-            </tr>
-            <tr>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Information Technology</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>8 Days</td>
-            </tr>
-            <tr>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Information Technology</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>8 Days</td>
-            </tr>
-            <tr>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Information Technology</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>8 Days</td>
-            </tr>
+            
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </section>
+
+
