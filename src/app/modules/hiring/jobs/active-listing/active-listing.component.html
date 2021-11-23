@@ -19,86 +19,17 @@
     </div>
   </div>
 
-  <div class="row">
+  <div *ngFor="let job of jobs" class="row">
     <div class="col-3">
-      <p>Software developement</p>
-    </div>
-
-    <div class="col-3">
-      <p>Information technology</p>
+      <p>{{ job.job_title }}</p>
     </div>
 
     <div class="col-3">
-      <p>28/06/2021</p>
-    </div>
-
-    <div class="row col-3">
-      <div class="col-6">
-        <a href="http://" type="button" class="btn btn-outline-dark btn-sm">Copy Url</a>
-      </div>
-
-      <div class="col-6">
-        <a href="http://" type="button" class="btn btn-outline-dark btn-sm">Share</a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <p>Software developement</p>
+      <p> {{ job.department }} </p>
     </div>
 
     <div class="col-3">
-      <p>Information technology</p>
-    </div>
-
-    <div class="col-3">
-      <p>28/06/2021</p>
-    </div>
-
-    <div class="row col-3">
-      <div class="col-6">
-        <a href="http://" type="button" class="btn btn-outline-dark btn-sm">Copy Url</a>
-      </div>
-
-      <div class="col-6">
-        <a href="http://" type="button" class="btn btn-outline-dark btn-sm">Share</a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <p>Software developement</p>
-    </div>
-
-    <div class="col-3">
-      <p>Information technology</p>
-    </div>
-
-    <div class="col-3">
-      <p>28/06/2021</p>
-    </div>
-
-    <div class="row col-3">
-      <div class="col-6">
-        <a href="http://" type="button" class="btn btn-outline-dark btn-sm">Copy Url</a>
-      </div>
-
-      <div class="col-6">
-        <a href="http://" type="button" class="btn btn-outline-dark btn-sm">Share</a>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-3">
-      <p>Software developement</p>
-    </div>
-
-    <div class="col-3">
-      <p>Information technology</p>
-    </div>
-
-    <div class="col-3">
-      <p>28/06/2021</p>
+      <p>{{ job.deadline }}</p>
     </div>
 
     <div class="row col-3">

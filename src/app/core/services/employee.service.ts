@@ -7,7 +7,7 @@ import { Staff } from '../../shared/models/staff';
   providedIn: 'root',
 })
 export class EmployeeService {
-  sourceUrl = 'http://127.0.0.1:8000';
+  sourceUrl = 'https://fuzupay-hr.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 

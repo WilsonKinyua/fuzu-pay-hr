@@ -1,50 +1,70 @@
 <section class="content">
   <app-jobs></app-jobs>
 
+  <!-- display error and success successMessage -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-success" role="alert" *ngIf="successMessage">
+        {{successMessage}}
+      </div>
+      <div *ngIf="errorMessage">
+        <span *ngFor="let item of errorMessage | keyvalue">
+          <div class="alert alert-danger text-capitalize" role="alert">
+            {{item.key}} - {{item.value}}
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- ======================================================= -->
 
 <div class="container-fluid m-5">
-  <form action="">
+  <form (ngSubmit)="addListingOnSubmit(f)" #f="ngForm" *ngIf="!isLoading">
     <div class="row">
       <div class="row col-6 pt-4">
         <div class="mb-4 row">
           <label for="date" class="col-sm-4 col-form-label">Deadline*</label>
           <div class="col-sm-8">
-            <input type="date" class="form-control" id="date">
+            <input type="date" class="form-control" id="date" name="begin" 
+                   min="1997-01-01" name="deadline" ngModel #deadline required>
           </div>
         </div>
 
         <div class="mb-4 row">
           <label for="Job" class="col-sm-4 col-form-label">Job title*</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="Job">
+            <input type="text" class="form-control" id="Job" id="date" name="job_title" ngModel #job_title required>
           </div>
         </div>
 
         <div class="mb-4 row">
           <label for="Job" class="col-sm-4 col-form-label">Department*</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="Job">
+            <!-- <input type="text" class="form-control" id="Job" name="department" ngModel #department required> -->
+            <select name="department" id="department" class="form-select" ngModel #department required>
+              <option *ngFor="let dep of departments" value="{{ dep.id }}">{{ dep.name }}</option>
+            </select>
           </div>
         </div>
 
         <div class="mb-4 row">
           <label for="Job" class="col-sm-4 col-form-label">Location*</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="Job">
+            <input type="text" class="form-control" id="Job" name="location" ngModel #location required>
           </div>
         </div>
 
         <div class="mb-4 row">
           <label for="Job" class="col-sm-4 col-form-label">Job type*</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="Job">
+            <input type="text" class="form-control" id="Job" name="job_type" ngModel #job_type required>
           </div>
         </div>
 
         <div class="mb-4 row">
           <label for="Job" class="col-sm-4 col-form-label">Desired Experience*</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="Job">
+            <input type="text" class="form-control" id="Job" name="experience" ngModel #experience required>
           </div>
         </div>
 
@@ -52,7 +72,7 @@
         <div class="mb-4 row">
           <label for="Job" class="col-sm-4 col-form-label">Salary*</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="Job">
+            <input type="text" class="form-control" id="Job" name="salary" ngModel #salary required>
           </div>
         </div>
       </div>
@@ -60,7 +80,7 @@
       <div class="row col-6">
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label">Description *</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="17"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="17" name="job_description" ngModel #job_description required></textarea>
         </div>
 
       </div>
