@@ -6,7 +6,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class LeaveRequestService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   sourceUrl = environment.sourceUrl;
 

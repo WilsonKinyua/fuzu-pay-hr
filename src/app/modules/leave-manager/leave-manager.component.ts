@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeaveRequestService } from 'src/app/core/services/leave-request.service';
+import { Leave } from 'src/app/shared/models/leave';
 
 @Component({
   selector: 'app-leave-manager',
@@ -14,6 +15,7 @@ export class LeaveManagerComponent implements OnInit {
   checkedInputs = [];
   successMessage;
   errorMessage;
+  days;
 
   ngOnInit(): void {
     this.getLeaveRequests();
@@ -37,7 +39,15 @@ export class LeaveManagerComponent implements OnInit {
     this.leaveRequestService.getAllLeaveRequests().subscribe(
       (res) => {
         console.log(res);
+        // from response get the difference in days
         this.leavesRequests = res;
+        this.leavesRequests.forEach((leave) => {
+          const startDateTime = new Date(leave.leave_date_from).getTime();
+          const endDateTime = new Date(leave.leave_date_to).getTime();
+          const difference = endDateTime - startDateTime;
+          this.days = Math.round(difference / (1000 * 60 * 60 * 24));
+          leave.days = this.days;
+        });
         this.isLoading = false;
       },
       (error) => {
@@ -67,8 +77,8 @@ export class LeaveManagerComponent implements OnInit {
         (res) => {
           console.log('Approved status', res);
           this.getLeaveRequests();
-            this.successMessage = 'Leave request approved successfully';
-            this.isLoading = false;
+          this.successMessage = 'Leave request approved successfully';
+          this.isLoading = false;
         },
         (error) => {
           console.log(error);
