@@ -13,7 +13,7 @@ export class PastApplicantComponent implements OnInit {
 
   constructor(private employeeService: EmployeeService) {}
 
-   // get all Applicants
+   // get past Applicants
    getPastApplicants() {
     this.isLoading = true;
     this.employeeService.getPastApplicant().subscribe(

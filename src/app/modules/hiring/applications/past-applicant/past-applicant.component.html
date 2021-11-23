@@ -14,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr routerLink="/hiring/application/singleapplications" ngFor='let pastApplicant of pastApplicant'>
+        <tr routerLink="/hiring/application/singleapplications" *ngFor='let pastApplicant of pastApplicant'>
           <th scope="row">{{pastApplicant.applicant_name}}</th>
           <td>{{pastApplicant.position}}</td>
           <td>{{pastApplicant.education_obtained}}</td>

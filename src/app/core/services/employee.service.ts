@@ -32,7 +32,7 @@ export class EmployeeService {
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
   }
   getNewApplicant(){
-    return this.http.get(this.sourceUrl + '/human-resource/api/applications/')
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/new/')
   }
   getPastApplicant(){
     return this.http.get(this.sourceUrl + '/human-resource/api/applications/')

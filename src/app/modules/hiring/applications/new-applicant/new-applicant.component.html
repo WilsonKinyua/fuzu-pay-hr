@@ -13,12 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr routerLink="/hiring/application/singleapplications" ngFor='let newApplicant of newApplicant'>
-        <th scope="row">{{newApplicant.applicant_name }}</th>
-        <td>{{newApplicant.position}}</td>
-        <td>{{newApplicant.education_obtained}}</td>
-        <td>{{newApplicant.experience}}</td>
-        <td>{{newApplicant.location}}</td>
+      <tr routerLink="/hiring/application/singleapplications" *ngFor='let  newApplicants of newApplicant'>
+        <th scope="row">{{newApplicants.applicant_name }}</th>
+        <td>{{newApplicants.position}}</td>
+        <td>{{newApplicants.education_obtained}}</td>
+        <td>{{newApplicants.experience}}</td>
+        <td>{{newApplicants.location}}</td>
         <td></td>
       </tr>
 
