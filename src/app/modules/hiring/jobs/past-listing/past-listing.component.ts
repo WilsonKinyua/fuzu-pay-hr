@@ -34,6 +34,6 @@ export class PastListingComponent implements OnInit {
         this.isLoading = false;
       }
     );
-  }
+  }  
 
 }

@@ -15,62 +15,24 @@
       </div>
 
     </div>
+<div>
 
-    <div class="row">
+</div>
+    <div class="row" *ngFor="let pastjob of jobs">
       <div class="col-4">
-        <p>Software developement</p>
+        <p>{{ pastjob.job_title }}</p>
       </div>
 
       <div class="col-4">
-        <p>Information technology</p>
+        <p>{{ pastjob.department }}</p>
       </div>
 
       <div class="col-4">
-        <p>28/06/2021</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4">
-        <p>Software developement</p>
-      </div>
-
-      <div class="col-4">
-        <p>Information technology</p>
-      </div>
-
-      <div class="col-4">
-        <p>28/06/2021</p>
+        <p class="text-danger">{{ pastjob.deadline }}</p>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-4">
-        <p>Software developement</p>
-      </div>
 
-      <div class="col-4">
-        <p>Information technology</p>
-      </div>
-
-      <div class="col-4">
-        <p>28/06/2021</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4">
-        <p>Software developement</p>
-      </div>
-
-      <div class="col-4">
-        <p>Information technology</p>
-      </div>
-
-      <div class="col-4">
-        <p>28/06/2021</p>
-      </div>
-    </div>
   </div>
 
 </section>
