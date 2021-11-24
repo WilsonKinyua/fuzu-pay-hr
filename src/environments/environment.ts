@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-   sourceUrl: 'https://fuzupay-hr.herokuapp.com',
+   sourceUrl: 'http://127.0.0.1:8000',
 };
 
 /*
