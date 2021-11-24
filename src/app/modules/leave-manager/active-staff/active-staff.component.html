@@ -9,6 +9,7 @@
               Leave Request </a>
           </div>
           <div>
+        
             <a routerLink="/leave-manager/on-leave" class="btn btn-outline-primary a-button" id="department">On Leave</a>
           </div>
           <div>
@@ -80,7 +81,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let activeEmps of activeEmp ">
+                <td>{{activeEmps.other_names}}</td>
+                <td>{{activeEmps.position}}</td>
+                <td>{{activeEmps.department}}</td>
+                <td>{{activeEmps.employment_type}}</td>
+              </tr>
+              <!-- <tr>
                 <td>James Wanyama</td>
                 <td>Software Developer</td>
                 <td>Information Technology</td>
@@ -115,13 +122,7 @@
                 <td>Software Developer</td>
                 <td>Information Technology</td>
                 <td>Fulltime</td>
-              </tr>
-              <tr>
-                <td>James Wanyama</td>
-                <td>Software Developer</td>
-                <td>Information Technology</td>
-                <td>Fulltime</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
