@@ -12,3 +12,4 @@ export class Job {
         public created_at?: Date,
       ) {}
 }
+

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { HiringService } from 'src/app/core/services/hiring.service';
 import { DepartmentService } from 'src/app/core/services/department.service';
 
+import { EmployeeService } from 'src/app/core/services/employee.service';
 
 @Component({
   selector: 'app-new-listing',
