@@ -6,26 +6,22 @@ import { Observable } from 'rxjs';
 import { Department } from 'src/app/shared/models/department';
 import { Staff } from 'src/app/shared/models/staff';
 
+
 @Injectable({
   providedIn: 'root',
 })
 export class DepartmentService {
   sourceUrl = environment.sourceUrl;
-
   constructor(private http: HttpClient) {}
 
   // get all departments
   getDepartments() {
-    return this.http.get(`${this.sourceUrl}/human-resource/api/departments/`);
+    return this.http.get(`${this.sourceUrl}/human-resource/api/departments/`);}
   // add new department
   addDepartment(department: Department) {
     return this.http.post(this.sourceUrl + '/human-resource/api/departments/',
       department
     );
-  }
-  // get all departments
-  getDepartments(){
-    return this.http.get(this.sourceUrl + '/human-resource/api/departments/');
   }
   // get a list of employees in a specific department
   getEmployeesByDepartments(selectedDepartmentId :number):Observable<any>
@@ -33,4 +29,5 @@ export class DepartmentService {
     let params1 = new HttpParams().set('department',selectedDepartmentId);
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/',{params:params1});
   }
+
 }
