@@ -9,10 +9,12 @@
               Leave Request </a>
           </div>
           <div>
-            <a routerLink="/leave-manager/on-leave" class="btn btn-outline-primary a-button" id="department">On Leave</a>
+            <a routerLink="/leave-manager/on-leave" class="btn btn-outline-primary a-button" id="department">On
+              Leave</a>
           </div>
           <div>
-            <a routerLink="/leave-manager/active-staff" class="btn btn-outline-primary a-button" id="addstaff">active staff</a>
+            <a routerLink="/leave-manager/active-staff" class="btn btn-outline-primary a-button" id="addstaff">active
+              staff</a>
           </div>
         </div>
       </div>
@@ -22,10 +24,24 @@
       <div class="col-md-12">
         <div class="d-flex justify-content-start button-group mt-4">
           <div>
-            <button class="btn btn-outline-primary btn-sm">Approve</button>
+            <button class="btn btn-outline-primary btn-sm" (click)="onSubmitApproveLeaveRequest()">Approve</button>
           </div>
           <div>
-            <button class="btn btn-outline-primary btn-sm">Reject</button>
+            <button class="btn btn-outline-primary btn-sm" (click)="onSubmitRejectLeaveRequest()">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3 mb-3">
+      <div class="col-md-3"></div>
+      <div class="col-md-5">
+        <div class="alert alert-success" role="alert" *ngIf="successMessage">
+          {{successMessage}}
+        </div>
+        <div *ngIf="errorMessage">
+          <div class="alert alert-danger text-capitalize" role="alert">
+            {{errorMessage}}
           </div>
         </div>
       </div>
@@ -39,7 +55,7 @@
             <tr>
               <th scope="col">
                 <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                 </div>
               </th>
               <th scope="col">Name</th>
@@ -50,97 +66,33 @@
               <th scope="col">Leave Duration</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-                <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                </div>
-              </th>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Annual Leave</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>18 Days</td>
+          <tbody *ngIf="isLoading">
+            <tr class="preloader">
+              <td colspan="6" class="text-center mt-5">
+                <app-loader></app-loader>
+              </td>
             </tr>
-            <tr>
+          </tbody>
+          <tbody *ngIf="!isLoading">
+            <tr *ngFor="let item of leavesRequests" class="text-capitalize">
               <th scope="row">
                 <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="userRadio" id="flexRadioDefault2" checked>
+                  <input class="form-check-input" type="radio" name="{{item.id}}" id="flexRadioDefault2"
+                    (click)="onChecked(item.id)">
                 </div>
               </th>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Annual Leave</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>18 Days</td>
+              <td>{{ item.employee }}</td>
+              <td>{{ item.positon }}</td>
+              <td>{{ item.leave_type }}</td>
+              <td>{{ item.leave_date_from }}</td>
+              <td>{{ item.leave_date_to }}</td>
+              <td>{{ item.days }} Days</td>
             </tr>
-            <tr>
-              <th scope="row">
-                <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" checked>
-                </div>
-              </th>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Annual Leave</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>18 Days</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                </div>
-              </th>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Annual Leave</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>18 Days</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" checked>
-                </div>
-              </th>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Annual Leave</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>18 Days</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                </div>
-              </th>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Annual Leave</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>18 Days</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                <div class="check-radio">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault2" checked>
-                </div>
-              </th>
-              <td>James Wanyama</td>
-              <td>Software Developer</td>
-              <td>Annual Leave</td>
-              <td>02/6/2021</td>
-              <td>20/6/2021</td>
-              <td>18 Days</td>
+            <!-- if empty -->
+            <tr *ngIf="leavesRequests.length == 0">
+              <td colspan="6" class="text-center mt-5">
+                <h5 class="text-danger">No Leave Requests</h5>
+              </td>
             </tr>
           </tbody>
         </table>
