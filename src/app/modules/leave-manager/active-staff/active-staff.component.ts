@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActiveStaffService } from 'src/app/core/services/active-staff.service';
 
 @Component({
   selector: 'app-active-staff',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiveStaffComponent implements OnInit {
 
-  constructor() { }
+  activeEmp;
+  isLoading = false;
+  constructor(private activestaffService: ActiveStaffService) {}
+
+  getActiveStaff() {
+    this.isLoading = true;
+    this.activestaffService.ActiveStaff().subscribe(
+      (res) => {
+        console.log(res);
+        this.activeEmp = res;
+        this.isLoading = false;
+      },
+      (error) => {
+        console.log(error);
+        this.isLoading = false;
+      }
+    );
+  }
 
   ngOnInit(): void {
+    this.getActiveStaff()
   }
 
 }
