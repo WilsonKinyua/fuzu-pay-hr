@@ -1,5 +1,4 @@
 <app-applications></app-applications>
-<section class="content">
   <div class="container-fluid">
     <div class="row">
       <!-- the left side of the single interview body -->
@@ -14,10 +13,10 @@
           </div>
           <div class="col-sm-8 pt-5" >
             <h6 class="m-2 text-bold">{{ singleApplicant?.applicant_name }}</h6>
-            <h6 class="m-2"><i class="far fa-envelope"></i> <span
-                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url }}</span></h6>
-            <h6 class="m-2"><i class="fab fa-linkedin"></i> <span
-                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url }}</span></h6>
+            <h6 class="m-2"><i class="far fa-envelope"></i> <a href="{{ singleApplicant?.linkedin_url }}"
+                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url }}</a> </h6>
+            <h6 class="m-2"><i class="fab fa-linkedin"></i> <a href="{{ singleApplicant?.linkedin_url }}"
+                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url }}</a></h6>
           </div>
   
         </div>
@@ -67,7 +66,7 @@
               <h6>Desired pay:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>{{ singleApplicant?.desired_salary }} ksh</h6>
+              <h6>{{ singleApplicant?.desired_salary }}</h6>
             </div>
           </div>
           <div class="row m-3">
@@ -179,5 +178,3 @@
 
 
   </div>
-
-</section>
