@@ -44,4 +44,10 @@ export class EmployeeService {
       this.sourceUrl + '/human-resource/api/employees/' + employee_id + '/'
     );
   }
+
+  // get one applicant
+
+  getOneApplicant(application_id:Application){
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + application_id  + '/' );
+  } 
 }
