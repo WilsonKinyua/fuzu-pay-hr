@@ -1,0 +1,23 @@
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  .dropdown-menu{
+    /* position: relative; */
+    left: -10em;
+    top: 30px;
+    z-index: 1;
+  }
+  .hr-btn{
+    background-color: #004763;
+    border: 1px solid #004763 ;
+    border-radius: 2px;
+    width: 120px;
+    margin: 20px;
+    color:#FFFFFF; 
+
+}
