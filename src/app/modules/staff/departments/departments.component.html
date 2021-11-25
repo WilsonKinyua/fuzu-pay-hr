@@ -65,14 +65,14 @@
         </tr>
       </thead>
       <tbody>
-      <tr class="text-capitalize" >
+      <tr class="text-capitalize" *ngFor="let depDetail of depDetails" >
         <td class="main-color">
           <!-- <a routerLink="/staff/{{ staff.employee_id }}"> -->
-            <!-- {{ staff.other_names }} {{ staff.surname }} -->
+            {{ depDetail.other_names }} {{ depDetail.surname }}
           <!-- </a> -->
         </td>
         <td>
-          <!-- {{ staff.position }} -->
+          {{ depDetail.position }}
         </td>
         <td>
           <!-- {{ staff.work_email }} -->

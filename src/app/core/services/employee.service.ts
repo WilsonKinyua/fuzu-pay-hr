@@ -51,4 +51,9 @@ export class EmployeeService {
       this.sourceUrl + '/human-resource/api/employees/' + employee_id + '/'
     );
   }
+
+  // get department details
+  getDepartmentDetails(){
+    return this.http.get(this.sourceUrl +'/human-resource/api/departments/')
+  }
 }

@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
     box-sizing: border-box;
   }
   
@@ -10,9 +10,9 @@
     top: 0;
     left: 0;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
     padding: 0.15rem;
     color: #004763;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -29,33 +29,33 @@
   }
   
   .nav-bar ul li {
-    width: 100%;
+    /* width: 100%; */
     margin: 10px;
     padding: 0px;
   }
   
-  a {
+  /* a {
     text-decoration: none;
     color: #004763;
-  }
-  
-  
+  } */
   .profile {
     border-left: 1px solid #004763;
     height: 79px;
     right: 0%;
-    /* margin-left:50%; */
+    margin-left:50%;
     top: 60px;
   }
-  
   .profile-name-font-size {
     font-weight: 700;
+  }
+  #date-details{
+    margin-right:-15em;
   }
   
   .date {
     font-weight: 400;
     font-size: 14px;
-    margin-right:3em;
+  
   }
   
   .vertical-bar {
