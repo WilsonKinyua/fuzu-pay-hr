@@ -9,6 +9,7 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
 export class StaffComponent implements OnInit {
   staffs;
   isLoading = false;
+  
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit(): void {

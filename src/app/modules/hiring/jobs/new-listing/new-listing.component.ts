@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { HiringService } from 'src/app/core/services/hiring.service';
+import { DepartmentService } from 'src/app/core/services/department.service';
+
 import { EmployeeService } from 'src/app/core/services/employee.service';
 
 @Component({
@@ -6,32 +10,50 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
   templateUrl: './new-listing.component.html',
   styleUrls: ['./new-listing.component.css']
 })
-export class NewListingComponent implements OnInit {
+export class NewListingComponent implements OnInit{
+  constructor( 
+    private hiringservice: HiringService,
+    private departmentService: DepartmentService,
+    ) { }
 
-  jobLists;
+  
+  listings;
   isLoading = false;
-  constructor(private employeeService: EmployeeService) {}
+  departments;
+  errorMessage: any = [];
+  successMessage = null;
 
- 
+  ngOnInit(): void {
+    this.getDepartments();
+  }
 
-  getNewApplicant() {
+  addListingOnSubmit(form: NgForm) {
+    console.log(form.value);
     this.isLoading = true;
-    this.employeeService.getNewApplicant().subscribe(
+    this.hiringservice.createListing(form.value).subscribe(
       (res) => {
         console.log(res);
-        this.jobLists = res;
         this.isLoading = false;
+        this.successMessage = res;
       },
       (error) => {
-        console.log(error);
+        this.errorMessage = error.error;
         this.isLoading = false;
+        console.log(this.errorMessage);
       }
     );
   }
 
 
-  ngOnInit(): void {
-    this.getNewApplicant();
+  getDepartments() {
+    this.departmentService.getDepartments().subscribe((res) => {
+      console.log(
+        '================================ Departments =========================='
+      );
+      this.departments = res;
+      console.log(res);
+    });
   }
 
 }
+

@@ -1,5 +1,4 @@
-<div class="container-fluid">
-
+<div class="container-fluid body">
   <table class="table table-hover table-borderless">
     <thead>
       <tr>
@@ -13,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr routerLink="/hiring/application/singleapplications" *ngFor='let  newApplicants of newApplicant'>
+      <tr *ngFor='let  newApplicants of newApplicant' routerLink="/hiring/application/singleapplications/{{ newApplicants.application_id }}" >
         <th scope="row">{{newApplicants.applicant_name }}</th>
         <td>{{newApplicants.position}}</td>
         <td>{{newApplicants.education_obtained}}</td>
