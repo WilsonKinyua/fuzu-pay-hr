@@ -401,7 +401,7 @@ th {
 .down button {
   color: white;
   background-color: #004763;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .john {
