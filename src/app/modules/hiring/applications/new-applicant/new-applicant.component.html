@@ -4,7 +4,7 @@
       <tr>
         <th scope="col">Applicants Name</th>
         <th scope="col">Position Applied</th>
-        <th scope="col">Education Qualifications</th>
+        <th scope="col" >Education Qualifications</th>
         <th scope="col">Experience</th>
         <th scope="col">location</th>
         <th scope="col" >Attached Documents</th>
@@ -12,8 +12,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let  newApplicants of newApplicant' routerLink="/hiring/application/singleapplications/{{ newApplicants.application_id }}" >
-        <th scope="row">{{newApplicants.applicant_name }}</th>
+      <tr *ngFor='let  newApplicants of newApplicant'>
+        <th scope="row"  routerLink="/hiring/application/singleapplications/{{ newApplicants.id }}" >{{newApplicants.applicant_name }}</th>
         <td>{{newApplicants.position}}</td>
         <td>{{newApplicants.education_obtained}}</td>
         <td>{{newApplicants.experience}}</td>

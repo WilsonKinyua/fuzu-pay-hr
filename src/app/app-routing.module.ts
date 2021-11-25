@@ -54,7 +54,7 @@ const routes: Routes = [
     component: PastApplicantComponent,
   },
   {
-    path: 'hiring/application/singleapplications',
+    path: 'hiring/application/singleapplications/:id',
     component: SingleApplicantComponent,
   },
   { path: 'hiring/interview/active', component: ActiveInterviewComponent },

@@ -47,7 +47,7 @@ export class EmployeeService {
 
   // get one applicant
 
-  getOneApplicant(application_id:Application){
-    return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + application_id  + '/' );
+  getOneApplicant(id:Application){
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + id  + '/' );
   } 
 }
