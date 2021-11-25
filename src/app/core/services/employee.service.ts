@@ -12,14 +12,21 @@ import { Application } from 'src/app/shared/models/application';
 })
 export class EmployeeService {
   sourceUrl = environment.sourceUrl;
+  token = environment.token;
+
 
   constructor(private http: HttpClient) {}
 
   // add new employee
   addStaff(employee: Staff) {
     return this.http.post(
-      this.sourceUrl + '/human-resource/api/employees/',
-      employee
+      this.sourceUrl + '/account/register/',
+      employee,
+      {
+        headers: {
+          Authorization: 'Token ' + this.token,
+        },
+      }
     );
   }
   // Add applicant
