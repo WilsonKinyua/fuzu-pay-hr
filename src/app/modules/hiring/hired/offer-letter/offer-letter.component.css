@@ -16,7 +16,7 @@
     color: #004763;
     border: 4px #004763;
     font-size: 24px;
-    box-shadow: 1px 2px 1px 1px;
+    
     
 }
 
@@ -37,7 +37,16 @@
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
-    
-    
+
+}
+.kev{
+    margin: 0 -4.3rem;
+}
+.mb-3{
+    margin: 0 -5rem;
+
+}
+.form-select select{
+    color: white;
 
 }
