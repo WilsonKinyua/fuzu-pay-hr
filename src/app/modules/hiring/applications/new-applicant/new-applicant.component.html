@@ -12,6 +12,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr class="preloader" *ngIf="isLoading">
+        <td colspan="5" class="text-center mt-5">
+          <app-loader></app-loader>
+        </td>
+      </tr>
       <tr *ngFor='let  newApplicants of newApplicant'>
         <th scope="row"  routerLink="/hiring/application/singleapplications/{{ newApplicants.id }}" >{{newApplicants.applicant_name }}</th>
         <td>{{newApplicants.position}}</td>

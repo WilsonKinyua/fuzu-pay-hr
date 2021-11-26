@@ -2,7 +2,7 @@
 <section class="content">
 
   <div class="container-fluid ">
-    <table class="table table-hover table-borderless color">
+    <table class="table table-hover table-borderless">
       <thead>
         <tr>
           <th scope="col">Position</th>
@@ -11,10 +11,15 @@
         </tr>
       </thead>
       <tbody>
+        <tr class="preloader" *ngIf="isLoading">
+          <td colspan="5" class="text-center mt-5">
+            <app-loader></app-loader>
+          </td>
+        </tr>
         <tr *ngFor="let pastjob of jobs">
           <th class="col" scope="row">{{ pastjob.job_title }}</th>
           <td class="col">{{ pastjob.department }}</td>
-          <td class="col">{{ pastjob.deadline | date:'dd/MM/yyyy' }}</td>
+          <td class="col color">{{ pastjob.deadline | date:'dd/MM/yyyy' }}</td>
         </tr>
       </tbody>
     </table>

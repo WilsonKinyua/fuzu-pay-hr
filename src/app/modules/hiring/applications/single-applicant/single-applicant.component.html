@@ -1,8 +1,8 @@
 <app-applications></app-applications>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row d-flex justify-content-between">
       <!-- the left side of the single interview body -->
-      <div class="row col-md-6">
+      <div class="row col-md-5">
         <div>
           <h6>Application Status: {{ singleApplicant?.status }}</h6>
         </div>
@@ -14,9 +14,9 @@
           <div class="col-sm-8 pt-5" >
             <h6 class="m-2 text-bold">{{ singleApplicant?.applicant_name }}</h6>
             <h6 class="m-2"><i class="far fa-envelope"></i> <a href="{{ singleApplicant?.linkedin_url }}"
-                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url }}</a> </h6>
+                class="text-dark text-bold m-1 nowrap">{{ singleApplicant?.email | slice:0:30 }}..</a> </h6>
             <h6 class="m-2"><i class="fab fa-linkedin"></i> <a href="{{ singleApplicant?.linkedin_url }}"
-                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url }}</a></h6>
+                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url | slice:0:30  }}..</a></h6>
           </div>
   
         </div>
@@ -111,12 +111,12 @@
         </div>
         <div class="row">
           <div class="card col-sm-12" style="height: 495px;">
-            <embed src="file_name.pdf" height="495px" />
+            <embed src="./assets/img/hes-resume-cover-letter-guide.pdf " height="495px" />
           </div>
         </div>
         <div class="row justify-content-center mt-2">
           <div class="col-sm-4">
-            <a href="file_name.pdf" download="proposed_file_name"
+            <a href="./assets/img/hes-resume-cover-letter-guide.pdf " download="proposed_file_name"
               class="btn btn-outline-secondary activebuttons h text-light">Download</a>
           </div>
         </div>

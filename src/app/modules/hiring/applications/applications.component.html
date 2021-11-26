@@ -9,6 +9,33 @@
         <button type="button" routerLink="/hiring/application/pastapplications" class="btn btn-outline-secondary h"
           routerLinkActive="activebuttons">Past Applicants</button>
       </div>
+
+      <div class="col-md-3 m-1 d-flex justify-content-end">
+        <div>
+          <h6 class="m-2">Job title</h6>
+        </div>
+        <div>
+          <select class="form-select">
+            <option>All</option>
+            <option>Permanent</option>
+            <option>Contract</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="col-md-3 m-1 d-flex justify-content-end">
+        <div>
+          <h6 class="m-2">Job title</h6>
+        </div>
+        <div>
+          <select class="form-select">
+            <option>All</option>
+            <option>Permanent</option>
+            <option>Contract</option>
+          </select>
+        </div>
+      </div>
+
     </div>
   </div>
   <div *ngIf="hasRoute('newapplication')">
