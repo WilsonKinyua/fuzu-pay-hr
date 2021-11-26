@@ -10,15 +10,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item mb-lg-5"></li>
-        <li class="nav-item">
+        <li class="nav-item" id="searched">
           <div class="input-group">
             <input type="text" class="search-input text-center" placeholder="Search">
           </div>
         </li>
-        <li class="nav-item text-center">
+        <li class="nav-item text-center" id="text">
           <div class="date-time">
-            <span class="date"> <i class="fa fa-calendar-alt icon"></i> <span class="current-date">Monday, June 7 2021 |
-                08:08, Nairobi</span> <span class="icon"><i class="fa fa-bell"></i></span></span>
+            <span class="date"> <i class="fa fa-calendar-alt icon"></i> <span class="current-date"> {{ date | date:'EEEE' }},  {{ date | date:'MMM/dd/yyyy' }} |
+              {{ time | date: 'hh:mm:ss a' }}, Nairobi</span> <span class="icon"><i class="fa fa-bell"></i></span></span>
           </div>
         </li>
       </ul>
@@ -36,14 +36,22 @@
             </a>
           </div>
           <div>
-            <span class="icon">
-              <a href="">
-                <i class="fa fa-chevron-down"></i>
-              </a>
-            </span>
+            <div class="dropdown">
+              <span class="icon">
+                <a href="">
+                  <i class="fa fa-chevron-down"></i>
+                </a>
+              </span>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Switch Account</a>
+              <a class="dropdown-item" href="#">Account Settings</a>
+              <button class="hr-btn">LogOut</button>
+            </div>
+            </div>
           </div>
         </div>
       </li>
+      
     </div>
   </div>
 </nav>
