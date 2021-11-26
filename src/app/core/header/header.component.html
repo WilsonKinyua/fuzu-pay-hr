@@ -20,8 +20,8 @@
         </li>
         <li class="nav-item text-center">
           <div class="date-time">
-            <span class="date"> <i class="fa fa-calendar-alt icon"></i> <span class="current-date">Monday, June 7 2021 |
-                08:08, Nairobi</span> <span class="icon"><i class="fa fa-bell"></i></span></span>
+            <span class="date"> <i class="fa fa-calendar-alt icon"></i> <span class="current-date"> {{ date | date:'EEEE' }},  {{ date | date:'MMM/dd/yyyy' }} |
+              {{ time | date: 'hh:mm:ss a' }}, Nairobi</span> <span class="icon"><i class="fa fa-bell"></i></span></span>
           </div>
         </li>
       </ul>
