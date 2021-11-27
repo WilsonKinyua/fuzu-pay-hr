@@ -121,11 +121,16 @@ tbody tr td {
 /* .navbar {
   overflow: hidden;
 } */
-
+.date{
+  white-space: nowrap; 
+}
 .navbar-expand-lg {
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   padding: 14px 14px 14px 14px;
+}
+.navbar-brand{
+  margin-right: -21rem;
 }
 
 .logo span {
