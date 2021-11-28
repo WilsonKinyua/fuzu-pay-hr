@@ -14,7 +14,6 @@ import { GetUserTokenService } from './get-user-token.service';
 export class EmployeeService {
   sourceUrl = environment.sourceUrl;
 
-
   constructor(
     private http: HttpClient,
     private userTokenService: GetUserTokenService
@@ -31,7 +30,10 @@ export class EmployeeService {
 
   // Add applicant
   addApplicant(applicant: JobListing) {
-    return this.http.post(this.sourceUrl + '/human-resource/api/employees/', applicant);
+    return this.http.post(
+      this.sourceUrl + '/human-resource/api/employees/',
+      applicant
+    );
   }
 
   // get all employees
@@ -39,10 +41,12 @@ export class EmployeeService {
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
   }
   getNewApplicant() {
-    return this.http.get(this.sourceUrl + '/human-resource/api/applications/new/')
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/applications/new/'
+    );
   }
   getPastApplicant() {
-    return this.http.get(this.sourceUrl + '/human-resource/api/applications/')
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/');
   }
 
   // get employee by id
@@ -54,26 +58,32 @@ export class EmployeeService {
 
   // get one applicant
   getOneApplicant(id: Application) {
-    return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + id + '/');
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/applications/' + id + '/'
+    );
   }
   // get interviews
 
   getActiveInter() {
-    return this.http.get(this.sourceUrl + '/human-resource/api/active/interviews/');
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/active/interviews/'
+    );
   }
   getPastInter() {
-    return this.http.get(this.sourceUrl + '/human-resource/api/past/interviews/');
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/past/interviews/'
+    );
   }
-  // schedule interviews 
+  // schedule interviews
   scheduleInterview(listings: Job) {
-    return this.http.post(this.sourceUrl + '/human-resource/api/jobs/', listings);
+    return this.http.post(
+      this.sourceUrl + '/human-resource/api/jobs/',
+      listings
+    );
   }
 
   // get department details
   getDepartmentDetails() {
-    return this.http.get(this.sourceUrl + '/human-resource/api/departments/')
+    return this.http.get(this.sourceUrl + '/human-resource/api/departments/');
   }
-
-
 }
-
