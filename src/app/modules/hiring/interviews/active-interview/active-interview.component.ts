@@ -8,17 +8,17 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
 })
 export class ActiveInterviewComponent implements OnInit {
 
-  newApplicant;
+  newInterview;
   isLoading = false;
 
   constructor(private employeeService: EmployeeService) {}
   
-  getnewApplicants() {
+  getActiveInterviews() {
     this.isLoading = true;
-    this.employeeService.getNewApplicant().subscribe(
+    this.employeeService.getActiveInter().subscribe(
       (res) => {
         console.log(res);
-        this.newApplicant = res;
+        this.newInterview = res;
         this.isLoading = false;
       },
       (error) => {
@@ -29,9 +29,7 @@ export class ActiveInterviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getnewApplicants();
+    this.getActiveInterviews();
   }
-
-
 
 }

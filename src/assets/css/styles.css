@@ -284,6 +284,8 @@ footer {
   margin-left: 200px !important;
 }
 /* extras in the nav bar  */
+
+
 /* .dropdown:hover>.dropdown-menu {
   display: block;
 } */
@@ -297,7 +299,9 @@ footer {
   transform: rotate(-90deg);
 }
 .log:hover{
+  transition: 300ms ease all;
   transform: rotate(0deg);
+
 }
 .hr-btn{
   background-color: #004763;

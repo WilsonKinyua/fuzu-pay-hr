@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Staff } from '../../shared/models/staff';
 import { JobListing } from 'src/app/shared/models/job-listing';
 import { Application } from 'src/app/shared/models/application';
+import { Job } from '../../shared/models/job';
 import { GetUserTokenService } from './get-user-token.service';
 
 @Injectable({
@@ -26,6 +27,7 @@ export class EmployeeService {
       },
     });
   }
+
   // Add applicant
   addApplicant(applicant: JobListing) {
     return this.http.post(
@@ -55,10 +57,28 @@ export class EmployeeService {
   }
 
   // get one applicant
-
   getOneApplicant(id: Application) {
     return this.http.get(
       this.sourceUrl + '/human-resource/api/applications/' + id + '/'
+    );
+  }
+  // get interviews
+
+  getActiveInter() {
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/active/interviews/'
+    );
+  }
+  getPastInter() {
+    return this.http.get(
+      this.sourceUrl + '/human-resource/api/past/interviews/'
+    );
+  }
+  // schedule interviews
+  scheduleInterview(listings: Job) {
+    return this.http.post(
+      this.sourceUrl + '/human-resource/api/jobs/',
+      listings
     );
   }
 
