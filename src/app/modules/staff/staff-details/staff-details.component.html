@@ -1,4 +1,6 @@
-<section class="content">
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<section class="content" >
   <div class="container" *ngIf="isLoading">
     <div class="row">
       <div class="col-md-12 text-center">
@@ -31,9 +33,10 @@
         </div>
       </div>
       <div class="card-body">
-        <h4 class="card-title text-capitalize">{{ employee?.other_names }} {{ employee?.username }}</h4>
-        <h6 class="sub-title text-capitalize">{{ employee?.department }}</h6>
-        <p class="sub-title text-capitalize"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ employee?.country }}</p>
+        <h4 class="card-title text-capitalize"> {{ employee.employee.other_names }} {{ employee.employee.surname }}</h4>
+        <h6 class="sub-title text-capitalize">{{ employee?.department.name }}</h6>
+        <p class="sub-title text-capitalize"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ employee?.employee.country }}
+        </p>
         <p class="sub-title">Working Period: <strong>9 Months</strong></p>
 
       </div>
@@ -51,22 +54,22 @@
           <th>Company:</th>
           <th>Company Limited</th>
           <th>Employee ID:</th>
-          <th>{{ employee?.employee_id }}</th>
+          <th>{{ employee?.employee.employee_id }}</th>
         </tr>
       </thead>
 
       <tbody class="mt-5 text-capitalize">
         <tr>
           <td class="back">Work Email</td>
-          <td>{{ employee?.work_email }}</td>
+          <td class="text-lowercase">{{ employee?.employee.email }}</td>
           <td>Employment Date</td>
           <td>{{ employee?.employment_date }}</td>
         </tr>
         <tr>
           <td class="back">Personal Email</td>
-          <td>{{ employee?.personal_email }}</td>
+          <td>{{ employee?.employee.personal_email }}</td>
           <td>Department</td>
-          <td>{{ employee?.department }}</td>
+          <td>{{ employee?.department.name }}</td>
         </tr>
         <tr>
           <td class="back">Mobile Number</td>
@@ -76,7 +79,7 @@
         </tr>
         <tr>
           <td class="back">Employee Type</td>
-          <td>{{ employee?.employment_type }}</td>
+          <td>{{ employee?.employment_type.name }}</td>
           <td>Employment Date</td>
           <td>{{ employee?.employment_date }}</td>
         </tr>
@@ -94,13 +97,13 @@
         </tr>
         <tr>
           <td class="back">ID Number</td>
-          <td>{{ employee?.id_number }}</td>
+          <td>{{ employee?.employee.national_id }}</td>
           <td>Marital Status</td>
           <td>{{ employee?.marital_status }}</td>
         </tr>
         <tr>
           <td class="back">Date Of Birth</td>
-          <td>{{ employee?.date_of_birth }}</td>
+          <td>{{ employee?.employee.date_of_birth }}</td>
           <td>Emergency Contact</td>
           <td>{{ employee?.emergency_contact }} / {{ employee?.emergency_contact_number }}</td>
         </tr>

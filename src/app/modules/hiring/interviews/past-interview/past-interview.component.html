@@ -1,16 +1,17 @@
 <app-interviews></app-interviews>
 <div class="container">
-    <div class="row">
+    <div class="row stat">
         <div class="col-sm-">
             <table class="interview-table">
-                <tr>
-                    <th>Apllicant Name</th> 
+                <tr class="app">
+                    <th>Applicant Name</th> 
                     <th>Position Applied</th>
                     <th>Education Qualifications</th>
                     <th>Interview Date</th>
                     <th>Status</th>
                 </tr>
                
+<<<<<<< HEAD
                 <tr *ngFor='let  Interview of pastInterview' routerLink="/hiring/application/singleapplications/{{Interview.interview_date}}">
                     <td><small><a>{{Interview.interview_date}}</a></small></td>
                     <td><small>{{Interview.interview_date}}</small></td>
@@ -29,20 +30,40 @@
                     <td><small>David Martinez</small></td>
                     <td><small>Customer Support Specialist</small></td>
                     <td><small>Bachelor of Science in Mangement</small></td>
+=======
+                <tr>
+                    <td><small><a routerLink="/hiring/interview/inreview" class="named">James Murimi</a></small></td>
+                    <td class="pop"><small>Sales Manager</small></td>
+                    <td class="pop"><small>MBA Busniess Administration</small></td>
+                    <td class="tr-date"><small>14/12/2021</small></td>
+                    <td class="tr-hired"><small>Hired</small></td>
+                </tr>
+                <tr>
+                    <td class="name"><small><a routerLink="/hiring/interview/declined" class="bless">Blessings Mugendi</a></small></td>
+                    <td class="pop"><small>Product Designer</small></td>
+                    <td class="pop"><small>BSc Development and Product Design</small></td>
+                    <td class="tr-date"><small>14/12/2021</small></td>
+                    <td class="tr-declined"><small>Decline</small></td>
+                </tr>
+                <tr>
+                    <td class="name"><small>David Martinez</small></td>
+                    <td class="pop"><small>Customer Support Specialist</small></td>
+                    <td class="pop"><small>Bachelor of Science in Mangement</small></td>
+>>>>>>> 2f0f08d0dc4835b730ce3b80fc8bc7487db5b13d
                     <td class="tr-date"><small>16/12/2021</small></td>
                     <td class="tr-hired"><small>Hired</small></td>
                 </tr>
                 <tr>
-                    <td><small>Mercy John</small></td>
-                    <td><small>Data Analyst</small></td>
-                    <td><small>BSc Economics Statics</small></td>
+                    <td class="name"><small>Mercy John</small></td>
+                    <td class="pop"><small>Data Analyst</small></td>
+                    <td class="pop"><small>BSc Economics Statics</small></td>
                     <td class="tr-date"><small>17/12/2021</small></td>
                     <td class="tr-declined"><small>Declined</small></td>
                 </tr>
                 <tr>
-                    <td><small>Andrew Munene</small></td>
-                    <td><small>Software Developer</small></td>
-                    <td><small>BSc Computer Sceince and Mathematics</small></td>
+                    <td class="name"><small>Andrew Munene</small></td>
+                    <td class="pop"><small>Software Developer</small></td>
+                    <td class="pop"><small>BSc Computer Sceince and Mathematics</small></td>
                     <td class="tr-date"><small>18/12/2021</small></td>
                     <td class="tr-hired"><small>Hired</small></td>
                 </tr> -->
