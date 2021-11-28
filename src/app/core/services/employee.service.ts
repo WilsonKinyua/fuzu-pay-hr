@@ -6,6 +6,7 @@ import { Staff } from '../../shared/models/staff';
 import { JobListing } from 'src/app/shared/models/job-listing';
 import { Application } from 'src/app/shared/models/application';
 import { GetUserTokenService } from './get-user-token.service';
+import { Job } from '../../shared/models/job';
 
 @Injectable({
   providedIn: 'root',
@@ -55,13 +56,27 @@ export class EmployeeService {
   }
 
   // get one applicant
-
-  getOneApplicant(id: Application) {
+getOneApplicant(id: Application) {
     return this.http.get(
       this.sourceUrl + '/human-resource/api/applications/' + id + '/'
     );
   }
 
+  getOneApplicant(id:Application){
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + id  + '/' );
+  } 
+  // get interviews
+
+  getActiveInter(){
+    return this.http.get(this.sourceUrl + '/human-resource/api/active/interviews/');
+  } 
+  getPastInter(){
+    return this.http.get(this.sourceUrl + '/human-resource/api/past/interviews/');
+  } 
+// schedule interviews 
+scheduleInterview(listings: Job) {
+  return this.http.post(this.sourceUrl + '/human-resource/api/jobs/', listings);
+}
   // get department details
   getDepartmentDetails() {
     return this.http.get(this.sourceUrl + '/human-resource/api/departments/');
