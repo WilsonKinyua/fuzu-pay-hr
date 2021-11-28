@@ -122,6 +122,7 @@ tbody tr td {
   overflow: hidden;
 } */
 
+
 .navbar-collapse{
   flex-grow: 0;
 }
@@ -137,27 +138,47 @@ tbody tr td {
   margin-right: -21rem;
 }
 
-.logo span {
-  font-size: 1em;
+
+
+#text{
+  position: absolute;
+  right: 17%;
+}
+/* .navbar-expand-lg {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 14px 14px 14px 14px;
+} */
+
+/* .logo span {
+  font-size: 1.4em;
   font-weight: 600;
   color: #004763;
-  margin-right: 50px;
-}
+  margin-left: 2.5rem;
+  
+} */
+/* 
+#searched{
+  position: absolute;
+  left: 25%;
+} */
 
-.search-input {
+
+
+/* .search-input {
   border: 1.5px solid var(--main-color);
   margin-right: 110px;
   margin-left: 110px;
-  padding: 1px;
+  padding: 6px;
   margin-top: 8px;
   color: #004763;
   width: 260px;
-}
+} */
 
-.search-input:focus {
+/* .search-input:focus {
   border: 1px solid var(--main-color);
   outline: none;
-}
+} */
 
 .search-input::placeholder {
   color: #004763;
@@ -208,7 +229,7 @@ tbody tr td {
   width: 180px;
   position: fixed;
   left: 0;
-  height: 100%;
+  height: 100vh;
   background: #f1f1f0;
 }
 .sidebar-menu ul {
@@ -237,11 +258,20 @@ tbody tr td {
 }
 
 .copyright {
-  margin-top: 10px;
   text-align: center;
   font-size: 0.8em;
   color: #004763;
+ 
 }
+
+#copyright{
+  position: absolute;
+  padding-left: 3rem;
+  bottom: 10%;
+  
+}
+
+
 footer {
   margin-top: 160%;
 }
@@ -410,13 +440,13 @@ th {
 
 .down {
   position: absolute;
-  right: 120px;
+  right: 10%;
 }
 
 .down button {
   color: white;
   background-color: #004763;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .john {
