@@ -6,7 +6,7 @@ import { Staff } from '../../shared/models/staff';
 import { JobListing } from 'src/app/shared/models/job-listing';
 import { Application } from 'src/app/shared/models/application';
 import { Job } from '../../shared/models/job';
-
+import { GetUserTokenService } from './get-user-token.service';
 
 @Injectable({
   providedIn: 'root',
