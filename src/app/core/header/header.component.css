@@ -8,16 +8,22 @@
   }
   .dropdown-menu{
     /* position: relative; */
-    left: -10em;
-    top: 90px;
+    left: -14em;
+    top: 56px;
     z-index: 2;
-    width: 200px;
+    /* min-width: 17rem;   */
+  }
+  .log{
+    transform: rotate(-90deg);
+  }
+  .log:hover{
+    transform: rotate(0deg);
   }
   .hr-btn{
     background-color: #004763;
     border: 1px solid #004763 ;
     border-radius: 2px;
-    width: 120px;
+    /* width: 120px; */
     margin: 20px;
     color:#FFFFFF; 
 
