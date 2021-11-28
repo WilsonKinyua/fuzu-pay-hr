@@ -6,30 +6,29 @@ import { Staff } from '../../shared/models/staff';
 import { JobListing } from 'src/app/shared/models/job-listing';
 import { Application } from 'src/app/shared/models/application';
 import { Job } from '../../shared/models/job';
-
+import { GetUserTokenService } from './get-user-token.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmployeeService {
   sourceUrl = environment.sourceUrl;
-  // token = environment.token;
 
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private userTokenService: GetUserTokenService
+  ) {}
 
   // add new employee
   addStaff(employee: Staff) {
-    return this.http.post(
-      this.sourceUrl + '/account/register/',
-      employee,
-      {
-        headers: {
-          // Authorization: 'Token ' + this.token,
-        },
-      }
-    );
+    return this.http.post(this.sourceUrl + '/account/register/', employee, {
+      headers: {
+        Authorization: 'Token ' + this.userTokenService.getUserToken(),
+      },
+    });
   }
+
   // Add applicant
   addApplicant(applicant: JobListing) {
     return this.http.post(this.sourceUrl + '/human-resource/api/employees/', applicant);
@@ -39,10 +38,10 @@ export class EmployeeService {
   getAllEmployees() {
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
   }
-  getNewApplicant(){
+  getNewApplicant() {
     return this.http.get(this.sourceUrl + '/human-resource/api/applications/new/')
   }
-  getPastApplicant(){
+  getPastApplicant() {
     return this.http.get(this.sourceUrl + '/human-resource/api/applications/')
   }
 
@@ -53,7 +52,6 @@ export class EmployeeService {
     );
   }
 
-
   // get one applicant
 
   getOneApplicant(id:Application){
@@ -62,10 +60,10 @@ export class EmployeeService {
 
   // get interviews
 
-  getActiveInter(){
+  getActiveInter() {
     return this.http.get(this.sourceUrl + '/human-resource/api/active/interviews/');
-  } 
-  getPastInter(){
+  }
+  getPastInter() {
     return this.http.get(this.sourceUrl + '/human-resource/api/past/interviews/');
   } 
 // schedule interviews 
