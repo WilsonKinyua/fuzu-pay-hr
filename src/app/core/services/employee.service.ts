@@ -13,14 +13,21 @@ import { Job } from '../../shared/models/job';
 })
 export class EmployeeService {
   sourceUrl = environment.sourceUrl;
+  // token = environment.token;
+
 
   constructor(private http: HttpClient) {}
 
   // add new employee
   addStaff(employee: Staff) {
     return this.http.post(
-      this.sourceUrl + '/human-resource/api/employees/',
-      employee
+      this.sourceUrl + '/account/register/',
+      employee,
+      {
+        headers: {
+          // Authorization: 'Token ' + this.token,
+        },
+      }
     );
   }
   // Add applicant
@@ -46,12 +53,12 @@ export class EmployeeService {
     );
   }
 
+
   // get one applicant
 
   getOneApplicant(id:Application){
     return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + id  + '/' );
   } 
-
   // get interviews
 
   getActiveInter(){
@@ -66,3 +73,13 @@ scheduleInterview(listings: Job) {
 }
   
 }
+
+
+  // get department details
+  getDepartmentDetails(){
+    return this.http.get(this.sourceUrl +'/human-resource/api/departments/')
+  }
+
+
+}
+

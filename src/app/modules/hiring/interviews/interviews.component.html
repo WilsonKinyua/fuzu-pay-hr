@@ -1,16 +1,8 @@
 <app-hiring></app-hiring>
   <div class="container">
-    <!-- Section A -->
-    <!-- <div>
-          <button class="hr-btn">Jobs</button>
-          <button class="hr-btn">Applications</button>
-          <button class="hr-btn">Interviews</button>
-          <button class="hr-btn">Hired</button>
-      </div> -->
-
-    <!-- Section B -->
-    <div class="container-fluid shadow p-3 mb-5 bg-body rounded">
-      <div class="row">
+    <section class="content">
+    <div class="container com shadow p-3 mb-5 bg-body rounded">
+      <div class="row container">
         <div class="col-md-2 m-1">
           <button type="button" routerLink="/hiring/interview/active" class="btn btn-outline-secondary h"
             routerLinkActive="activebuttons">Active Interview</button>
@@ -20,9 +12,25 @@
             routerLinkActive="activebuttons">Past Interview</button>
         </div>
 
+
+      </div>
+      <div class="d-flex justify-content-start" id="type">
+        <div>
+          <h6 class="mt-2 m-2 job">Job Title</h6>
+        </div>
+        <div>
+          <select class="form-select">
+            <option>All</option>
+            <option>Permanent</option>
+            <option>Contract</option>
+          </select>
+        </div>
       </div>
 
+
     </div>
+  </section>
+
     <router-outlet></router-outlet>
 
     <!-- <div class="row">

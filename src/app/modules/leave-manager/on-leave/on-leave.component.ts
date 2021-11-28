@@ -11,6 +11,7 @@ import { OnLeaveService } from 'src/app/core/services/on-leave.service';
 export class OnLeaveComponent implements OnInit {
   empOnLeave;
   isLoading = false;
+  days;
 
 
   constructor(private OnLeaveService: OnLeaveService) { }
@@ -22,6 +23,13 @@ export class OnLeaveComponent implements OnInit {
       (res) => {
         console.log(res);
         this.empOnLeave = res;
+        this.empOnLeave.forEach((leave) => {
+          const startDateTime = new Date(leave.leave_date_from).getTime();
+          const endDateTime = new Date(leave.leave_date_to).getTime();
+          const difference = endDateTime - startDateTime;
+          this.days = Math.round(difference / (1000 * 60 * 60 * 24));
+          leave.days = this.days;
+        });
         this.isLoading = false;
       },
       (error) => {

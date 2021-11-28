@@ -30,15 +30,15 @@ export class LoginComponent implements OnInit {
     this.loginService.login(form.value).subscribe(
       (response) => {
         console.log(response);
-        this.isLoading = false;
-        this.token = response;
-        this.tokenService.setToken(this.token.token);
-        this.authService.isLoggedIn();
-        console.log(this.authService.isLoggedIn());
-        this.router.navigateByUrl('/')
-        .then(() => {
-          location.reload();
-        });
+        // this.isLoading = false;
+        // this.token = response;
+        // this.tokenService.setToken(this.token.token);
+        // this.authService.isLoggedIn();
+        // console.log(this.authService.isLoggedIn());
+        // this.router.navigateByUrl('/')
+        // .then(() => {
+        //   location.reload();
+        // });
         // this.loginService.setToken(response.token);
         // this.loginService.setUser(response.user);
         // this.loginService.setIsLoggedIn(true);
