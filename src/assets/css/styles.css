@@ -163,10 +163,10 @@ tbody tr td {
   border: 1.5px solid var(--main-color);
   margin-right: 110px;
   margin-left: 110px;
-  padding: 6px;
+  padding: 5px;
   margin-top: 8px;
   color: #004763;
-  width: 260px;
+  width: 280px;
 }
 .search-input::placeholder {
   color: #004763;
