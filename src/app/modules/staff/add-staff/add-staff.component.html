@@ -1,4 +1,6 @@
-<section class="content">
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<section class="content" >
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -31,7 +33,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="alert alert-success" role="alert" *ngIf="successMessage">
-          {{successMessage}}
+          {{successMessage.success }}
         </div>
         <div *ngIf="errorMessage">
           <span *ngFor="let item of errorMessage | keyvalue">

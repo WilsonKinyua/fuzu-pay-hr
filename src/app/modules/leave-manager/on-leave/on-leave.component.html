@@ -1,3 +1,5 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
 <section class="content">
   <div class="container">
     <!-- body code here -->
@@ -40,9 +42,9 @@
               <td>{{empOnLeaves.department}}</td>
               <td>{{empOnLeaves.leave_date_from}}</td>
               <td>{{empOnLeaves.leave_date_to}}</td>
-              <td>8 Days</td>
+              <td>{{ empOnLeaves.days }} Days</td>
             </tr>
-            
+
           </tbody>
         </table>
       </div>
