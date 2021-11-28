@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  sourceUrl: 'http://127.0.0.1:8000',
-  token: '20aa6b257241d222fd5a8f0675ccf993b0c6693c',
+  sourceUrl: 'https://machachari.herokuapp.com',
 };
 
 

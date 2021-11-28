@@ -12,7 +12,7 @@ import { Application } from 'src/app/shared/models/application';
 })
 export class EmployeeService {
   sourceUrl = environment.sourceUrl;
-  token = environment.token;
+  // token = environment.token;
 
 
   constructor(private http: HttpClient) {}
@@ -22,11 +22,11 @@ export class EmployeeService {
     return this.http.post(
       this.sourceUrl + '/account/register/',
       employee,
-      {
-        headers: {
-          Authorization: 'Token ' + this.token,
-        },
-      }
+      // {
+      //   headers: {
+      //     Authorization: 'Token ' + this.token,
+      //   },
+      // }
     );
   }
   // Add applicant
@@ -56,5 +56,5 @@ export class EmployeeService {
 
   getOneApplicant(id:Application){
     return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + id  + '/' );
-  } 
+  }
 }
