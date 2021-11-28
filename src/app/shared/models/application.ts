@@ -16,7 +16,6 @@ export class Application {
         public created_at: string,
         public soft_delete: string,
         
-       
     ){
 
     }
