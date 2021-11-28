@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
   isLoading = false;
   errorMessage: any = [];
   token;
+  responseUser;
+  isHumanResource;
 
   ngOnInit(): void {}
 
@@ -30,19 +32,22 @@ export class LoginComponent implements OnInit {
     this.loginService.login(form.value).subscribe(
       (response) => {
         console.log(response);
-        // this.isLoading = false;
-        // this.token = response;
-        // this.tokenService.setToken(this.token.token);
-        // this.authService.isLoggedIn();
-        // console.log(this.authService.isLoggedIn());
-        // this.router.navigateByUrl('/')
-        // .then(() => {
-        //   location.reload();
-        // });
-        // this.loginService.setToken(response.token);
-        // this.loginService.setUser(response.user);
-        // this.loginService.setIsLoggedIn(true);
-        // this.loginService.setIsHumanResource(response.user.is_human_resource);
+        this.token = response;
+        this.token = this.token.token;
+        this.responseUser = response;
+        this.responseUser = this.responseUser.user;
+        this.isHumanResource = this.responseUser.role.name;
+        this.isLoading = false;
+        if (this.isHumanResource === 'human_resources') {
+          // this.authService.setUser(this.responseUser);
+          this.tokenService.setToken(this.token);
+          this.router.navigate(['/dashboard']);
+        } else {
+          // display error message
+          this.errorMessage = [
+              'You are not authorized to access this page',
+          ];
+        }
       },
       (error) => {
         console.log(error);
