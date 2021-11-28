@@ -37,6 +37,8 @@ export class HeaderComponent implements OnInit {
 
     this.isLoggedIn();
   }
+
+  // running clock
   ngOnDestroy() {
     clearInterval(this.intervalId);
     if (this.subscription) {

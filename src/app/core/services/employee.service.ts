@@ -22,11 +22,11 @@ export class EmployeeService {
     return this.http.post(
       this.sourceUrl + '/account/register/',
       employee,
-      // {
-      //   headers: {
-      //     Authorization: 'Token ' + this.token,
-      //   },
-      // }
+      {
+        headers: {
+          // Authorization: 'Token ' + this.token,
+        },
+      }
     );
   }
   // Add applicant
@@ -52,9 +52,18 @@ export class EmployeeService {
     );
   }
 
+
   // get one applicant
 
   getOneApplicant(id:Application){
     return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + id  + '/' );
+  } 
+
+
+  // get department details
+  getDepartmentDetails(){
+    return this.http.get(this.sourceUrl +'/human-resource/api/departments/')
   }
+
+
 }
