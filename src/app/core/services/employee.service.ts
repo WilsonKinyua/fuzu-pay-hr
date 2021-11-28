@@ -52,8 +52,16 @@ export class EmployeeService {
     );
   }
 
+
+  // get one applicant
+
+  getOneApplicant(id:Application){
+    return this.http.get(this.sourceUrl + '/human-resource/api/applications/' + id  + '/' );
+  } 
+
   // get department details
   getDepartmentDetails(){
     return this.http.get(this.sourceUrl +'/human-resource​/api​/departments​/')
   }
+
 }

@@ -3,9 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
-  sourceUrl: 'http://127.0.0.1:8000/',
-  token: '20aa6b257241d222fd5a8f0675ccf993b0c6693c',
+  production: false,
+   sourceUrl: 'https://machachari.herokuapp.com',
 };
 
 /*

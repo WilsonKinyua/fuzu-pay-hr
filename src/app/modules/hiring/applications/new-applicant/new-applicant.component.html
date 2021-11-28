@@ -1,11 +1,10 @@
-<div class="container-fluid">
-
+<div class="container-fluid body">
   <table class="table table-hover table-borderless">
     <thead>
       <tr>
         <th scope="col">Applicants Name</th>
         <th scope="col">Position Applied</th>
-        <th scope="col">Education Qualifications</th>
+        <th scope="col" >Education Qualifications</th>
         <th scope="col">Experience</th>
         <th scope="col">location</th>
         <th scope="col" >Attached Documents</th>
@@ -13,8 +12,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr routerLink="/hiring/application/singleapplications" *ngFor='let  newApplicants of newApplicant'>
-        <th scope="row">{{newApplicants.applicant_name }}</th>
+      <tr class="preloader" *ngIf="isLoading">
+        <td colspan="5" class="text-center mt-5">
+          <app-loader></app-loader>
+        </td>
+      </tr>
+      <tr *ngFor='let  newApplicants of newApplicant'>
+        <th scope="row"  routerLink="/hiring/application/singleapplications/{{ newApplicants.id }}" >{{newApplicants.applicant_name }}</th>
         <td>{{newApplicants.position}}</td>
         <td>{{newApplicants.education_obtained}}</td>
         <td>{{newApplicants.experience}}</td>

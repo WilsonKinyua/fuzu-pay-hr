@@ -1,5 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 
 @Component({
@@ -8,19 +8,39 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
   styleUrls: ['./single-applicant.component.css']
 })
 export class SingleApplicantComponent implements OnInit {
-
-  // constructor(private location: Location) { }
-  constructor(private employeeservice: EmployeeService) {}
-
+  applicantId;
   singleApplicant;
   isLoading = false;
 
+  constructor( 
+    private route: ActivatedRoute,
+    private employeeservice: EmployeeService
+    ) {}
+
+  ngOnInit(): void {
+    let paramSub = this.route.params.subscribe(
+      (params) => {
+        console.log(params);
+        this.applicantId = params.id;
+        console.log(this.applicantId);
+        this.getSingleApplicant();
+      },
+      (error) => {
+        console.error(error);
+        paramSub.unsubscribe();
+      },
+      () => {
+        paramSub.unsubscribe();
+      }
+    );
+  }
+
   getSingleApplicant() {
     this.isLoading = true;
-    this.employeeservice.getPastApplicant().subscribe(
-      (res) => {
-        console.log(res);
-        this.singleApplicant = res;
+    this.employeeservice.getOneApplicant(this.applicantId).subscribe(
+      (singleApplicant) => {
+        console.log(singleApplicant);
+        this.singleApplicant = singleApplicant;
         this.isLoading = false;
       },
       (error) => {
@@ -30,9 +50,5 @@ export class SingleApplicantComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {
-    this.getSingleApplicant()
-  }
-  
   
 }
