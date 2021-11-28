@@ -14,15 +14,18 @@
             <th>Scheduled Time</th>
           </tr>
 
-          <tr>
-            <td><small><a routerLink="/hiring/interview/inreview" class="sail">James Murimi</a></small></td>
+          <tr *ngFor='let  Applicant of newApplicant'>
+            <td><small><a routerLink="/hiring/interview/inreview">James Murimi</a></small></td>
+
             <td><small>Sales Manager</small></td>
             <td><small>MBA Busniess Administration</small></td>
-            <td><small>14/12/2021</small></td>
+            <td><small>{{Applicant.interview_date}}</small></td>
             <td class="tr-time"><small>09:30 AM - 10:30 AM</small></td>
           </tr>
-          <tr routerLink="hiring/interview/inreview">
-            <td><small class="sail">Blessings Mugendi</small></td>
+
+          <!-- <tr routerLink="hiring/interview/inreview">
+            <td><small>Blessings Mugendi</small></td>
+
             <td><small>Product Designer</small></td>
             <td><small>BSc Development and Product Design</small></td>
             <td><small>14/12/2021</small></td>
@@ -48,7 +51,7 @@
             <td><small>BSc Computer Sceince and Mathematics</small></td>
             <td><small>18/12/2021</small></td>
             <td class="tr-time"><small>11:30 AM - 12:30 PM</small></td>
-          </tr>
+          </tr> -->
         </table>
       </div>
 

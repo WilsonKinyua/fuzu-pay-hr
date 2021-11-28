@@ -34,6 +34,8 @@ export class HeaderComponent implements OnInit {
       this.rxTime = time;
     });
   }
+
+  // running clock
   ngOnDestroy() {
     clearInterval(this.intervalId);
     if (this.subscription) {
