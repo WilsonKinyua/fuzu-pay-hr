@@ -25,7 +25,6 @@ import { PastInterviewComponent } from './modules/hiring/interviews/past-intervi
 import { OfferLetterComponent } from './modules/hiring/hired/offer-letter/offer-letter.component';
 import { InterviewStatusDeclinedComponent } from './modules/hiring/interviews/interview-status-declined/interview-status-declined.component';
 import { InterviewStatusInreviewComponent } from './modules/hiring/interviews/interview-status-inreview/interview-status-inreview.component';
-import { MainComponent } from './modules/main/main.component';
 import { AlreadyLoggedService } from './core/services/already-logged.service';
 import { EnsureAuthenticatedService } from './core/services/ensure-authenticated.service';
 const routes: Routes = [
@@ -150,7 +149,6 @@ const routes: Routes = [
     component: LoginComponent,
     canActivate: [AlreadyLoggedService],
   },
-  { path: 'app', component: MainComponent },
   { path: '**', redirectTo: 'dashboard' },
 ];
 

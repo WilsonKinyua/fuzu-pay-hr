@@ -127,7 +127,7 @@ tbody tr td {
   flex-grow: 0;
 }
 .date{
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 .navbar-expand-lg {
   background-color: #fff;
@@ -156,9 +156,9 @@ tbody tr td {
   font-weight: 600;
   color: #004763;
   margin-left: 2.5rem;
-  
+
 } */
-/* 
+/*
 #searched{
   position: absolute;
   left: 25%;
@@ -262,14 +262,14 @@ tbody tr td {
   text-align: center;
   font-size: 0.8em;
   color: #004763;
- 
+
 }
 
 #copyright{
   position: absolute;
   padding-left: 3rem;
   bottom: 10%;
-  
+
 }
 
 
@@ -281,6 +281,7 @@ footer {
 .content {
   margin: 0px 0px 0px 50px;
   padding: 0.5em;
+  margin-left: 200px !important;
 }
 /* extras in the nav bar  */
 /* .dropdown:hover>.dropdown-menu {
@@ -304,7 +305,7 @@ footer {
   border-radius: 2px;
   /* width: 120px; */
   margin: 20px;
-  color:#FFFFFF; 
+  color:#FFFFFF;
 
 }
 
