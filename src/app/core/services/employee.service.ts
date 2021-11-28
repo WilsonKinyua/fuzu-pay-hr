@@ -36,6 +36,7 @@ export class EmployeeService {
     );
   }
 
+
   // get all employees
   getAllEmployees() {
     return this.http.get(this.sourceUrl + '/human-resource/api/employees/');
