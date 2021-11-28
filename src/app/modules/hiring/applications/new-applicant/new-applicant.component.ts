@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 
-
-
 @Component({
   selector: 'app-new-applicant',
   templateUrl: './new-applicant.component.html',
