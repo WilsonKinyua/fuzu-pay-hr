@@ -251,6 +251,31 @@ footer {
   margin: 0px 0px 0px 50px;
   padding: 0.5em;
 }
+/* extras in the nav bar  */
+/* .dropdown:hover>.dropdown-menu {
+  display: block;
+} */
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.log{
+  transform: rotate(-90deg);
+}
+.log:hover{
+  transform: rotate(0deg);
+}
+.hr-btn{
+  background-color: #004763;
+  border: 1px solid #004763 ;
+  border-radius: 2px;
+  /* width: 120px; */
+  margin: 20px;
+  color:#FFFFFF; 
+
+}
 
 /* ======================== Dashboard ================================== */
 
