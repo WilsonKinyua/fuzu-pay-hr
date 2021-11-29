@@ -1,6 +1,8 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { EmployeeService } from 'src/app/core/services/employee.service';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-single-applicant',
@@ -8,19 +10,41 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
   styleUrls: ['./single-applicant.component.css']
 })
 export class SingleApplicantComponent implements OnInit {
-
-  // constructor(private location: Location) { }
-  constructor(private employeeservice: EmployeeService) {}
-
+  applicantId;
   singleApplicant;
   isLoading = false;
+  successMessage;
+  errorMessage;
+
+  constructor( 
+    private route: ActivatedRoute,
+    private employeeservice: EmployeeService
+    ) {}
+
+  ngOnInit(): void {
+    let paramSub = this.route.params.subscribe(
+      (params) => {
+        console.log(params);
+        this.applicantId = params.id;
+        console.log(this.applicantId);
+        this.getSingleApplicant();
+      },
+      (error) => {
+        console.error(error);
+        paramSub.unsubscribe();
+      },
+      () => {
+        paramSub.unsubscribe();
+      }
+    );
+  }
 
   getSingleApplicant() {
     this.isLoading = true;
-    this.employeeservice.getPastApplicant().subscribe(
-      (res) => {
-        console.log(res);
-        this.singleApplicant = res;
+    this.employeeservice.getOneApplicant(this.applicantId).subscribe(
+      (singleApplicant) => {
+        console.log(singleApplicant);
+        this.singleApplicant = singleApplicant;
         this.isLoading = false;
       },
       (error) => {
@@ -29,10 +53,24 @@ export class SingleApplicantComponent implements OnInit {
       }
     );
   }
+  // schedule interviews 
 
-  ngOnInit(): void {
-    this.getSingleApplicant()
+  scheduleInter(form: NgForm) {
+    console.log(form.value);
+    this.isLoading = true;
+    this.employeeservice.scheduleInterview(form.value).subscribe(
+      (res) => {
+        console.log(res);
+        this.isLoading = false;
+        this.successMessage = res;
+      },
+      (error) => {
+        this.errorMessage = error.error;
+        this.isLoading = false;
+        console.log(this.errorMessage);
+      }
+    );
   }
-  
+
   
 }

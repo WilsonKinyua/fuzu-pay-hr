@@ -19,7 +19,7 @@ export class LeaveRequestService {
   // update leave request
   uproveLeaveRequest(id: number) {
     return this.http.put(
-      `${this.sourceUrl}/human-resource/api/leaves/${id}/approve/`,
+      `${this.sourceUrl}/human-resource/api/leaves/${id}/update-status/`,
       { status: 'approved' }
     );
   }
@@ -27,7 +27,7 @@ export class LeaveRequestService {
   // reject leave request
   rejectLeaveRequest(id: number) {
     return this.http.put(
-      `${this.sourceUrl}/human-resource/api/leaves/${id}/approve/`,
+      `${this.sourceUrl}/human-resource/api/leaves/${id}/update-status/`,
       { status: 'rejected' }
     );
   }

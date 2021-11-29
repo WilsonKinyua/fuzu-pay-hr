@@ -70,3 +70,18 @@ button {
   width: 150px;
   font-size: 14px;
 }
+
+.com{
+  margin: 0 -8rem;
+ }
+
+ #type{
+  position: absolute;
+  right: 24%;
+  margin-top: -2.5rem;
+  
+  
+ }
+ .job{
+   font-weight: bold;
+ }

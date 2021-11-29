@@ -1,7 +1,6 @@
 
 <app-applications></app-applications>
-<section class="content">
-  <div class="container-fluid">
+  <div class="container">
     <table class="table table-hover table-borderless">
       <thead>
         <tr>
@@ -14,7 +13,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr routerLink="/hiring/application/singleapplications" *ngFor='let pastApplicant of pastApplicant'>
+        <tr class="preloader" *ngIf="isLoading">
+          <td colspan="5" class="text-center mt-5">
+            <app-loader></app-loader>
+          </td>
+        </tr>
+        <tr routerLink="/hiring/application/singleapplications/{{ pastApplicant.id }}" *ngFor='let pastApplicant of pastApplicant'>
           <th scope="row">{{pastApplicant.applicant_name}}</th>
           <td>{{pastApplicant.position}}</td>
           <td>{{pastApplicant.education_obtained}}</td>
@@ -74,5 +78,3 @@
 
 
   </div>
-
-</section>

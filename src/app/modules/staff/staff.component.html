@@ -1,4 +1,6 @@
-<section class="content">
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<section class="content" >
   <div class="container">
     <!-- body code here -->
     <div class="row">
@@ -37,7 +39,8 @@
                   </div>
                 </div>
                 <div>
-                  <div class="d-flex justify-content-start">
+
+                  <div class="d-flex justify-content-start" >
                     <div>
                       <h6 class="mt-1">Employment Type</h6>
                     </div>
@@ -49,6 +52,7 @@
                       </select>
                     </div>
                   </div>
+
                 </div>
                 <div>
                   <div class="d-flex justify-content-start">
@@ -98,23 +102,30 @@
                 <app-loader></app-loader>
               </td>
             </tr>
-            <tr *ngFor="let staff of staffs" class="text-capitalize" >
+            <tr *ngFor="let staff of staffs" class="text-capitalize">
               <td class="main-color">
-                <a routerLink="/staff/{{ staff.employee_id }}">
-                  {{ staff.other_names }} {{ staff.surname }}
+                <a routerLink="/staff/{{ staff.id }}">
+                  {{ staff.employee.other_names }} {{ staff.employee.surname }}
                 </a>
               </td>
               <td>
-                {{ staff.department }}
+                {{ staff.department?.name }}
               </td>
               <td>
                 {{ staff.position }}
               </td>
               <td>
-                {{ staff.status }}
+                <!-- if status is false display inactive -->
+                <span *ngIf="staff.status == false">
+                  Inactive
+                </span>
+                <!-- if status is true display active -->
+                <span *ngIf="staff.status == true">
+                  Active
+                </span>
               </td>
               <td>
-                {{ staff.employment_type }}
+                {{ staff.employment_type?.name }}
               </td>
             </tr>
           </tbody>
