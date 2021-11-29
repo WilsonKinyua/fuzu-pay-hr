@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetLoggedUserService } from 'src/app/core/services/get-logged-user.service';
+import { GetUserTokenService } from 'src/app/core/services/get-user-token.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   displayText;
-  constructor() {}
+  UserName;
+  constructor(
+    private loggedUserService: GetLoggedUserService,
+    private userTokenService: GetUserTokenService
+  ) {}
 
   ngOnInit(): void {
     this.getTimeGreeting();
+    this.getLoggedUserName();
   }
 
   // check what time it is and display the greeting
@@ -25,4 +32,12 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  getLoggedUserName() {
+    const token = this.userTokenService.getUserToken();
+    this.loggedUserService.getLoggedUser(token).subscribe((response) => {
+      this.UserName = response;
+      this.UserName = this.UserName.user.other_names;
+      console.log(this.UserName);
+    });
+  }
 }

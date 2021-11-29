@@ -1,0 +1,87 @@
+body {
+  background-color: #fdf3ee;
+}
+
+.card {
+  background-color: #fdf3ee;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 2px grey;
+}
+
+.containered {
+  font-family: Regular, Semibold and Bold;
+  font-size: 18px;
+  color: #004763;
+}
+
+.logo {
+  display: flex;
+}
+
+ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+}
+
+.text {
+  position: absolute;
+  left: 30%;
+}
+#check {
+  position: absolute;
+  left: 70%;
+}
+.home {
+  font-size: 24px;
+  padding: 10px 40px;
+  border-radius: 2px;
+}
+.home:active {
+  background-color: #004763;
+}
+
+.group {
+  display: flex;
+}
+
+.name {
+  margin-left: 5rem;
+}
+
+.reg {
+  padding: 4rem;
+}
+.join {
+  margin-left: 8rem;
+  font-size: 20px;
+}
+
+.dot {
+  height: 18px;
+  width: 18px;
+  background-color: #004763;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 1.2rem;
+}
+.over {
+  display: flex;
+}
+
+.over p {
+  margin-top: 0.9rem;
+  margin-left: 1rem;
+}
+
+.span {
+  margin-left: 6rem;
+}
+.join h5 {
+  color: black;
+  font-size: 25px;
+}
+
+.pam {
+  margin-top: 3rem;
+}
