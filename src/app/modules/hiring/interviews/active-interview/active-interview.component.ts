@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/core/services/employee.service';
 
 @Component({
   selector: 'app-active-interview',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiveInterviewComponent implements OnInit {
 
-  constructor() { }
+  newInterview;
+  isLoading = false;
+
+  constructor(private employeeService: EmployeeService) {}
+  
+  getActiveInterviews() {
+    this.isLoading = true;
+    this.employeeService.getActiveInter().subscribe(
+      (res) => {
+        console.log(res);
+        this.newInterview = res;
+        this.isLoading = false;
+      },
+      (error) => {
+        console.log(error);
+        this.isLoading = false;
+      }
+    );
+  }
 
   ngOnInit(): void {
+    this.getActiveInterviews();
   }
 
 }

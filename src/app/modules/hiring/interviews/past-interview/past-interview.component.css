@@ -1,16 +1,53 @@
-.container{
+/* .container{
     margin: 0 0 0 30px;
-}
+} */
 th, .tr-date{
     color: #004763;
+    /* font-size: 1rem; */
 }
 .interview-table td{ 
-    padding: 8px;
+    padding: 6px;
     width: 250px;
+    font-size: 1rem;    
+
 }
 .tr-hired{
     color: #43a047; ;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 .tr-declined{
-    color:#F30B0B;
+    color:#b35353;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.name{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+.named{
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.bless{
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.pop{
+    font-size: 1rem;
+    color: black;
+}
+.stat{
+    margin: 0 -8rem;
+}
+.content{
+    position: absolute;
+    left: 10%;
 }

@@ -1,25 +1,24 @@
 <app-applications></app-applications>
-<section class="content">
   <div class="container-fluid">
-    <div class="row">
+    <div class="row d-flex justify-content-between">
       <!-- the left side of the single interview body -->
-      <div class="row col-md-6">
+      <div class="row col-md-5">
         <div>
-          <h6>Application Status: In Review</h6>
+          <h6>Application Status: {{ singleApplicant?.status }}</h6>
         </div>
         <div class="row">
           <div class="col-sm-4 ">
             <img src="./assets/img/prof.png" class="avatar-md avatar rounded-circle" style="width: 150px;height: 150px;"
               alt="">
           </div>
-          <div class="col-sm-8 pt-5">
-            <h6 class="m-2 text-bold">Michael Muthamia</h6>
-            <h6 class="m-2"><i class="far fa-envelope"></i> <span
-                class="text-dark text-bold m-1">Linkedin.com/in/muthamiamichael</span></h6>
-            <h6 class="m-2"><i class="fab fa-linkedin"></i> <span
-                class="text-dark text-bold m-1">Linkedin.com/in/muthamiamichael</span></h6>
+          <div class="col-sm-8 pt-5" >
+            <h6 class="m-2 text-bold">{{ singleApplicant?.applicant_name }}</h6>
+            <h6 class="m-2"><i class="far fa-envelope"></i> <a href="{{ singleApplicant?.linkedin_url }}"
+                class="text-dark text-bold m-1 nowrap">{{ singleApplicant?.email | slice:0:30 }}..</a> </h6>
+            <h6 class="m-2"><i class="fab fa-linkedin"></i> <a href="{{ singleApplicant?.linkedin_url }}"
+                class="text-dark text-bold m-1">{{ singleApplicant?.linkedin_url | slice:0:30  }}..</a></h6>
           </div>
-
+  
         </div>
         <div class="col mt-5">
           <div class="row m-3">
@@ -27,7 +26,7 @@
               <h6>Phone No:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>+254723xxxxxxx</h6>
+              <h6>{{ singleApplicant?.phone_number }}</h6>
             </div>
           </div>
           <div class="row m-3">
@@ -35,7 +34,7 @@
               <h6>Location:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>Nairobi/kenya</h6>
+              <h6>{{ singleApplicant?.location }}</h6>
             </div>
           </div>
           <div class="row m-3">
@@ -43,15 +42,15 @@
               <h6>Education Obtained:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>Bachelors Degree</h6>
+              <h6>{{ singleApplicant?.education_obtained }}</h6>
             </div>
           </div>
           <div class="row m-3">
             <div class="col-sm-4 text-dark">
-              <h6>Education Obtained:</h6>
+              <h6>Experience:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>Bachelors Degree</h6>
+              <h6>{{ singleApplicant?.experience }}</h6>
             </div>
           </div>
           <div class="row m-3">
@@ -59,7 +58,7 @@
               <h6>Graduation Year:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>2021</h6>
+              <h6>{{ singleApplicant?.graduation_year }}</h6>
             </div>
           </div>
           <div class="row m-3">
@@ -67,7 +66,7 @@
               <h6>Desired pay:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>600000 ksh</h6>
+              <h6>{{ singleApplicant?.desired_salary }}</h6>
             </div>
           </div>
           <div class="row m-3">
@@ -75,7 +74,7 @@
               <h6>Date Available:</h6>
             </div>
             <div class="col-sm-8">
-              <h6>1/02/2021</h6>
+              <h6>{{ singleApplicant?.date_available }}</h6>
             </div>
           </div>
         </div>
@@ -91,7 +90,7 @@
             <button type="button" class="btn btn-outline-primary h" routerLinkActive="activebuttons">Decline</button>
           </div>
           <div class="col-sm-4">
-            <button type="button" class="btn btn-outline-primary h " (click)="goBack()">Go back</button>
+            <button type="button" class="btn btn-outline-primary h ">Go back</button>
           </div>
 
         </div>
@@ -112,12 +111,12 @@
         </div>
         <div class="row">
           <div class="card col-sm-12" style="height: 495px;">
-            <embed src="file_name.pdf" height="495px" />
+            <embed src="./assets/img/hes-resume-cover-letter-guide.pdf " height="495px" />
           </div>
         </div>
         <div class="row justify-content-center mt-2">
           <div class="col-sm-4">
-            <a href="file_name.pdf" download="proposed_file_name"
+            <a href="./assets/img/hes-resume-cover-letter-guide.pdf " download="proposed_file_name"
               class="btn btn-outline-secondary activebuttons h text-light">Download</a>
           </div>
         </div>
@@ -179,5 +178,3 @@
 
 
   </div>
-
-</section>

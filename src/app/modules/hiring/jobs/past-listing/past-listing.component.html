@@ -1,76 +1,29 @@
 <app-jobs></app-jobs>
 <section class="content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-4">
-        <h4>Position</h4>
-      </div>
 
-      <div class="col-4">
-        <h4>Department</h4>
-      </div>
+  <div class="container container-fluid ">
+    <table class="table table-hover table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Position</th>
+          <th scope="col">Department</th>
+          <th scope="col">Expired</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="preloader" *ngIf="isLoading">
+          <td colspan="5" class="text-center mt-5">
+            <app-loader></app-loader>
+          </td>
+        </tr>
+        <tr *ngFor="let pastjob of jobs">
+          <th class="col" scope="row">{{ pastjob.job_title }}</th>
+          <td class="col">{{ pastjob.department }}</td>
+          <td class="col color">{{ pastjob.deadline | date:'dd/MM/yyyy' }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
 
-      <div class="col-4">
-        <h4>Expired</h4>
-      </div>
-
-    </div>
-
-    <div class="row">
-      <div class="col-4">
-        <p>Software developement</p>
-      </div>
-
-      <div class="col-4">
-        <p>Information technology</p>
-      </div>
-
-      <div class="col-4">
-        <p>28/06/2021</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4">
-        <p>Software developement</p>
-      </div>
-
-      <div class="col-4">
-        <p>Information technology</p>
-      </div>
-
-      <div class="col-4">
-        <p>28/06/2021</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4">
-        <p>Software developement</p>
-      </div>
-
-      <div class="col-4">
-        <p>Information technology</p>
-      </div>
-
-      <div class="col-4">
-        <p>28/06/2021</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-4">
-        <p>Software developement</p>
-      </div>
-
-      <div class="col-4">
-        <p>Information technology</p>
-      </div>
-
-      <div class="col-4">
-        <p>28/06/2021</p>
-      </div>
-    </div>
-  </div>
 
 </section>

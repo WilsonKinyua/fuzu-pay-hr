@@ -1,4 +1,6 @@
-<section class="content">
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<section class="content" >
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -31,7 +33,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="alert alert-success" role="alert" *ngIf="successMessage">
-          {{successMessage}}
+          {{successMessage.success }}
         </div>
         <div *ngIf="errorMessage">
           <span *ngFor="let item of errorMessage | keyvalue">
@@ -45,8 +47,8 @@
     <form (ngSubmit)="addStaffOnSubmit(f)" #f="ngForm" *ngIf="!isLoading">
       <div id="input-details">
         <div class="container">
-          <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-            <div class="col mb-2 employee_code">
+          <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-2">
+            <div class="col employee_code">
               <label class="mb-1" for="employee-code">Employee Code</label>
               <input type="text" id="employee_code" name="employee_id" class="form-control" ngModel #employee_id
                 required>
@@ -55,69 +57,74 @@
                 Or Copy: {{employeeCode}}
               </span>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="surname">Surname</label>
               <input type="text" name="surname" class="form-control" ngModel #surname required>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="other-name">Other Name</label>
               <input type="text" name="other_names" class="form-control" ngModel #other_names required>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="phone-number">Phone Number</label>
               <input type="number" name="phone_number" class="form-control" ngModel #phone_number required>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="email">Email</label>
-              <input type="email" name="work_email" class="form-control" ngModel #work_email required>
+              <input type="email" name="email" class="form-control" ngModel #email required>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="id">ID/Passport Number</label>
-              <input type="text" name="id_number" class="form-control" ngModel #id_number required>
+              <input type="text" name="national_id" class="form-control" ngModel #national_id required>
             </div>
-            <div class="col mb-2">
-              <label class="mb-1" for="nationality">Nationality</label>
+            <div class="col">
+              <label class="mb-1" for="nationality">Country</label>
               <input type="text" name="country" class="form-control" ngModel #country>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="dob">Date of Birth</label>
-              <input type="text" name="date_of_birth" class="form-control" ngModel #date_of_birth>
+              <input type="date" name="date_of_birth" class="form-control" ngModel #date_of_birth>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="position">Department</label>
               <!-- <input type="text" name="department" class="form-control" ngModel #department> -->
               <select name="department" id="department" class="form-select" ngModel #department>
                 <option *ngFor="let dep of departments" value="{{ dep.id }}">{{ dep.name }}</option>
               </select>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="position">Position</label>
               <input type="text" name="position" class="form-control" ngModel #position required>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="employment-type">Employment Type</label>
               <!-- <input type="text" name="employment_type" class="form-control" ngModel #employment_type> -->
               <select name="employment_type" id="employment_type" class="form-select" ngModel #employment_type>
                 <option *ngFor="let emp of employmentType" value="{{ emp.id }}">{{ emp.name }}</option>
               </select>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="employment-date">Employment Date</label>
-              <input type="text" name="employment_date" class="form-control">
+              <input type="date" name="employment_date" class="form-control" ngModel #employment_date>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="gross-salary">Gross Salary</label>
               <input type="number" name="gross_salary" class="form-control" ngModel #gross_salary required>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="marital-status">Marital Status</label>
-              <input type="text" name="marital_status" class="form-control" ngModel #marital_status>
+              <select name="marital_status" id="marital_status" class="form-select" ngModel #marital_status>
+                <option value="married">Married</option>
+                <option value="single">Single</option>
+                <option value="divorced">Divorced</option>
+                <option value="widow">Widow</option>
+              </select>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="emergency-contact">Emergency Contact</label>
               <input type="number" name="emergency_contact" class="form-control" ngModel #emergency_contact>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="emergencyphone">Emergency Contact Phone</label>
               <input type="number" name="emergency_contact_number" class="form-control" ngModel
                 #emergency_contact_number>
@@ -129,19 +136,20 @@
         <p class="p-payment">Payment Details</p>
 
         <div class="container">
-          <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-            <div class="col mb-2">
+          <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-1">
+            <div class="col">
               <label class="mb-1" for="bank-name">Bank Name</label>
               <input type="text" name="bank_name" class="form-control" ngModel #bank_name>
             </div>
-            <div class="col mb-2">
-              <label class="mb-1" for="branch">Branch</label>
-              <input type="text" name="branch_name" class="form-control" ngModel #branch_name>
+            <div class="col">
+              <label class="mb-1" for="branch">Branch Name</label>
+              <input type="text" name="bank_branch" class="form-control" ngModel #bank_branch>
             </div>
-            <div class="col mb-2">
+            <div class="col">
               <label class="mb-1" for="account-number">Account Number</label>
               <input type="text" name="account_number" class="form-control" ngModel #account_number>
             </div>
+            <input type="text" name="password" value="password" ngModel #password>
           </div>
         </div>
       </div>
