@@ -1,13 +1,15 @@
-.container{
+/* .container{
     margin: 0 0 0 30px;
-}
+} */
 th, .tr-date{
     color: #004763;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 .interview-table td{ 
     padding: 6px;
     width: 250px;
+    font-size: 1rem;    
+
 }
 .tr-hired{
     color: #43a047; ;
@@ -37,13 +39,15 @@ th, .tr-date{
     font-weight: bold;
 }
 
-.app{
-    font-size: 1.1rem;
-}
+
 .pop{
     font-size: 1rem;
     color: black;
 }
 .stat{
     margin: 0 -8rem;
+}
+.content{
+    position: absolute;
+    left: 10%;
 }
