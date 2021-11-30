@@ -8,9 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class HiringService {
   baseurl = environment.sourceUrl;
-  httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+  
+  httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+  
+  constructor( private http: HttpClient) { }
 
-  constructor(private http: HttpClient) {}
 
   createListing(listings: Job) {
     return this.http.post(this.baseurl + '/human-resource/api/jobs/', listings);

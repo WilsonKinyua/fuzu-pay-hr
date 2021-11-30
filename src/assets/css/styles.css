@@ -123,6 +123,21 @@ tbody tr td {
 } */
 
 
+.navbar-collapse{
+  flex-grow: 0;
+}
+.date{
+  white-space: nowrap;
+}
+.navbar-expand-lg {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 14px 14px 14px 14px;
+}
+.navbar-brand{
+  margin-right: -21rem;
+}
+
 #text{
   position: absolute;
   right: 17%;
@@ -132,42 +147,35 @@ tbody tr td {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   padding: 14px 14px 14px 14px;
 }
-
-.logo span {
+.logo span{
   font-size: 1.4em;
   font-weight: 600;
-  color: #004763;
+  color:  #004763;
   margin-left: 2.5rem;
-  
 }
+
 
 #searched{
   position: absolute;
   left: 25%;
 }
-
-
-
 .search-input {
   border: 1.5px solid var(--main-color);
   margin-right: 110px;
   margin-left: 110px;
-  padding: 6px;
+  padding: 5px;
   margin-top: 8px;
   color: #004763;
-  width: 260px;
+  width: 280px;
 }
-
-.search-input:focus {
-  border: 1px solid var(--main-color);
-  outline: none;
-}
-
 .search-input::placeholder {
   color: #004763;
   font-size: 18px;
 }
-
+.search-input:focus {
+  border: 1px solid var(--main-color);
+  outline: none;
+}
 .date-time {
   margin-top: 5px;
 }
@@ -244,14 +252,14 @@ tbody tr td {
   text-align: center;
   font-size: 0.8em;
   color: #004763;
- 
+
 }
 
 #copyright{
   position: absolute;
   padding-left: 3rem;
   bottom: 10%;
-  
+
 }
 
 
@@ -263,6 +271,36 @@ footer {
 .content {
   margin: 0px 0px 0px 50px;
   padding: 0.5em;
+  margin-left: 200px !important;
+}
+/* extras in the nav bar  */
+
+
+/* .dropdown:hover>.dropdown-menu {
+  display: block;
+} */
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.log{
+  transform: rotate(-90deg);
+}
+.log:hover{
+  transition: 300ms ease all;
+  transform: rotate(0deg);
+
+}
+.hr-btn{
+  background-color: #004763;
+  border: 1px solid #004763 ;
+  border-radius: 2px;
+  /* width: 120px; */
+  margin: 20px;
+  color:#FFFFFF;
+
 }
 
 /* ======================== Dashboard ================================== */
@@ -398,13 +436,13 @@ th {
 
 .down {
   position: absolute;
-  right: 120px;
+  right: 10%;
 }
 
 .down button {
   color: white;
   background-color: #004763;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .john {

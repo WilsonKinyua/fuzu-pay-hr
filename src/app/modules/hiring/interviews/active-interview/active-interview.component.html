@@ -6,30 +6,30 @@
     <div class="row">
       <div class="col-sm-">
         <table class="interview-table">
-          <tr>
+          <tr class="app">
             <th>Apllicant Name</th>
             <th>Position Applied</th>
             <th>Education Qualifications</th>
             <th>Scheduled Date</th>
             <th>Scheduled Time</th>
           </tr>
-
-          <tr>
-            <td><small><a routerLink="/hiring/interview/inreview" class="sail">James Murimi</a></small></td>
-            <td><small>Sales Manager</small></td>
-            <td><small>MBA Busniess Administration</small></td>
-            <td><small>14/12/2021</small></td>
-            <td class="tr-time"><small>09:30 AM - 10:30 AM</small></td>
+          <tr *ngFor='let  Interview of newInterview' routerLink="/hiring/application/singleapplications/{{Interview.interview_date}}">
+            <td><small><a>{{Interview.interview_date}}</a></small></td>
+            <td><small>{{Interview.interview_date}}</small></td>
+            <td><small>{{Interview.interview_date}}</small></td>
+            <td><small>{{Interview.interview_date}}</small></td>
+            <td class="tr-time"><small>{{Interview.interview_date}} - {{Interview.interview_date}}</small></td>
           </tr>
           <tr routerLink="hiring/interview/inreview">
-            <td><small class="sail">Blessings Mugendi</small></td>
+            <td><small>Blessings Mugendi</small></td>
+
             <td><small>Product Designer</small></td>
             <td><small>BSc Development and Product Design</small></td>
             <td><small>14/12/2021</small></td>
             <td class="tr-time"><small>10:30 AM - 11:30 AM</small></td>
           </tr>
-          <tr>
-            <td class="sail"><small>David Martinez</small></td>
+          <!-- <tr>
+            <td><small>David Martinez</small></td>
             <td><small>Customer Support Specialist</small></td>
             <td><small>Bachelor of Science in Mangement</small></td>
             <td><small>16/12/2021</small></td>
@@ -48,7 +48,7 @@
             <td><small>BSc Computer Sceince and Mathematics</small></td>
             <td><small>18/12/2021</small></td>
             <td class="tr-time"><small>11:30 AM - 12:30 PM</small></td>
-          </tr>
+          </tr>  -->
         </table>
       </div>
 

@@ -14,6 +14,7 @@ export class Application {
         public cover_letter: string,
         public status: string,
         public created_at: string,
+        public interview_date:string,
         public soft_delete: string,
         
     ){
