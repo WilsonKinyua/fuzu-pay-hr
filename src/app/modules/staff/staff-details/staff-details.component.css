@@ -2,11 +2,12 @@
 
 .card-body {
   position: absolute;
-  left: 9rem;
+  left: 35%;
 }
 .card {
   margin-top: 2.3rem;
   font-size: 1rem;
+  box-shadow: 2px 2px 2px 2px #b9bdbe;
 }
 .abb {
   margin-top: 2.2rem;
