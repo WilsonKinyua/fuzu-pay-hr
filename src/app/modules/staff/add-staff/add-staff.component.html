@@ -79,7 +79,14 @@
             </div>
             <div class="col">
               <label class="mb-1" for="nationality">Country</label>
-              <input type="text" name="country" class="form-control" ngModel #country>
+              <select name="country" id="country" class="form-select" ngModel #country>
+                <option value="Kenya">Kenya</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Rwanda">Rwanda</option>
+              </select>
             </div>
             <div class="col">
               <label class="mb-1" for="dob">Date of Birth</label>

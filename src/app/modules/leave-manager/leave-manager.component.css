@@ -7,3 +7,7 @@
 .mt-0 {
   margin-top: -10px !important;
 }
+a{
+  font-size: small;
+  font-weight: bold;
+}
