@@ -39,10 +39,9 @@
                       <label for="" class="col-form-label">Employment Type</label>
                     </div>
                     <div class="col-md-4" style="margin-left: -10%;">
-                      <select class="form-select">
-                        <option>All</option>
-                        <option>Permanent</option>
-                        <option>Contract</option>
+                      <select name="employment_type" id="employment_type" class="form-select">
+                        <option value="all">All</option>
+                        <option *ngFor="let emp of employmentType" value="{{ emp.id }}">{{ emp.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -51,10 +50,9 @@
                       <label for="" class="col-form-label">Department</label>
                     </div>
                     <div class="col-md-4">
-                      <select class="form-select">
-                        <option>All</option>
-                        <option></option>
-                        <option></option>
+                      <select name="department" id="department" class="form-select">
+                        <option value="all">All</option>
+                        <option *ngFor="let dep of departments" value="{{ dep.id }}">{{ dep.name }}</option>
                       </select>
                     </div>
                   </div>

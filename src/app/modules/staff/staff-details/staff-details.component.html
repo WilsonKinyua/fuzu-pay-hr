@@ -11,8 +11,59 @@
   <div class="container" *ngIf="!isLoading">
     <div class="row">
       <div class="col-md-2">
-        <button class="btn-bn btn-edit mt-3">Edit</button>
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Edit</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+       <button type="button" class="btn btn-primary justify-content-center">Schedule Interview</button>
       </div>
+      <div class="modal-body">
+        <form>
+          <div class="row mb-3">
+            <div class="col-1">
+              <label for="recipient-name" class="col-form-label">Email</label>
+            </div>
+            <div class="col-11">
+              <input type="email" class="form-control" id="recipient-name">
+            </div>
+
+          </div>
+          <div class="row mb-3">
+            <div class="col-1">
+              <label for="recipient-name" class="col-form-label">Time</label>
+            </div>
+            <div class="col-11">
+              <input type="time" class="form-control" id="recipient-name">
+            </div>
+
+          </div>
+          <div class="row mb-3">
+            <div class="col-1">
+              <label for="recipient-name" class="col-form-label">Date</label>
+            </div>
+            <div class="col-11">
+              <input type="date" class="form-control" id="recipient-name">
+            </div>
+
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text" rows="20"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+
+        <button type="button" class="btn btn-primary justify-content-center">Send</button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+      </div>
+
       <div class="col-md-2">
         <div class="mt-3">
           <select class="form-select">
@@ -24,8 +75,7 @@
       </div>
     </div>
 
-    <div class="card" style="width: 30rem;">
-      <div class="col">
+
         <div class="icon">
           <i class="fas fa-user-circle"></i>
         </div>
@@ -39,7 +89,7 @@
 
       </div>
 
-    </div>
+    <!-- </div> -->
 
     <div class="abb">
       <h3>Employee Information</h3>
@@ -116,5 +166,5 @@
     </div>
 
 
-  </div>
+  <!-- </div> -->
 </section>
