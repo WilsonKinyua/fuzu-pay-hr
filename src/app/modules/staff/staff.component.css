@@ -2,4 +2,20 @@
   margin-left: 60px;
   padding: 0.5em;
 }
+h6{
+  font-size: small;
+  font-weight: bold;
+}
+option{
+  font-size: small;
+  font-weight: bold;
+  color: #004763;
+}
 
+.button-group a{
+  font-size: small;
+  font-weight: bold;
+}
+td{
+  font-size: 15px;
+}

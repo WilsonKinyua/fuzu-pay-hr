@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/core/services/employee.service';
-
+import { DepartmentService } from 'src/app/core/services/department.service';
+import { EmploymentTypeService } from 'src/app/core/services/employment-type.service';
 @Component({
   selector: 'app-staff',
   templateUrl: './staff.component.html',
@@ -8,12 +9,18 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
 })
 export class StaffComponent implements OnInit {
   staffs;
+  departments;
+  employmentType;
   isLoading = false;
   
-  constructor(private employeeService: EmployeeService) {}
+  constructor(private employeeService: EmployeeService,
+              private departmentService: DepartmentService,
+              private employmentTypeService: EmploymentTypeService,) {}
 
   ngOnInit(): void {
     this.getAllStaff();
+    this.getDepartments();
+    this.getEmploymentTypes();
   }
 
   // change the button current state
@@ -43,5 +50,26 @@ export class StaffComponent implements OnInit {
         this.isLoading = false;
       }
     );
+  }
+  // get departments
+  getDepartments() {
+    this.departmentService.getDepartments().subscribe((res) => {
+      console.log(
+        '================================ Departments =========================='
+      );
+      this.departments = res;
+      console.log(res);
+    });
+  }
+
+  // get employment types
+  getEmploymentTypes() {
+    this.employmentTypeService.getEmploymentTypes().subscribe((res) => {
+      console.log(
+        '================================ Employment Types =========================='
+      );
+      this.employmentType = res;
+      console.log(res);
+    });
   }
 }
