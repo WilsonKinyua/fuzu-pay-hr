@@ -9,7 +9,7 @@ export class AlreadyLoggedService {
 
   canActivate(): boolean {
     if (localStorage.getItem('currentUserToken')) {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/dashboard');
       return false;
     } else {
       return true;

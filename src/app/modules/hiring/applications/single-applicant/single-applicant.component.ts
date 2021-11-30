@@ -1,6 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/core/services/employee.service';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-single-applicant',
@@ -11,6 +13,8 @@ export class SingleApplicantComponent implements OnInit {
   applicantId;
   singleApplicant;
   isLoading = false;
+  successMessage;
+  errorMessage;
 
   constructor( 
     private route: ActivatedRoute,
@@ -46,6 +50,24 @@ export class SingleApplicantComponent implements OnInit {
       (error) => {
         console.log(error);
         this.isLoading = false;
+      }
+    );
+  }
+  // schedule interviews 
+
+  scheduleInter(form: NgForm) {
+    console.log(form.value);
+    this.isLoading = true;
+    this.employeeservice.scheduleInterview(form.value).subscribe(
+      (res) => {
+        console.log(res);
+        this.isLoading = false;
+        this.successMessage = res;
+      },
+      (error) => {
+        this.errorMessage = error.error;
+        this.isLoading = false;
+        console.log(this.errorMessage);
       }
     );
   }

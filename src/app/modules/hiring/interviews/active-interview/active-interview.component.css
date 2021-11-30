@@ -1,12 +1,23 @@
-.container{
-    margin: 0 0 0 30px;
-}
+
+
 th, .tr-time{
     color: #004763;
 
 }
 .interview-table td{ 
     padding: 8px;
-    width: 250px;
-    
+    width: 40em;
+    font-size: 1rem;    
+}
+tr{
+    color: black;
+}
+.sail{
+    color: black;
+    font-weight: bold;
+}
+
+.content{
+    position: absolute;
+    left: 10%;
 }
