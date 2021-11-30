@@ -172,7 +172,7 @@
         </div>
         <form class="row g-0">
           <div class="col-auto">
-            <input class="form-control" type="file" id="formFile" name="employee-upload" multiple="false" (change)="uploadEmployeeCsvFile($event)">
+            <input class="form-control" type="file" id="formFile" name="employee_upload" multiple="false" (change)="uploadEmployeeCsvFile($event)" accept=".csv" #employee_upload>
           </div>
           <div class="col-auto">
             <button class="btn btn-outline-primary mb-3">Upload</button>
