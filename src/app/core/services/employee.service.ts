@@ -30,6 +30,13 @@ export class EmployeeService {
   }
 
   // upload employee
+  addStaffViaUpload(employee: any) {
+    return this.http.post(this.sourceUrl + '/account/register/', employee, {
+      headers: {
+        Authorization: 'Token ' + this.userTokenService.getUserToken(),
+      },
+    });
+  }
 
   // Add applicant
   addApplicant(applicant: JobListing) {
