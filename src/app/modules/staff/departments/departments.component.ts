@@ -6,15 +6,15 @@ import { EmployeeService } from 'src/app/core/services/employee.service';
   selector: 'app-departments',
   templateUrl: './departments.component.html',
   styleUrls: ['./departments.component.css'],
-  
+
 })
 export class DepartmentsComponent implements OnInit {
- 
+
   depDetails;
   isLoading = false;
-  
+
   constructor(private departmentService: EmployeeService ) {}
-  
+
   onClick(event: any) {
     const element = event.target || event.srcElement || event.currentTarget;
     const idAttr = element.attributes.class;
@@ -29,7 +29,7 @@ export class DepartmentsComponent implements OnInit {
 
   getDepartmentDetails() {
     this.isLoading = true;
-    this.departmentService.getDepartmentDetails().subscribe(
+    this.departmentService.getAllEmployees().subscribe(
       (res) => {
         console.log(res);
         this.depDetails = res;
@@ -43,10 +43,10 @@ export class DepartmentsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getDepartmentDetails() 
- 
+    this.getDepartmentDetails()
+
   }
-  
- 
+
+
 
 }
