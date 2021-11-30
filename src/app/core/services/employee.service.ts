@@ -6,6 +6,7 @@ import { Staff } from '../../shared/models/staff';
 import { JobListing } from 'src/app/shared/models/job-listing';
 import { Application } from 'src/app/shared/models/application';
 import { Job } from '../../shared/models/job';
+import { GetUserTokenService } from './get-user-token.service';
 // import { GetUserTokenService } from './get-user-token.service';
 
 @Injectable({
@@ -16,17 +17,19 @@ export class EmployeeService {
 
   constructor(
     private http: HttpClient,
-    // private userTokenService: GetUserTokenService
+    private userTokenService: GetUserTokenService
   ) {}
 
   // add new employee
   addStaff(employee: Staff) {
     return this.http.post(this.sourceUrl + '/account/register/', employee, {
       headers: {
-        // Authorization: 'Token ' + this.userTokenService.getUserToken(),
+        Authorization: 'Token ' + this.userTokenService.getUserToken(),
       },
     });
   }
+
+  // upload employee
 
   // Add applicant
   addApplicant(applicant: JobListing) {

@@ -156,7 +156,7 @@
               <label class="mb-1" for="account-number">Account Number</label>
               <input type="text" name="account_number" class="form-control" ngModel #account_number>
             </div>
-            <input type="text" name="password" value="password" ngModel #password>
+            <!-- <input type="text" name="password" value="password" ngModel #password> -->
           </div>
         </div>
       </div>
@@ -172,7 +172,7 @@
         </div>
         <form class="row g-0">
           <div class="col-auto">
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" type="file" id="formFile" name="employee-upload" multiple="false" (change)="uploadEmployeeCsvFile($event)">
           </div>
           <div class="col-auto">
             <button class="btn btn-outline-primary mb-3">Upload</button>
