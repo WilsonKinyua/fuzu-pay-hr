@@ -2,3 +2,10 @@
   margin-left: 100px;
   padding: 0.5em;
 }
+a{
+  font-size: small;
+  font-weight: bold;
+}
+td{
+  font-size: 15px;
+}
