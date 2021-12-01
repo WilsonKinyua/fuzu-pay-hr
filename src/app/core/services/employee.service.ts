@@ -14,6 +14,7 @@ import { GetUserTokenService } from './get-user-token.service';
 })
 export class EmployeeService {
   sourceUrl = environment.sourceUrl;
+  deployedUrl = 'https://fuzupay-hr.herokuapp.com';
 
   constructor(
     private http: HttpClient,
@@ -53,11 +54,11 @@ export class EmployeeService {
   }
   getNewApplicant() {
     return this.http.get(
-      this.sourceUrl + '/human-resource/api/applications/new/'
+      this.deployedUrl + '/human-resource/api/applications/new/'
     );
   }
   getPastApplicant() {
-    return this.http.get(this.sourceUrl + '/human-resource/api/applications/');
+    return this.http.get(this.deployedUrl + '/human-resource/api/applications/');
   }
 
   // get employee by id
@@ -70,7 +71,7 @@ export class EmployeeService {
   // get one applicant
   getOneApplicant(id: Application) {
     return this.http.get(
-      this.sourceUrl + '/human-resource/api/applications/' + id + '/'
+      this.deployedUrl + '/human-resource/api/applications/' + id + '/'
     );
   }
   // get interviews
