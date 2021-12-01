@@ -20,6 +20,7 @@ export class PastListingComponent implements OnInit {
 
   }
 
+  
   getAllpastListings() {
     this.isLoading = true;
     this.hiringservice.getAllPastJob().subscribe(
