@@ -4,7 +4,7 @@ import { BankDetailsService } from 'src/app/core/services/bank-details.service';
 import { DepartmentService } from 'src/app/core/services/department.service';
 import { EmploymentTypeService } from 'src/app/core/services/employment-type.service';
 import { EmployeeService } from '../../../core/services/employee.service';
-import * as XLSX from 'xlsx';
+// import * as XLSX from 'xlsx';
 import { Employee } from 'src/app/shared/models/employee';
 
 @Component({
