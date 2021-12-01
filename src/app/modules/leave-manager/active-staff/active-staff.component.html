@@ -72,7 +72,14 @@
                 <th scope="col">Employment Type</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody *ngIf="isLoading">
+              <tr class="preloader">
+                <td colspan="6" class="text-center mt-5">
+                  <app-loader></app-loader>
+                </td>
+              </tr>
+            </tbody>
+            <tbody *ngIf="!isLoading">
               <tr *ngFor="let activeEmps of activeEmp ">
                 <td>{{activeEmps.employee.other_names}}</td>
                 <td>{{activeEmps.position}}</td>
