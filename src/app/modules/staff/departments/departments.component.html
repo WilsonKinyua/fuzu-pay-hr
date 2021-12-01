@@ -69,18 +69,18 @@
       <tbody>
       <tr class="text-capitalize" *ngFor="let depDetail of depDetails" >
         <td class="main-color">
-          <!-- <a routerLink="/staff/{{ depDetail.employee_id }}"> -->
-            {{ depDetail.other_names }} {{ depDetail.surname }}
+          <!-- <a routerLink="/staff/{{ staff.employee_id }}"> -->
+            {{ depDetail.employee.other_names }} {{ depDetail.employee.surname }}
           <!-- </a> -->
         </td>
         <td>
           {{ depDetail.position }}
         </td>
         <td>
-          {{ depDetail.work_email }}
+          {{ depDetail.employee.email }}
         </td>
         <td>
-          {{ depDetail.employment_type }}
+          {{ depDetail.employment_type?.name }}
         </td>
       </tr>
       </tbody>
