@@ -76,19 +76,23 @@
     </div>
 
 
+      <div class="card" style="width: 25rem;">
+      <div class="col">
         <div class="icon">
           <i class="fas fa-user-circle"></i>
         </div>
       </div>
-      <div class="body-card">
+      <div class="card-body">
+        <h4 class="card-title text-capitalize"> {{ employee.employee.other_names }} {{ employee.employee.surname }}</h4>
+        <h6 class="sub-title text-capitalize">{{ employee?.department.name }}</h6>
+        <p class="sub-title text-capitalize"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ employee?.employee.country }}
+        </p>
         <p class="sub-title">Working Period: <strong>9 Months</strong></p>
-      </div>
-    </div>
 
-<<<<<<< HEAD
+      </div> 
+
+    </div> 
     
-=======
->>>>>>> 6a8c526c6b0d3708156b63c681d9dd5ac49f3741
 
     <div class="abb">
       <h3>Employee Information</h3>
@@ -166,4 +170,4 @@
 
 
   <!-- </div> -->
-</section>
+<!-- </section> -->
