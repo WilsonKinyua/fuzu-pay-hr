@@ -25,7 +25,7 @@
           <p class="m-1 text-bold paragraph-1">* Click staff name to make changes</p>
         </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-10">
             <div class="top-header-table">
               <div class="d-flex justify-content-between">
                 <div class="mr-5">
@@ -45,10 +45,9 @@
                       <h6 class="mt-1">Employment Type</h6>
                     </div>
                     <div>
-                      <select class="form-select">
-                        <option>All</option>
-                        <option>Permanent</option>
-                        <option>Contract</option>
+                      <select name="employment_type" id="employment_type" class="form-select">
+                        <option value="all">All</option>
+                        <option *ngFor="let emp of employmentType" value="{{ emp.id }}">{{ emp.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -60,10 +59,9 @@
                       <h6 class="mt-1">Department</h6>
                     </div>
                     <div>
-                      <select class="form-select">
-                        <option>All</option>
-                        <option>Permanent</option>
-                        <option>Contract</option>
+                      <select name="department" id="department" class="form-select">
+                        <option value="all">All</option>
+                        <option *ngFor="let dep of departments" value="{{ dep.id }}">{{ dep.name }}</option>
                       </select>
                     </div>
                   </div>
@@ -86,6 +84,7 @@
             </div>
           </div>
         </div>
+        <div class="col-md-10">
         <table class="table table-borderless table-responsive">
           <thead>
             <tr>
@@ -130,6 +129,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   </div>
