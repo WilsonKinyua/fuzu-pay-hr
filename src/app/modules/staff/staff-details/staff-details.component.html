@@ -1,6 +1,4 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
-<section class="content" >
+<section class="content">
   <div class="container" *ngIf="isLoading">
     <div class="row">
       <div class="col-md-12 text-center">
@@ -27,7 +25,7 @@
             <div class="col-11">
               <input type="email" class="form-control" id="recipient-name">
             </div>
-
+            
           </div>
           <div class="row mb-3">
             <div class="col-1">
@@ -36,7 +34,7 @@
             <div class="col-11">
               <input type="time" class="form-control" id="recipient-name">
             </div>
-
+            
           </div>
           <div class="row mb-3">
             <div class="col-1">
@@ -45,7 +43,7 @@
             <div class="col-11">
               <input type="date" class="form-control" id="recipient-name">
             </div>
-
+            
           </div>
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Message:</label>
@@ -54,11 +52,11 @@
         </form>
       </div>
       <div class="modal-footer justify-content-center">
-
+  
         <button type="button" class="btn btn-primary justify-content-center">Send</button>
 
       </div>
-
+       
     </div>
   </div>
 </div>
@@ -74,8 +72,11 @@
         </div>
       </div>
     </div>
+   
 
-
+    <div class="card" style="width: 38rem;">
+      <div class="col-md-6 mb-4">
+    
         <div class="icon">
           <i class="fas fa-user-circle"></i>
         </div>
@@ -89,13 +90,13 @@
 
       </div>
 
-    <!-- </div> -->
+    </div>
 
     <div class="abb">
       <h3>Employee Information</h3>
     </div>
 
-    <table class="table table-borderless mt-4" >
+    <table class="table table-borderless">
 
       <thead>
         <tr>
@@ -166,5 +167,5 @@
     </div>
 
 
-  <!-- </div> -->
+  </div>
 </section>
