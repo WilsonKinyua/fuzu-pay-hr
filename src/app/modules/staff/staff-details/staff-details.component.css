@@ -1,16 +1,16 @@
 /* styling for staff details component */
-
-.card-body {
-  position: absolute;
-  left: 35%;
-}
-.card {
+/* .card {
   margin-top: 2.3rem;
   font-size: 1rem;
   box-shadow: 2px 2px 2px 2px #b9bdbe;
   
 
-}
+} */
+/* .card-body {
+  position: absolute;
+  left: 35%;
+} */
+
 .abb {
   margin-top: 2.2rem;
   color: #004763;
