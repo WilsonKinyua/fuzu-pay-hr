@@ -1,14 +1,16 @@
 /* styling for staff details component */
 
-.card-body {
-  position: absolute;
-  left: 35%;
-  
-}
 .card {
   margin-top: 2.3rem;
-  font-size: 1rem;
+  box-shadow: 2px 2px 2px 2px #b9bdbe;
+  
+
 }
+.body-card{
+  position: absolute;
+  left: 35%;
+}
+
 .abb {
   margin-top: 2.2rem;
   color: #004763;
@@ -78,13 +80,14 @@
 }
 
 .icon i {
-  font-size: 6em;
+  font-size: 5em;
 }
 
-.card-body p,
-.card-body h6,
-.card-body h4 {
+.body-card p,
+.body-card h6,
+.body-card h4 {
   color: #0a0a0a;
+  font-size: 16px;
 }
 
 .fa-map-marker {
