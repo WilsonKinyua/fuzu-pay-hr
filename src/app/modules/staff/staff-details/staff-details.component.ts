@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/core/services/employee.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-staff-details',
@@ -14,7 +15,9 @@ export class StaffDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private employeeService: EmployeeService
+    private employeeService: EmployeeService,
+    private location: Location
+
   ) {}
 
   ngOnInit(): void {
@@ -49,5 +52,9 @@ export class StaffDetailsComponent implements OnInit {
         this.isLoading = false;
       }
     );
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

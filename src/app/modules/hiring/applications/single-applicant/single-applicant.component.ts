@@ -2,7 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/core/services/employee.service';
 import { NgForm } from '@angular/forms';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-single-applicant',
@@ -18,7 +18,8 @@ export class SingleApplicantComponent implements OnInit {
 
   constructor( 
     private route: ActivatedRoute,
-    private employeeservice: EmployeeService
+    private employeeservice: EmployeeService,
+    private location: Location
     ) {}
 
   ngOnInit(): void {
@@ -70,6 +71,10 @@ export class SingleApplicantComponent implements OnInit {
         console.log(this.errorMessage);
       }
     );
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HiringService } from 'src/app/core/services/hiring.service';
-import { DepartmentService } from 'src/app/core/services/department.service';
 
 @Component({
   selector: 'app-active-listing',
@@ -12,7 +11,6 @@ export class ActiveListingComponent implements OnInit {
   isLoading = false;
   constructor(
     private hiringservice: HiringService,
-    private departmentService: DepartmentService,
   ) { }
 
   ngOnInit(): void {
