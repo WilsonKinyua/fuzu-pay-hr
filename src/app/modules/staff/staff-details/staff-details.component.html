@@ -1,3 +1,5 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
 <section class="content">
   <div class="container" *ngIf="isLoading">
     <div class="row">
@@ -9,137 +11,58 @@
   <div class="container" *ngIf="!isLoading">
     <div class="row">
       <div class="col-md-2">
-        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Edit</button>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header justify-content-center">
-       <button type="button" class="btn btn-primary justify-content-center">Schedule Interview</button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">Email</label>
-            </div>
-            <div class="col-11">
-              <input type="email" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">Time</label>
-            </div>
-            <div class="col-11">
-              <input type="time" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">Time</label>
-            </div>
-            <div class="col-11">
-              <input type="time" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">work email</label>
-            </div>
-            <div class="col-11">
-              <input type="email" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">personal Email</label>
-            </div>
-            <div class="col-11">
-              <input type="email" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-whatever="@mdo">Edit</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header justify-content-center">
+                <button type="button" class="btn btn-primary justify-content-center">Schedule Interview</button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="row mb-3">
+                    <div class="col-1">
+                      <label for="recipient-name" class="col-form-label">Email</label>
+                    </div>
+                    <div class="col-11">
+                      <input type="email" class="form-control" id="recipient-name">
+                    </div>
 
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">Mobile Number</label>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-1">
+                      <label for="recipient-name" class="col-form-label">Time</label>
+                    </div>
+                    <div class="col-11">
+                      <input type="time" class="form-control" id="recipient-name">
+                    </div>
+
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-1">
+                      <label for="recipient-name" class="col-form-label">Date</label>
+                    </div>
+                    <div class="col-11">
+                      <input type="date" class="form-control" id="recipient-name">
+                    </div>
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text" rows="20"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer justify-content-center">
+
+                <button type="button" class="btn btn-primary justify-content-center">Send</button>
+
+              </div>
+
             </div>
-            <div class="col-11">
-              <input type="number" class="form-control" id="recipient-name">
-            </div>
-            
           </div>
-
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">Employee type</label>
-            </div>
-            <div class="col-11">
-              <input type="text" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">insurance Number</label>
-            </div>
-            <div class="col-11">
-              <input type="number" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">Tax Pin Number</label>
-            </div>
-            <div class="col-11">
-              <input type="number" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">Id No</label>
-            </div>
-            <div class="col-11">
-              <input type="number" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-
-          <div class="row mb-3">
-            <div class="col-1">
-              <label for="recipient-name" class="col-form-label">D.O.B</label>
-            </div>
-            <div class="col-11">
-              <input type="date" class="form-control" id="recipient-name">
-            </div>
-            
-          </div>
-
-
-          
-          <div class="mb-3">
-            <textarea class="form-control" id="message-text" rows="10"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer justify-content-center">
-  
-        <button type="button" class="btn btn-primary justify-content-center">Send</button>
-
-      </div>
-       
-    </div>
-  </div>
-</div>
+        </div>
       </div>
 
       <div class="col-md-2">
@@ -152,9 +75,10 @@
         </div>
       </div>
     </div>
-   
 
 
+    <div class="card" style="width: 27rem;">
+      <div class="col">
         <div class="icon">
           <i class="fas fa-user-circle"></i>
         </div>
@@ -162,18 +86,21 @@
       <div class="body-card">
         <h4 class="card-title text-capitalize"> {{ employee.employee.other_names }} {{ employee.employee.surname }}</h4>
         <h6 class="sub-title text-capitalize">{{ employee?.department.name }}</h6>
-        <p class="sub-title text-capitalize"><i class="fa fa-map-marker" aria-hidden="true"></i>{{ employee?.employee.country }}
+        <p class="sub-title text-capitalize"><i class="fa fa-map-marker" aria-hidden="true"></i>{{
+          employee?.employee.country }}
         </p>
         <p class="sub-title">Working Period: <strong>9 Months</strong></p>
 
-      </div> 
+      </div>
+
+    </div>
 
 
     <div class="abb">
       <h3>Employee Information</h3>
     </div>
 
-    <table class="table table-borderless">
+    <table class="table table-borderless mt-4">
 
       <thead>
         <tr>
@@ -239,7 +166,10 @@
 
     <div class="int">
       <button class="btn-bn">Save Change</button>
-      <button class="btn btn-outline-primary text-bold"> Go Back</button>
+      <button class="btn btn-outline-primary text-bold" (click)="goBack()"> Go Back</button>
 
     </div>
 
+
+    <!-- </div> -->
+    <!-- </section> -->
