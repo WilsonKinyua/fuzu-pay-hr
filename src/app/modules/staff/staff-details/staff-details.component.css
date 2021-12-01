@@ -5,7 +5,7 @@
   
 
 }
-.card-body {
+.body-card{
   position: absolute;
   left: 35%;
 }
@@ -82,11 +82,11 @@
   font-size: 5em;
 }
 
-.card-body p,
-.card-body h6,
-.card-body h4 {
+.body-card p,
+.body-card h6,
+.body-card h4 {
   color: #0a0a0a;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .fa-map-marker {
