@@ -13,6 +13,10 @@ export class ActiveInterviewComponent implements OnInit {
 
   constructor(private employeeService: EmployeeService) {}
   
+  ngOnInit(): void {
+    this.getActiveInterviews();
+  }
+  
   getActiveInterviews() {
     this.isLoading = true;
     this.employeeService.getActiveInter().subscribe(
@@ -26,10 +30,6 @@ export class ActiveInterviewComponent implements OnInit {
         this.isLoading = false;
       }
     );
-  }
-
-  ngOnInit(): void {
-    this.getActiveInterviews();
   }
 
 }

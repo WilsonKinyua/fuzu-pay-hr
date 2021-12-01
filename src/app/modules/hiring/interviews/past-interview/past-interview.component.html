@@ -14,9 +14,9 @@
                
 
                 <tr *ngFor='let  Interview of pastInterview' routerLink="/hiring/application/singleapplications/{{Interview.interview_date}}">
-                    <td><small><a>{{Interview.interview_date}}</a></small></td>
-                    <td><small>{{Interview.interview_date}}</small></td>
-                    <td><small>{{Interview.interview_date}}</small></td>
+                    <td><small><a>{{Interview.applicant.applicant_name}}</a></small></td>
+                    <td><small>{{Interview.applicant.position}}</small></td>
+                    <td><small>{{Interview.applicant.education_obtained}}</small></td>        
                     <td class="tr-date"><small>{{Interview.interview_date}}</small></td>
                     <td class="tr-hired" [ngClass]="{'text-danger' :  Interview.status == 'decline'}"><small>{{Interview.interview_date}}</small></td>
                 </tr>

@@ -1,5 +1,6 @@
 <app-applications></app-applications>
-  <div class="container-fluid">
+<section class="content">
+  <div class="container">
     <div class="row d-flex justify-content-between">
       <!-- the left side of the single interview body -->
       <div class="row col-md-5">
@@ -90,7 +91,7 @@
             <button type="button" class="btn btn-outline-primary h" routerLinkActive="activebuttons">Decline</button>
           </div>
           <div class="col-sm-4">
-            <button type="button" class="btn btn-outline-primary h ">Go back</button>
+            <button type="button" (click)="goBack()" class="btn btn-outline-primary h ">Go back</button>
           </div>
 
         </div>
@@ -133,39 +134,67 @@
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+              <!-- display error and success successMessage -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="alert alert-success" role="alert" *ngIf="successMessage">
+                    {{successMessage}}
+                  </div>
+                  <div *ngIf="errorMessage">
+                    <span *ngFor="let item of errorMessage | keyvalue">
+                      <div class="alert alert-danger text-capitalize" role="alert">
+                        {{item.key}} - {{item.value}}
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- ======================================================= -->
           <div class="modal-body">
             <div class="row justify-content-center">
               <div class="col-sm-4 mb-5">
                 <button type="button" class="btn btn-outline-secondary activebuttons h">Schedule interview</button>
               </div>
-              <form action="">
+              <form (ngSubmit)="scheduleInter(f)" #f="ngForm" *ngIf="!isLoading">
+                <div class="mb-4 row">
+                  <label for="mail" class="col-sm-2 col-form-label">Name</label>
+                  <div class="col-sm-6">
+                    <select name="applicant" id="department" class="form-select" ngModel #applicant required>
+                      <option  value="{{ singleApplicant.id }}" selected >{{ singleApplicant.applicant_name }}</option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
                 <div class="mb-4 row">
                   <label for="mail" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-6">
-                    <input type="email" class="form-control" id="mail">
+                    <input type="email" class="form-control" id="mail" value="{{ singleApplicant?.email}}" name="applicant_email" ngModel #applicant_email required>
                   </div>
                 </div>
                 <div class="mb-4 row">
                   <label for="time" class="col-sm-2 col-form-label">Time</label>
-                  <div class="col-sm-4">
-                    <input type="time" class="form-control" id="time">
+                  <div class="col-sm-3">
+                    <input type="time" class="form-control" id="time" name="interview_time_from" step="2" ngModel #interview_time_from required>
+                  </div>
+                  <div class="col-sm-3">
+                    <input type="time" class="form-control" id="time" name="interview_time_to" step="2" ngModel #interview_time_to required>
                   </div>
                 </div>
                 <div class="mb-4 row">
                   <label for="date" class="col-sm-2 col-form-label">Date</label>
                   <div class="col-sm-4">
-                    <input type="date" class="form-control" id="date">
+                    <input type="date" class="form-control" id="date" placeholder="{{ singleApplicant?.date_available }}" name="interview_date" ngModel #interview_date required>
                   </div>
                 </div>
                 <div class="mb-4 row">
                   <div class="col-sm-12">
-                    <textarea name="" id="" cols="81" rows="15"></textarea>
+                    <textarea name="" id="" cols="81" rows="15" name="content" ngModel #content required></textarea>
                   </div>
                 </div>
 
                 <div class="row justify-content-center">
                   <div class="col-sm-4 mb-5">
-                    <button type="button" class="btn btn-outline-primary activebuttons h">Send</button>
+                    <button type="submit" class="btn btn-outline-primary activebuttons h">Send</button>
                   </div>
                 </div>
               </form>
@@ -178,3 +207,4 @@
 
 
   </div>
+</section>
