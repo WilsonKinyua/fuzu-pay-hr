@@ -133,18 +133,23 @@ export class AddStaffComponent implements OnInit {
           csvRecordsArray,
           headersRow.length
         );
-        this.staffService.addStaffViaUpload(this.employeeUplodData).subscribe(
-          (res) => {
-            console.log(res);
-            // this.isLoading = false;
-            this.successMessage = res;
-          },
-          (error) => {
-            this.errorMessage = error.error;
-            // this.isLoading = false;
-            console.log(this.errorMessage);
-          }
-        );
+        this.employeeUplodData = this.employeeUplodData.map((x) => {
+          // return ({Employee: x});
+          console.log(x);
+          this.isLoading = true;
+          this.staffService.addStaffViaUpload(x).subscribe(
+            (res) => {
+              console.log(res);
+              this.isLoading = false;
+              this.successMessage = res;
+            },
+            (error) => {
+              this.errorMessage = error.error;
+              this.isLoading = false;
+              console.log(this.errorMessage);
+            }
+          );
+        });
         console.log(this.employeeUplodData);
       };
       reader.onerror = function () {
