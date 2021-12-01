@@ -66,13 +66,24 @@
           <th>Employment Type</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody *ngIf="isLoading">
+        <tr class="preloader">
+          <td colspan="6" class="text-center mt-5">
+            <app-loader></app-loader>
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="!isLoading">
       <tr class="text-capitalize" *ngFor="let depDetail of depDetails" >
         <td class="main-color">
           <!-- <a routerLink="/staff/{{ staff.employee_id }}"> -->
-            {{ depDetail.employee.other_names }} {{ depDetail.employee.surname }}
+            <!-- {{ depDetail.employee.other_names }} {{ depDetail.employee.surname }} -->
+            <a routerLink="/staff/{{ depDetail.id }}">
+              {{ depDetail.employee.other_names }} {{ depDetail.employee.surname }}
+            </a>
           <!-- </a> -->
         </td>
+
         <td>
           {{ depDetail.position }}
         </td>

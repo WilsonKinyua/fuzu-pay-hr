@@ -4,7 +4,7 @@ import { BankDetailsService } from 'src/app/core/services/bank-details.service';
 import { DepartmentService } from 'src/app/core/services/department.service';
 import { EmploymentTypeService } from 'src/app/core/services/employment-type.service';
 import { EmployeeService } from '../../../core/services/employee.service';
-import * as XLSX from 'xlsx';
+// import * as XLSX from 'xlsx';
 import { Employee } from 'src/app/shared/models/employee';
 
 @Component({
@@ -133,18 +133,23 @@ export class AddStaffComponent implements OnInit {
           csvRecordsArray,
           headersRow.length
         );
-        this.staffService.addStaffViaUpload(this.employeeUplodData).subscribe(
-          (res) => {
-            console.log(res);
-            // this.isLoading = false;
-            this.successMessage = res;
-          },
-          (error) => {
-            this.errorMessage = error.error;
-            // this.isLoading = false;
-            console.log(this.errorMessage);
-          }
-        );
+        this.employeeUplodData = this.employeeUplodData.map((x) => {
+          // return ({Employee: x});
+          console.log(x);
+          this.isLoading = true;
+          this.staffService.addStaffViaUpload(x).subscribe(
+            (res) => {
+              console.log(res);
+              this.isLoading = false;
+              this.successMessage = res;
+            },
+            (error) => {
+              this.errorMessage = error.error;
+              this.isLoading = false;
+              console.log(this.errorMessage);
+            }
+          );
+        });
         console.log(this.employeeUplodData);
       };
       reader.onerror = function () {

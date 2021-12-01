@@ -35,10 +35,17 @@
               <th scope="col">Remaining Days</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngIf="isLoading">
+            <tr class="preloader">
+              <td colspan="6" class="text-center mt-5">
+                <app-loader></app-loader>
+              </td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="!isLoading">
             <tr *ngFor="let empOnLeaves of empOnLeave">
               <td>{{empOnLeaves.employee}}</td>
-              <td>{{empOnLeaves.Positon}}</td>
+              <td>{{empOnLeaves.positon}}</td>
               <td>{{empOnLeaves.department}}</td>
               <td>{{empOnLeaves.leave_date_from}}</td>
               <td>{{empOnLeaves.leave_date_to}}</td>
