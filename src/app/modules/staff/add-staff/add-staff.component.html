@@ -79,7 +79,14 @@
             </div>
             <div class="col">
               <label class="mb-1" for="nationality">Country</label>
-              <input type="text" name="country" class="form-control" ngModel #country>
+              <select name="country" id="country" class="form-select" ngModel #country>
+                <option value="Kenya">Kenya</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Rwanda">Rwanda</option>
+              </select>
             </div>
             <div class="col">
               <label class="mb-1" for="dob">Date of Birth</label>
@@ -149,7 +156,7 @@
               <label class="mb-1" for="account-number">Account Number</label>
               <input type="text" name="account_number" class="form-control" ngModel #account_number>
             </div>
-            <input type="text" name="password" value="password" ngModel #password>
+            <!-- <input type="text" name="password" value="password" ngModel #password> -->
           </div>
         </div>
       </div>
@@ -165,7 +172,7 @@
         </div>
         <form class="row g-0">
           <div class="col-auto">
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" type="file" id="formFile" name="employee_upload" multiple="false" (change)="uploadEmployeeCsvFile($event)" accept=".csv" #employee_upload>
           </div>
           <div class="col-auto">
             <button class="btn btn-outline-primary mb-3">Upload</button>

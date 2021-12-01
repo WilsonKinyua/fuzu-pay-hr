@@ -6,6 +6,7 @@ export class InterviewSchedule {
         public interview_time_to: Date,
         public content: string,
         public created_at: Date,
+        public applicant_email:string,
     ){
     }
 }

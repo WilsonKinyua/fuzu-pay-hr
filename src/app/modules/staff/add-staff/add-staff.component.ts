@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BankDetailsService } from 'src/app/core/services/bank-details.service';
 import { DepartmentService } from 'src/app/core/services/department.service';
 import { EmploymentTypeService } from 'src/app/core/services/employment-type.service';
-import { BankDetails } from 'src/app/shared/models/bank-details';
 import { EmployeeService } from '../../../core/services/employee.service';
+// import * as XLSX from 'xlsx';
+import { Employee } from 'src/app/shared/models/employee';
 
 @Component({
   selector: 'app-add-staff',
@@ -23,6 +24,8 @@ export class AddStaffComponent implements OnInit {
   departments;
   employmentType;
   isLoading = false;
+  employeeUplodData: any[] = [];
+  @ViewChild('csvReader') csvReader: any;
 
   // empty error message array
   errorMessage: any = [];
@@ -112,5 +115,98 @@ export class AddStaffComponent implements OnInit {
           console.log('Error Log => ', error);
         }
       );
+  }
+
+  // upload employee csv file
+  uploadEmployeeCsvFile($event): void {
+    let text = [];
+    let files = $event.srcElement.files;
+    if (this.isValidCSVFile(files[0])) {
+      let input = $event.target;
+      let reader = new FileReader();
+      reader.readAsText(input.files[0]);
+      reader.onload = () => {
+        let csvData = reader.result;
+        let csvRecordsArray = (<string>csvData).split(/\r\n|\n/);
+        let headersRow = this.getHeaderArray(csvRecordsArray);
+        this.employeeUplodData = this.getDataRecordsArrayFromCSVFile(
+          csvRecordsArray,
+          headersRow.length
+        );
+        this.employeeUplodData = this.employeeUplodData.map((x) => {
+          // return ({Employee: x});
+          console.log(x);
+          this.isLoading = true;
+          this.staffService.addStaffViaUpload(x).subscribe(
+            (res) => {
+              console.log(res);
+              this.isLoading = false;
+              this.successMessage = res;
+            },
+            (error) => {
+              this.errorMessage = error.error;
+              this.isLoading = false;
+              console.log(this.errorMessage);
+            }
+          );
+        });
+        console.log(this.employeeUplodData);
+      };
+      reader.onerror = function () {
+        console.log('error is occured while reading file!');
+      };
+    } else {
+      alert('Please import valid .csv file.');
+      this.fileReset();
+    }
+  }
+
+  getDataRecordsArrayFromCSVFile(csvRecordsArray: any, headerLength: any) {
+    let csvArr = [];
+    for (let i = 1; i < csvRecordsArray.length; i++) {
+      let curruntRecord = (<string>csvRecordsArray[i]).split(',');
+      if (curruntRecord.length == headerLength) {
+        let csvRecord: Employee = new Employee();
+        csvRecord.employee_id = curruntRecord[0].trim();
+        csvRecord.surname = curruntRecord[1].trim();
+        csvRecord.other_names = curruntRecord[2].trim();
+        csvRecord.email = curruntRecord[3].trim();
+        csvRecord.national_id = curruntRecord[4].trim();
+        csvRecord.country = curruntRecord[5].trim();
+        csvRecord.department = parseInt(curruntRecord[6].trim());
+        csvRecord.position = curruntRecord[7].trim();
+        csvRecord.employment_type = parseInt(curruntRecord[8].trim());
+        csvRecord.date_of_birth = curruntRecord[9].trim();
+        csvRecord.employment_date = curruntRecord[10].trim();
+        csvRecord.gross_salary = parseInt(curruntRecord[11].trim());
+        csvRecord.marital_status = curruntRecord[12].trim();
+        csvRecord.phone_number = curruntRecord[13].trim();
+        csvRecord.emergency_contact = curruntRecord[14].trim();
+        csvRecord.emergency_contact_number = curruntRecord[15].trim();
+        csvRecord.bank_name = curruntRecord[16].trim();
+        csvRecord.bank_branch = curruntRecord[17].trim();
+        csvRecord.account_number = parseInt(curruntRecord[18].trim());
+        csvArr.push(csvRecord);
+      }
+    }
+    return csvArr;
+  }
+
+  isValidCSVFile(file: any) {
+    return file.name.endsWith('.csv');
+  }
+
+  getHeaderArray(csvRecordsArr: any) {
+    let headers = (<string>csvRecordsArr[0]).split(',');
+    let headerArray = [];
+    for (let j = 0; j < headers.length; j++) {
+      headerArray.push(headers[j]);
+    }
+    return headerArray;
+  }
+
+  fileReset() {
+    this.csvReader.nativeElement.value = '';
+    this.employeeUplodData = [];
   }
 }

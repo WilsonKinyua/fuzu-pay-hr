@@ -168,7 +168,7 @@
                 <div class="mb-4 row">
                   <label for="mail" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-6">
-                    <input type="email" class="form-control" id="mail" value="{{ singleApplicant?.email}}">
+                    <input type="email" class="form-control" id="mail" value="{{ singleApplicant?.email}}" name="applicant_email" ngModel #applicant_email required>
                   </div>
                 </div>
                 <div class="mb-4 row">
