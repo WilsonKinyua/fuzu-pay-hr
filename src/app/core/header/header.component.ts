@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription, timer } from 'rxjs';
 import { map, share } from 'rxjs/operators';
 import { AuthenticationService } from '../services/authentication.service';
@@ -24,7 +25,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private authService: AuthenticationService,
     private loggedUserService: GetLoggedUserService,
-    private userTokenService: GetUserTokenService
+    private userTokenService: GetUserTokenService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -66,5 +68,12 @@ export class HeaderComponent implements OnInit {
         this.UserName.user.other_names + ' ' + this.UserName.user.surname;
       console.log(this.UserName);
     });
+  }
+  // onclick logout
+  logout($event) {
+    $event.preventDefault();
+    localStorage.removeItem('currentUserToken');
+    this.isAuthenticated = false;
+    this.router.navigate(['/login']);
   }
 }
