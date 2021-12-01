@@ -5,9 +5,9 @@ import { environment } from 'src/environments/environment';
 import { Staff } from '../../shared/models/staff';
 import { JobListing } from 'src/app/shared/models/job-listing';
 import { Application } from 'src/app/shared/models/application';
+import { InterviewSchedule } from '../../shared/models/interview-schedule';
 import { Job } from '../../shared/models/job';
 import { GetUserTokenService } from './get-user-token.service';
-// import { GetUserTokenService } from './get-user-token.service';
 
 @Injectable({
   providedIn: 'root',
@@ -87,13 +87,12 @@ export class EmployeeService {
     );
   }
   // schedule interviews
-  scheduleInterview(listings: Job) {
+  scheduleInterview(schedule: InterviewSchedule) {
     return this.http.post(
-      this.sourceUrl + '/human-resource/api/jobs/',
-      listings
+      this.sourceUrl + '​/human-resource​/api​/schedule-interview​/',
+      schedule
     );
   }
-
   // get department details
   getDepartmentDetails() {
     return this.http.get(this.sourceUrl + '/human-resource/api/departments/');
