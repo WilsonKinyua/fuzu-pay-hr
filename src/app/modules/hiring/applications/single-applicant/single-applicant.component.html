@@ -160,30 +160,31 @@
                   <label for="mail" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-6">
                     <select name="applicant" id="department" class="form-select" ngModel #applicant required>
-                      <option  value="{{ singleApplicant.id }}" selected >{{ singleApplicant.applicant_name }}</option>
-                      <option value=""></option>
+                      <option value="{{ singleApplicant.id }}" selected >{{ singleApplicant.applicant_name }}</option>
                     </select>
                   </div>
                 </div>
                 <div class="mb-4 row">
                   <label for="mail" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-6">
-                    <input type="email" class="form-control" id="mail" value="{{ singleApplicant?.email}}" name="applicant_email" ngModel #applicant_email required>
+                    <select name="applicant_email" id="department" class="form-select" ngModel #applicant required>
+                      <option  value="{{ singleApplicant?.email}}" selected >{{ singleApplicant?.email}}</option>
+                    </select>
                   </div>
                 </div>
                 <div class="mb-4 row">
                   <label for="time" class="col-sm-2 col-form-label">Time</label>
                   <div class="col-sm-3">
-                    <input type="time" class="form-control" id="time" name="interview_time_from" step="2" ngModel #interview_time_from required>
+                    <input type="time" class="form-control" id="time" name="interview_time_from"  ngModel #interview_time_from required>
                   </div>
                   <div class="col-sm-3">
-                    <input type="time" class="form-control" id="time" name="interview_time_to" step="2" ngModel #interview_time_to required>
+                    <input type="time" class="form-control" id="time" name="interview_time_to"  ngModel #interview_time_to required>
                   </div>
                 </div>
                 <div class="mb-4 row">
                   <label for="date" class="col-sm-2 col-form-label">Date</label>
                   <div class="col-sm-4">
-                    <input type="date" class="form-control" id="date" placeholder="{{ singleApplicant?.date_available }}" name="interview_date" ngModel #interview_date required>
+                    <input type="date" class="form-control" id="date" value="{{ singleApplicant?.date_available }}" min="1997-01-01" name="interview_date" ngModel #interview_date required>
                   </div>
                 </div>
                 <div class="mb-4 row">

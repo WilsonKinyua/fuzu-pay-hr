@@ -1,6 +1,6 @@
 export class InterviewSchedule {
     constructor(
-        public applicant: number,
+        public applicant: any,
         public interview_date: Date,
         public interview_time_from: Date,
         public interview_time_to: Date,
