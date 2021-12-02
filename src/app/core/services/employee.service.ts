@@ -89,7 +89,7 @@ export class EmployeeService {
   // schedule interviews
   scheduleInterview(schedule: InterviewSchedule) {
     return this.http.post(
-      this.sourceUrl + '​/human-resource​/api​/schedule-interview​/',
+      this.sourceUrl + '/human-resource/api/schedule-interview/',
       schedule
     );
   }

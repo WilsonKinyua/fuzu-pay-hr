@@ -19,12 +19,12 @@
             <app-loader></app-loader>
           </td>
         </tr>
-        <tr routerLink="/hiring/application/singleapplications/{{ pastApplicant.id }}" *ngFor='let pastApplicant of pastApplicant'>
-          <th scope="row">{{pastApplicant.applicant_name}}</th>
-          <td>{{pastApplicant.position}}</td>
-          <td>{{pastApplicant.education_obtained}}</td>
-          <td>{{pastApplicant.experience}}</td>
-          <td >{{pastApplicant.status}}</td>
+        <tr routerLink="/hiring/application/singleapplications/{{ Applicant.applicant.id }}" *ngFor='let Applicant of pastApplicant'>
+          <th scope="row">{{Applicant.applicant_name}}</th>
+          <td>{{Applicant.position}}</td>
+          <td>{{Applicant.education_obtained}}</td>
+          <td>{{Applicant.experience}}</td>
+          <td >{{Applicant.applicant.status}}</td>
         </tr>
 
         <!-- <tr>

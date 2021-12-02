@@ -13,12 +13,12 @@
                 </tr>
                
 
-                <tr *ngFor='let  Interview of pastInterview' routerLink="/hiring/application/singleapplications/{{Interview.interview_date}}">
+                <tr *ngFor='let  Interview of pastInterview' routerLink="/hiring/application/singleapplications/{{Interview.applicant.id}}">
                     <td><small><a>{{Interview.applicant.applicant_name}}</a></small></td>
                     <td><small>{{Interview.applicant.position}}</small></td>
                     <td><small>{{Interview.applicant.education_obtained}}</small></td>        
                     <td class="tr-date"><small>{{Interview.interview_date}}</small></td>
-                    <td class="tr-hired" [ngClass]="{'text-danger' :  Interview.status == 'decline'}"><small>{{Interview.interview_date}}</small></td>
+                    <td class="tr-hired" [ngClass]="{'text-danger' :  Interview.status == 'decline'}"><small>{{Interview.applicant.status}}</small></td>
                 </tr>
                  <tr>
                     <td><small><a routerLink="/hiring/application/singleapplications/1">Blessings Mugendi</a></small></td>

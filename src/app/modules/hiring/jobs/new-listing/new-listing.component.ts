@@ -20,8 +20,8 @@ export class NewListingComponent implements OnInit{
   listings;
   isLoading = false;
   departments;
-  errorMessage: any = [];
-  successMessage = null;
+  errorMessage;
+  successMessage;
 
   ngOnInit(): void {
     this.getDepartments();
@@ -47,9 +47,7 @@ export class NewListingComponent implements OnInit{
 
   getDepartments() {
     this.departmentService.getDepartments().subscribe((res) => {
-      console.log(
-        '================================ Departments =========================='
-      );
+      console.log("this.departments" );
       this.departments = res;
       console.log(res);
     });

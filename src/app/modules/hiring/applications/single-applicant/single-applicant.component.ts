@@ -54,6 +54,7 @@ export class SingleApplicantComponent implements OnInit {
       }
     );
   }
+  
   // schedule interviews 
 
   scheduleInter(form: NgForm) {
